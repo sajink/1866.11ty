@@ -1,0 +1,73 @@
+<header>
+<div class="text-white lg:container lg:mx-auto">
+    <nav class="py-4 md:py-5 flex justify-between items-center lg:px-20 ">
+        <div class="hidden md:block">
+        <a class="pl-6 text-3xl font-bold leading-none md:pl-6 lg:pl-16 inline-flex gap-6" href="/">          
+            <img src="/images/twitter.png" alt="logo" />
+            <img src="/images/fb.png" alt="logo" />
+            <img src="/images/insta.png" alt="logo" />
+        </a>
+        </div>
+        <img class="pl-4 w-32 md:w-40 h-auto" src="/images/site-logo.svg" alt="logo" />       
+        <div class="md:hidden pl-64">
+            <button class="navbar-burger flex items-center p-2">
+                <img src="/images/hamburger.png" class="rounded border-1 border" alt="hamburger menu" />
+                <title>Mobile menu</title>
+            </button>
+        </div>
+        <button class="pr-0 lg:pr-20 md:pr-6">
+            <a class="hover:no-underline hidden md:inline-block py-2 px-6 border border-white transition duration-200" href="{{page.topmenu.cta.href}}">{{page.topmenu.cta.title}}</a>
+        </button>
+    </nav>
+
+    <div class="container mx-auto flex justify-center items-center pt-5">
+        <ul class="hidden transform md:flex md:items-center md:w-auto md:space-x-6" id="menu">
+        {% for link in page.topmenu.links %}
+        {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
+        <li><a href="{{ link.href }}" class="tmenu oneline font-bold uppercase" aria-current="page">{{ link.title }}</a></li>
+        {% elseif link.sub %}
+            <li>
+                <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline uppercase">
+                    {{ link.title }}
+                    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+            </li>
+        {% else %}
+            <li><a href="{{ link.href }}" class="tmenu oneline uppercase">{{ link.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    </div>
+
+    <div class="navbar-menu z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-0"></div>
+        <nav class="fixed top-20 left-0 flex flex-col py-4 px-4 bg-white border-r w-full">
+            <div class="flex items-center ml-auto">
+                <button class="navbar-close">
+                    <img class="rounded border" src="/images/close.png" alt="navbar-close">
+                </button>
+            </div>            
+            <div>
+                <ul>
+                    {% for link in page.topmenu.links %}
+                        {% if link.href == page.url %}
+                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr primary-clr font-bold leading-tight" aria-current="page">{{ link.title }}</a></li>
+                        {% elseif (link.href | replace('/', ''))==(page.url | replace('/', ''))  %}
+                            <li class="font-bold primary-clr"><a href="{{ link.href }}" class="tmenu oneline" aria-current="page">{{ link.title }}</a></li>
+                        {% else %}
+                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-gray-700 text-sm font-serif leading-tight">{{ link.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>                          
+            </div>
+            <div class="mt-auto">
+                <div class="pt-4 px-20">
+                    <a class="block font-sans mb-2 py-2 hover:no-underline border text-center primary-clr hover:bg-yellow-600 hover:text-white border-yellow-600 text-base focus:ring-4 focus:outline-none" href="{{page.topmenu.cta.href}}">{{page.topmenu.cta.title}}</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+</header>

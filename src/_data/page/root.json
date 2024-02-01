@@ -1,0 +1,20 @@
+{
+    "places":[
+        {"image":"/images/places/img1.jpg","name":"Taj Mahal"},
+        {"image":"/images/places/img2.jpg","name":"The City Palace"},
+        {"image":"/images/places/img3.jpg","name":"Albert Hall Museum"},
+        {"image":"/images/places/img4.jpg","name":"Amer Fort"}
+    ],
+    "slide":[
+        {"image":"/images/slide/img1.jpg","alt":"Image 1"},
+        {"image":"/images/slide/img2.jpg","alt":"Image 2"},
+        {"image":"/images/slide/img3.jpg","alt":"Image 3"},
+        {"image":"/images/slide/img4.jpg","alt":"Image 4"}
+    ],
+    "spec":[
+        {"image":"images/spec/image1.jpg","num":"01","title":"Immersive View","subh":"Egestas risus tempor cras posuere viverra pellentesque sodales.","desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."},
+        {"image":"images/spec/image2.jpg","num":"02","title":"Exquisite Suite","subh":"Egestas risus tempor cras posuere viverra pellentesque sodales.","desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."},
+        {"image":"images/spec/image3.jpg","num":"03","title":"Dine Under the Stars","subh":"Egestas risus tempor cras posuere viverra pellentesque sodales.","desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."},
+        {"image":"images/spec/image4.jpg","num":"04","title":"Traditional Touch","subh":"Egestas risus tempor cras posuere viverra pellentesque sodales.","desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."}
+    ]
+}

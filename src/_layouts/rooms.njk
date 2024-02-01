@@ -1,0 +1,74 @@
+---
+layout: default.njk
+---
+
+<div class="bg-[#C29A5C]">
+{% include "header.html" %} 
+<p class="text-white text-center text-5xl md:text-9xl pb-12 md:pb-10  md:py-12 lg:py-16 ">Rooms & Suites</p>
+</div>
+<div class="mx-6 md:mx-[10%] lg:mx-[27%]">
+                <div class="primary-clr text-4xl md:text-7xl text-center md:pb-4 leading-snug pt-12 md:pt-20 lg:pt-32">Raj Vilas Palace</div>
+                <p class="text-gray-600 text-sm md:text-base font-serif text-center pb-8 md:pb-16">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
+</div>
+<div class="px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pb-10 md:pb-20">
+    {% for r in page.roomssuites.rooms %}
+    <div class="md:mb-4 lg:mb-6">
+        <img src="{{r.image}}" alt="{{r.alt}}" class="w-full h-[280px] lg:h-[555px]">
+        <div class="pt-4">
+            <p class="text-2xl md:text-4xl font-bold">{{r.title}}</p>
+            <p class="text-gray-600 text-sm md:text-base font-serif tracking-tight">{{r.desc}}</p>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 pt-1 md:pt-4">
+           {% for i in page.roomssuites.icons %}
+                {% if r.space %}
+                    <div class="inline-flex gap-4">
+                        <div class="pt-1">
+                            <img src="{{ i.cube }}" alt="{{ i.calt }}" class="w-[17px] h-[17px]">
+                        </div>
+                        <div class="text-gray-600 text-sm md:text-base font-serif tracking-tight">{{ r.space }}</div>
+                    </div>
+                {% endif %}
+                
+                {% if r.wifi %}
+                    <div class="inline-flex gap-4">
+                        <div class="pt-1">
+                            <img src="{{ i.wifi }}" alt="{{ i.walt }}" class="w-[17px] h-[17px]">
+                        </div>
+                        <div class="text-gray-600 text-sm md:text-base font-serif tracking-tight">{{ r.wifi }}</div>
+                    </div>
+                {% endif %}
+
+                {% if r.ac %}
+                    <div class="inline-flex gap-4">
+                        <div class="pt-1">
+                            <img src="{{ i.snow }}" alt="{{ i.salt }}" class="w-[17px] h-[17px]">
+                        </div>
+                        <div class="text-gray-600 text-sm md:text-base font-serif tracking-tight">{{ r.ac }}</div>
+                    </div>
+                {% endif %}
+
+                {% if r.bed %}
+                    <div class="inline-flex gap-4">
+                        <div class="pt-1">
+                            <img src="{{ i.bed }}" alt="{{ i.balt }}" class="w-[17px] h-[17px]">
+                        </div>
+                        <div class="text-gray-600 text-sm md:text-base font-serif tracking-tight">{{ r.bed }}</div>
+                    </div>
+                {% endif %}
+
+                {% if r.breakfast %}
+                    <div class="inline-flex gap-4">
+                        <div class="pt-1">
+                            <img src="{{ i.breakfast }}" alt="{{ i.bfalt }}" class="w-[17px] h-[17px]">
+                        </div>
+                        <div class="text-gray-600 text-sm md:text-base font-serif tracking-tight">{{ r.breakfast }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+           </div>
+            <button class="primary-clr hover:text-black text-sm font-bold lg:mb-0 mt-8 md:mt-8 lg:mt-8">BOOK NOW → </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>

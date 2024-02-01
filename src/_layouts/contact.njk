@@ -1,0 +1,64 @@
+---
+layout: default.njk
+---
+
+<div class="bg-[#C29A5C]">
+{% include "header.html" %} 
+<p class="text-white text-center text-5xl md:text-9xl pb-12 md:pb-10  md:py-12 lg:py-16 ">Contact</p>
+</div>
+
+<div class="mx-6 md:mx-[10%] lg:mx-[27%]">
+<div class="flex items-center justify-center md:pt-20">
+<img src="/images/contact/location.png" alt="location">
+</div>
+<p class="text-base text-center font-bold tracking-wider md:pt-3">LOCATION</p>
+<div class="text-2xl md:text-3xl text-center font-bold">{{ site.name }}, {{ site.address }},</div>
+<div class="text-2xl md:text-3xl text-center font-bold">{{ site.place }}{{ site.pin}}, {{ site.country}}.</div>
+<p class="text-2xl md:text-3xl text-center font-bold md:pt-3">{{ site.phone }}</p>
+<p class="text-2xl md:text-3xl text-center font-bold md:pt-3">{{ site.email }}</p>
+ <div class="flex items-center justify-center py-10">
+            <img src="/images/about-us/divider.svg" alt="divider">
+ </div>
+</div>
+
+<div class="flex items-center justify-center px-6 md:p-12">
+  <div class="mx-auto w-full max-w-[600px]">
+    <form>
+        <div class="mb-5 flex flex-col">
+            <label for="first_name" class="font-serif font-bold block text-sm mb-2">Name <span class="text-red-500">*</span></label>
+            <div class="flex gap-4">
+                <div class="w-1/2">
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+                </div>
+                <div class="w-1/2">
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <label for="email" class="block font-serif font-bold text-sm">Email <span class="text-red-500">*</span></label>
+            <input type="email" name="email" id="email" placeholder="example@domain.com" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+        </div>
+        <div class="mb-5">
+            <label for="subject" class="block font-serif font-bold text-sm">Phone <span class="text-red-500">*</span></label>
+            <input type="text" name="subject" id="subject" placeholder="Phone number" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+        </div>
+        <div class="mb-3">
+            <label for="message" class="block font-serif font-bold text-sm">Comment or Message <span class="text-red-500">*</span></label>
+            <textarea rows="4" name="message" id="message" placeholder="Type your message" class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none shadow focus-dotted-border" required></textarea>
+        </div>
+        <div class="pb-20">
+            <button class="lg:inline-block py-2 px-6 primary-clr border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                <a class="hover:no-underline" href="">SEND MESSAGE</a>
+            </button>
+        </div>
+    </form>
+  </div>
+</div>
+
+<div class=" w-full h-96">
+    <iframe class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12080.73732861526!2d-74.0059418!3d40.7127847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDA2JzEwLjAiTiA3NMKwMjUnMzcuNyJX!5e0!3m2!1sen!2sus!4v1648482801994!5m2!1sen!2sus"
+        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+</div>

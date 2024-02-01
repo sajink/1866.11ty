@@ -1,0 +1,33 @@
+<div class="pt-10 lg:pt-20">
+    <div class="flex flex-col">
+        {% set count=1 %}
+        {% for sp in page.root.spec %}
+            {% if count%2 !=0 %}
+            <div class="flex-row lg:inline-flex items-center ">
+                <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:w-1/2 md:w-full md:object-none md:h-96 lg:h-full" />
+                <div class="mx-6 md:mx-16 lg:w-1/2 lg:mx-28">
+                    <p class="primary-clr text-lg py-1 lg:py-2 font-semibold">{{sp.num}}</p>
+                    <p class="primary-clr text-4xl md:text-5xl lg:pt-2 leading-snug font-semibold">{{sp.title}}</p>
+                    <p class="text-sm md:text-base font-serif py-2 font-semibold">{{sp.subh}}</p>
+                    <p class="text-gray-800 text-sm md:text-base font-serif leading-6 text-justify">{{sp.desc}}</p>
+                    <button class="primary-clr hover:text-black text-sm font-bold my-10">VIEW ROOMS → </button>
+                    {% set count = count + 1 %}
+                </div>
+            </div>
+            {% else %}
+            <div class="flex flex-col lg:flex-row items-center">
+                <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:hidden lg:w-full mb-4 md:w-full md:object-none md:h-96 lg:h-full" />
+                <div class="flex-row items-center mx-6 md:mx-16 lg:mx-28">
+                    <p class="primary-clr text-lg py-1 lg:py-2 font-semibold">{{sp.num}}</p>
+                    <p class="primary-clr text-4xl md:text-5xl lg:pt-2 leading-snug font-semibold">{{sp.title}}</p>
+                    <p class="text-sm md:text-base font-serif py-2 font-semibold">{{sp.subh}}</p>
+                    <p class="text-gray-800 text-sm md:text-base font-serif text-justify leading-6">{{sp.desc}}</p>
+                    <button class="primary-clr hover:text-black text-sm font-bold my-10">VIEW ROOMS → </button>
+                    {% set count = count + 1 %}
+                </div>
+                <img src="{{sp.image}}" alt="{{sp.title}}" class="hidden lg:block lg:w-1/2 md:w-full md:object-none md:h-96 lg:h-full" />
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

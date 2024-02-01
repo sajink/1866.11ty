@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-7xl sm:text-5xl font-bold mt-5 mb-3;
+  }
+
+  a {
+    @apply cursor-pointer hover:underline;
+  }
+
+  p {
+    @apply mt-4 mb-2;
+  }
+
+  footer li {
+    @apply text-slate-500 text-sm font-normal leading-tight;
+  }
+
+  h1 {
+    @apply text-slate-800 font-bold leading-normal text-xl;
+  }
+  h2 {
+    @apply text-slate-800 font-bold leading-normal text-lg;
+  }
+  h3 {
+    @apply text-slate-800 font-bold leading-normal;
+  }
+  h4 {
+    @apply text-slate-800 font-bold leading-normal text-sm;
+  }
+  table, table td, table th {
+    @apply border-collapse border border-gray-300;
+  }
+  label {
+    @apply block mb-2 text-sm leading-tight text-slate-800 font-normal lg:leading-normal lg:text-base md:leading-normal md:text-base;
+  }
+  #leadForm input[type="text"] {
+    @apply block w-full border border-gray-300 rounded leading-7 text-base text-slate-900 font-normal lg:text-base lg:leading-loose md:text-lg md:leading-loose pl-3;
+
+  }
+}
+
+@layer components {
+  .hline {
+    @apply border-gray-900 border-t my-8 h-px w-full;
+  }
+
+  .vline {
+    @apply border-gray-900 border-l mx-8 w-px h-full inline-block;
+  }
+
+  .primary-clr {
+      color: rgb(194, 154, 92);
+  }
+
+  .ftrtext a {
+    white-space: nowrap;
+  }
+
+  .focus-dotted-border:focus {
+    border-style: dotted;
+    border-color: #6A64F1;
+    border-width: 1px;
+  }
+  
+}

@@ -1,0 +1,32 @@
+{
+    "title": "Heritage Hotel",
+    "name": "Raj Vilas Palace",
+    "email": "mail@example.com",
+    "phone": "+91-123-456-7890",
+    "address": "Sansar Chandra Road",
+    "place": "Jaipur",
+    "pin": "123 456",
+    "country": "India",
+    "social": [
+        {
+            "name": "facebook",
+            "href": "/",
+            "image": "/images/footer/fb-black.png"
+        },
+        {
+            "name": "instagram",
+            "href": "/",
+            "image": "/images/footer/insta-black.png"
+        },
+        {
+            "name": "twitter",
+            "href": "/",
+            "image": "/images/footer/twitter-black.png"
+        },
+        {
+            "name": "youtube",
+            "href": "/",
+            "image": "/images/footer/utube-black.png"
+        }
+      ]
+}

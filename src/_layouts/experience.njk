@@ -1,0 +1,34 @@
+---
+layout: default.njk
+---
+
+<div class="bg-[#C29A5C]">
+{% include "header.html" %} 
+<p class="text-white text-center text-5xl md:text-9xl pb-12 md:pb-10  md:py-12 lg:py-16 ">Experience</p>
+</div>
+<div class="mx-[4%] md:mx-[8%] lg:mx-[20%] pt-8 md:pt-24">
+<p class="primary-clr text-3xl md:text-6xl text-center font-semibold py-6 leading-tight md:leading-snug">Nothing about your stay at Raj Vilas Palace, Jaipur would be like your everyday life. You’ve got to ullamcorper lectus consectetur id tristique eget libero.</p>
+ <div class="flex items-center justify-center pt-6 md:pt-8 lg:pt-6 pb-16 md:pb-24 lg:pb-14">
+    <img src="/images/about-us/divider.svg" alt="divider">
+ </div>
+</div>
+
+
+<div class="flex flex-col items-center">
+ {% for e in page.exp.experience %}
+    <div class="mx-[5%] md:mx-[4%]">
+    <img src="{{e.image}}" alt="{{e.title}}" class="mb-4">
+    </div>
+    <div class="mx-[5%] md:mx-[8%] lg:mx-[28%] justify-center flex-row md:inline-flex gap-28">
+        <div class="flex flex-col">
+            <p class="primary-clr text-xl md:text-lg lg:pt-2 leading-snug font-semibold">{{e.num}}</p>
+            <p class="primary-clr text-4xl md:text-5xl lg:pt-2 leading-snug font-semibold">{{e.title}}</p>
+        </div>
+        <div class="text-left">
+            <p class="text-sm md:text-base font-serif py-2 font-semibold">{{e.subh}}</p>
+            <p class="text-gray-600 text-sm md:text-base font-serif leading-6 ">{{e.desc}}</p>
+            <button class="primary-clr hover:text-black text-sm font-bold mt-8 mb-16 md:mb-24">EXPLORE → </button>
+        </div>
+    </div>
+     {% endfor %}
+</div>

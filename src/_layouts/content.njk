@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+
+{% include "header.html" %}
+<div class="container mx-auto shadow-xl">
+<div class="px-8 lg:px-20 md:px-12 text-justify ">
+<h1 class="text-center text-slate-900 text-4xl font-bold pt-8 ">
+    {{ pageTitle or title }}
+</h1>
+<div class="text-sm md:text-base py-6" >{{ content | safe }}</div>
+</div>
+</div>

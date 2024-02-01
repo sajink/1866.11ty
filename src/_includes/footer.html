@@ -1,0 +1,61 @@
+<footer class="bg-[#F3EEE8]">
+    <div class="mx-auto">
+        <div class="pt-28 md:pt-20 pb-8 md:pb-16 grid grid-cols-2 gap-2 lg:flex lg:items-center lg:justify-center lg:gap-16">
+            
+            {% for sm in page.footer.socialmedia %}
+                <div class="mb-8 md:w-full lg:w-auto flex items-center justify-center lg:mx-0 lg:mb-0">
+                    <div class="md:inline-flex gap-2">
+                        <div class="flex items-center justify-center md:items-start md:justify-start pb-3 ">
+                            <img src="{{ sm.image }}" alt="{{ sm.title }}" class="w-12 h-12 md:w-full md:h-auto">
+                        </div>
+                        <div class="flex-row text-center md:text-start space-y-1">
+                            <div class="text-3xl md:text-6xl">{{ sm.rating }}</div>
+                            <div class="text-gray-600 font-semibold">{{ sm.title }}</div>
+                            <div class="text-gray-600 text-xs md:text-sm font-serif">{{ sm.des }}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div> 
+    
+    <div class="mb-10">
+        <hr class="md:w-[90%] lg:w-[60%] mx-auto bg-gray-300 h-0.5"></hr>
+        <div class="flex justify-center items-center pt-20 pb-14">
+            <img src="/images/footer/logo-black.svg" alt="logo" />
+        </div>
+        <div class="container mx-auto flex justify-center items-center text-center font-serif ">
+            <ul class="transform md:flex md:items-center md:w-auto md:space-x-6 space-y-2 md:space-y-0" id="menu">
+                {% for link in page.topmenu.links %}
+                {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
+                <li><a href="{{ link.href }}" class="tmenu oneline" aria-current="page">{{ link.title }}</a></li>
+                {% elseif link.sub %}
+                    <li>
+                        <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline">
+                            {{ link.title }}
+                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                    </li>
+                {% else %}
+                    <li><a href="{{ link.href }}" class="tmenu oneline">{{ link.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div> 
+    <hr class="mx-auto h-0.5"></hr>
+    <div class="container mx-auto">
+        <div class="py-2 md:py-8 flex flex-col md:flex-row justify-between items-center font-serif text-gray-600 md:mx-0 lg:mx-48">
+            <p>© 2024 Heritage Hotel </p>
+            <a class="py-2 md:pl-10 lg:pl-16 inline-flex gap-6 md:mb-0">    
+                {% for sm in site.social %}
+                <img src="{{sm.image}}" alt={{sm.name}} />
+                {% endfor %}
+            </a>
+            <p>Powered by Heritage Hotel</p>
+        </div>
+    </div>    
+</div> 
+</footer> 

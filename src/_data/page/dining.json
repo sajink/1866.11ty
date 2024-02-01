@@ -1,0 +1,7 @@
+{
+    "din":[
+        {"image":"/images/gallery/img1.jpg","title":"Square Terrace", "desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."},
+        {"image":"/images/gallery/img2.jpg","title":"Dining Hall", "desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."},
+        {"image":"/images/gallery/img3.jpg","title":"Royal Dining", "desc":"Ultricies non suspendisse eget et vitae elit tincidunt elit sed velit sit vitae quam pellentesque id dolor amet integer congue non non integer morbi integer felis morbi imperdiet cras ut sed porttitor id donec duis at est, justo pulvinar aliquam donec posuere pharetra eu, magna fusce sit massa, est eu, id purus nam integer sapien."}
+    ]
+}

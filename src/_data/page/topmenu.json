@@ -1,0 +1,15 @@
+{
+    "links": [
+        {"title":"Home","href":"/"},
+        {"title":"History","href":"/history"},
+        {"title":"Experience","href":"/experience"},
+        {"title":"Rooms & Suites","href":"/rooms-suites"},
+        {"title":"Dining","href":"/dining"},
+        {"title":"Gallery","href":"/gallery"},
+        {"title":"Contact","href":"/contact"}
+    ],
+    "cta": {
+        "title": "BOOK NOW",
+        "href": "/#bookform"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "socialmedia":[
+        {"image":"/images/footer/google.png","rating":"4.8","title":"GOOGLE RATING", "des":"Based on 2345 reviews"},
+        {"image":"/images/footer/trip.png","rating":"4.7","title":"TRIPADVISOR RATING", "des":"Based on 1234 reviews"},
+        {"image":"/images/footer/fb.png","rating":"1M+","title":"FACEBOOK LIKES", "des":"Find us on Facebook"},
+        {"image":"/images/footer/insta.png","rating":"2M+","title":"FOLLOWERS", "des":"Follow us on Instagram"}
+    ]
+}
