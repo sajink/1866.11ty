@@ -2,32 +2,52 @@
     <div class="flex flex-col">
         {% set count=1 %}
         {% for sp in page.root.spec %}
-            {% if count%2 !=0 %}
-            <div class="flex-row lg:inline-flex items-center ">
-                <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:w-1/2 md:w-full md:object-none md:h-96 lg:h-full" />
-                <div class="mx-6 md:mx-16 lg:w-1/2 lg:mx-28">
-                    <p class="primary-clr text-lg py-1 lg:py-2 font-semibold">{{sp.num}}</p>
-                    <p class="primary-clr text-4xl md:text-5xl lg:pt-2 leading-snug font-semibold">{{sp.title}}</p>
-                    <p class="text-sm md:text-base font-serif py-2 font-semibold">{{sp.subh}}</p>
-                    <p class="text-gray-800 text-sm md:text-base font-serif leading-6 text-justify">{{sp.desc}}</p>
-                    <button class="primary-clr hover:text-black text-sm font-bold my-10">VIEW ROOMS → </button>
-                    {% set count = count + 1 %}
+        {% if count%2 !=0 %}
+        <div class="flex-row lg:inline-flex ">
+            <div class="lg:w-1/2 md:w-full">
+                <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:w-full md:w-full w-full object-cover h-[240px] md:h-[500px] lg:h-[600px]" />
+            </div>
+            <div class="lg:w-1/2">
+                <div class="container ">
+                    <div class="md:pt-4 lg:pt-10">
+                        <div class="container">
+                            <div class="mx-10 lg:mx-24">
+                                <p class="primary-clr text-lg font-semibold">{{sp.num}}</p>
+                                <p class="primary-clr text-4xl lg:text-5xl lg:pt-2 leading-snug font-semibold">{{sp.title}}</p>
+                                <p class="text-sm md:text-base font-serif py-4 font-semibold">{{sp.subh}}</p>
+                                <p class="text-gray-800 text-sm md:text-base font-serif leading-6 text-left ">{{sp.desc}}</p>
+                                <button class="primary-clr hover:text-black text-sm font-bold lg:mt-8  ">VIEW ROOMS → </button>
+                                {% set count = count + 1 %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {% else %}
-            <div class="flex flex-col lg:flex-row items-center">
-                <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:hidden lg:w-full mb-4 md:w-full md:object-none md:h-96 lg:h-full" />
-                <div class="flex-row items-center mx-6 md:mx-16 lg:mx-28">
-                    <p class="primary-clr text-lg py-1 lg:py-2 font-semibold">{{sp.num}}</p>
-                    <p class="primary-clr text-4xl md:text-5xl lg:pt-2 leading-snug font-semibold">{{sp.title}}</p>
-                    <p class="text-sm md:text-base font-serif py-2 font-semibold">{{sp.subh}}</p>
-                    <p class="text-gray-800 text-sm md:text-base font-serif text-justify leading-6">{{sp.desc}}</p>
-                    <button class="primary-clr hover:text-black text-sm font-bold my-10">VIEW ROOMS → </button>
-                    {% set count = count + 1 %}
+        </div>
+        {% else %}
+        <div class="flex flex-col lg:flex-row ">
+            <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:hidden lg:w-full mb-4 md:w-auto object-cover h-[240px] md:h-[500px]  lg:h-[600px]" />
+            <div class="lg:w-1/2">
+                <div class="container ">
+                    <div class="md:pt-4 lg:pt-10">
+                        <div class="container mx-auto">
+                            <div class="lg:mx-24">
+                                <p class="primary-clr text-lg font-semibold">{{sp.num}}</p>
+                                <p class="primary-clr text-4xl lg:text-5xl lg:pt-2 leading-snug font-semibold">{{sp.title}}</p>
+                                <p class="text-sm md:text-base font-serif py-2 font-semibold">{{sp.subh}}</p>
+                                <p class="text-gray-800 text-sm md:text-base font-serif leading-6">{{sp.desc}}</p>
+                                <button class="primary-clr hover:text-black text-sm font-bold mt-8">VIEW ROOMS → </button>
+                                {% set count = count + 1 %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img src="{{sp.image}}" alt="{{sp.title}}" class="hidden lg:block lg:w-1/2 md:w-full md:object-none md:h-96 lg:h-full" />
             </div>
-            {% endif %}
+            <div class="lg:w-1/2">
+                <img src="{{sp.image}}" alt="{{sp.title}}" class="hidden lg:block lg:w-full md:w-auto object-cover h-[240px] md:h-[500px]  lg:h-[600px]" />
+            </div>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
 </div>

@@ -65,5 +65,13 @@
     border-color: #6A64F1;
     border-width: 1px;
   }
+
+  .medium {
+    @apply font-medium;
+  }
+
+  .semibold {
+    @apply font-semibold;
+  }
   
 }

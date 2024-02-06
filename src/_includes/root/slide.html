@@ -1,7 +1,7 @@
 <div class="relative">
     <div class="slideshow-container">
         {% for img in page.root.slide %}
-        <div class="mySlides fade">
+        <div class="mySlides fade pt-5 md:pt-0">
             <img src="{{img.image}}" class="w-full h-auto" alt="{{img.alt}}">
         </div>
         {% endfor %}
