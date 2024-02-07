@@ -1,10 +1,13 @@
 <div class="relative h-[500px] md:h-[550px] lg:h-[880px] bg-cover bg-center" style="background-image: url('/images/hotel-bg.jpg');">
-    {% include "header.html" %}
+    <div class="overlay"></div>
+    <div class="overlay-content">
+        {% include "header.html" %}
+    </div>
     <div class=""></div>
-    <div class="pt-24 md:pt-20 lg:pt-44 flex items-center justify-center">
+    <div class="pt-[40px] md:pt-20 lg:pt-44 flex items-center justify-center overlay-content">
         <div class="text-white text-center">
-            <P class=" text-base font-bold ">WELCOME TO</P>
-            <p class="text-5xl md:text-9xl pt-4 ">Heritage 1866</p>
+            <P class="text-base font-bold">WELCOME TO</P>
+            <p class="text-5xl medium md:text-9xl pt-4 shadow">Heritage 1866</p>
         </div>
     </div>
 </div>

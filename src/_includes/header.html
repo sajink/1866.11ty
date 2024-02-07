@@ -1,23 +1,23 @@
 <header>
 <div class="text-white lg:container lg:mx-auto">
-    <nav class="py-4 md:py-5 flex justify-between items-center lg:px-20 ">
+    <nav class="py-4 md:py-5 flex justify-between items-center md:px-[1%]">
         <div class="hidden md:block">
-        <a class="pl-6 text-3xl font-bold leading-none md:pl-6 lg:pl-16 inline-flex gap-6" href="/">          
-            <img src="/images/twitter.png" alt="logo" />
-            <img src="/images/fb.png" alt="logo" />
-            <img src="/images/insta.png" alt="logo" />
-        </a>
+            <a class=" text-3xl font-bold leading-none md:pl-6 inline-flex gap-6">          
+                <img src="/images/twitter.png" alt="logo" class="social-icon">
+                <img src="/images/fb.png" alt="logo" class="social-icon">
+                <img src="/images/insta.png" alt="logo" class="social-icon">
+            </a>                     
         </div>
-        <img class="pl-4 w-32 md:w-40 h-auto" src="/images/site-logo.svg" alt="logo" />       
-        <div class="md:hidden pl-64">
+        <img class="pl-5 w-[120px] md:w-[175px] h-auto pt-2 md:pt-0" src="/images/site-logo.svg" alt="logo" />       
+        <button class="pr-0 md:pr-6">
+            <a class="hover:no-underline hidden md:inline-block py-2 px-6 border border-white transition duration-200 hover:bg-white hover:primary-clr text-sm semibold tracking-widest" href="{{page.topmenu.cta.href}}">{{page.topmenu.cta.title}}</a>
+        </button>
+        <div class="pr-3 md:hidden pt-2">
             <button class="navbar-burger flex items-center p-2">
-                <img src="/images/hamburger.png" class="rounded border-1 border" alt="hamburger menu" />
+                <img src="/images/hamburger.png" class="rounded-sm border-1 border h-11" alt="hamburger menu" />
                 <title>Mobile menu</title>
             </button>
         </div>
-        <button class="pr-0 lg:pr-20 md:pr-6">
-            <a class="hover:no-underline hidden md:inline-block py-2 px-6 border border-white transition duration-200" href="{{page.topmenu.cta.href}}">{{page.topmenu.cta.title}}</a>
-        </button>
     </nav>
 
     <div class="container mx-auto flex justify-center items-center pt-5">
@@ -35,7 +35,7 @@
                 </button>
             </li>
         {% else %}
-            <li><a href="{{ link.href }}" class="text-sm font-bold uppercase">{{ link.title }}</a></li>
+            <li><a href="{{ link.href }}" class="text-sm font-bold text-[#ffffffcc] hover:no-underline hover:text-white uppercase">{{ link.title }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>

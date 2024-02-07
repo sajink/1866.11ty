@@ -74,4 +74,33 @@
     @apply font-semibold;
   }
   
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* Semi-transparent black */
+ }
+
+ .overlay-content {
+  position: relative;
+  z-index: 1; /* Ensure the text appears above the overlay */
+ }
+
+ .shadow {
+  text-shadow: 
+      0 0 5px rgba(0, 0, 0, 0.7), /* Outer shadow */
+      0 0 30px rgba(0, 0, 0, 0.5), /* Spread out shadow */
+      0 0 30px rgba(0, 0, 0, 0.3); /* Further spread out shadow */
+ }
+ 
+ .social-icon {
+  filter: brightness(0) invert(1);
+}
+
+.social-icon:hover {
+  filter: brightness(0) invert(0.9);
+}
+
 }
