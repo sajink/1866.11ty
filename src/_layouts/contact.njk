@@ -24,28 +24,34 @@ layout: default.njk
 <div class="flex items-center justify-center px-6 md:p-12">
   <div class="mx-auto w-full max-w-[600px]">
     <form>
-        <div class="mb-5 flex flex-col">
+        <div class="mb-5 flex flex-col ">
             <label for="first_name" class="font-serif font-bold block text-sm mb-2">Name <span class="text-red-500">*</span></label>
             <div class="flex gap-4">
-                <div class="w-1/2">
-                    <input type="text" name="first_name" id="first_name" placeholder="First Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+                <div class="w-1/2 rounded-md shadow">
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border " required />
                 </div>
-                <div class="w-1/2">
-                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+                <div class="w-1/2 rounded-md shadow">
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border " required />
                 </div>
             </div>
         </div>
         <div class="mb-5">
             <label for="email" class="block font-serif font-bold text-sm">Email <span class="text-red-500">*</span></label>
-            <input type="email" name="email" id="email" placeholder="example@domain.com" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+            <div class="rounded-md shadow">
+                <input type="email" name="email" id="email" placeholder="example@domain.com" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border " required />
+            </div>
         </div>
         <div class="mb-5">
             <label for="subject" class="block font-serif font-bold text-sm">Phone <span class="text-red-500">*</span></label>
-            <input type="text" name="subject" id="subject" placeholder="Phone number" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border shadow" required />
+            <div class="rounded-md shadow">
+                <input type="text" name="subject" id="subject" placeholder="Phone number" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border " required />
+            </div>
         </div>
         <div class="mb-3">
             <label for="message" class="block font-serif font-bold text-sm">Comment or Message <span class="text-red-500">*</span></label>
-            <textarea rows="4" name="message" id="message" placeholder="Type your message" class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none shadow focus-dotted-border" required></textarea>
+           <div class="rounded-md">
+                <textarea rows="4" name="message" id="message" placeholder="Type your message" class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);" required></textarea>
+            </div>
         </div>
         <div class="pb-20">
             <button class="lg:inline-block py-2 px-6 primary-clr border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">

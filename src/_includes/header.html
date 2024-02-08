@@ -42,8 +42,8 @@
     </div>
 
     <div class="navbar-menu z-50 hidden">
-        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-0"></div>
-        <nav class="fixed top-20 left-0 flex flex-col py-4 px-4 bg-white border-r w-full">
+        <div class="navbar-backdrop fixed inset-0 opacity-0 z-40"></div>
+        <nav class="fixed top-20 left-0 flex flex-col py-4 px-4 bg-white border-r w-full z-50">
             <div class="flex items-center ml-auto">
                 <button class="navbar-close">
                     <img class="rounded border" src="/images/close.png" alt="navbar-close">
@@ -53,14 +53,14 @@
                 <ul>
                     {% for link in page.topmenu.links %}
                         {% if link.href == page.url %}
-                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr primary-clr font-bold leading-tight" aria-current="page">{{ link.title }}</a></li>
+                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr font-bold leading-tight primary-clr" aria-current="page">{{ link.title }}</a></li>
                         {% elseif (link.href | replace('/', ''))==(page.url | replace('/', ''))  %}
-                            <li class="font-bold primary-clr"><a href="{{ link.href }}" class="text-sm font-bold" aria-current="page">{{ link.title }}</a></li>
+                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-base font-bold leading-tight primary-clr" aria-current="page">{{ link.title }}</a></li>
                         {% else %}
-                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-gray-700 text-sm font-serif leading-tight">{{ link.title }}</a></li>
+                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-base font-serif leading-tight text-gray-700">{{ link.title }}</a></li>
                         {% endif %}
                     {% endfor %}
-                </ul>                          
+                </ul>                                    
             </div>
             <div class="mt-auto">
                 <div class="pt-4 px-20">

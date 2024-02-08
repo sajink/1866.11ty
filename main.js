@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 menu.forEach(function(menuElement) {
                     menuElement.classList.toggle('hidden');
                 });
-
-                // Toggle visibility of hamburger icon
                 burger.forEach(function(burgerElement) {
                     burgerElement.classList.toggle('hidden');
                 });
@@ -24,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.forEach(function(menuElement) {
             menuElement.classList.add('hidden');
         });
-
-        // Show the hamburger icon when the menu is closed
         burger.forEach(function(burgerElement) {
             burgerElement.classList.remove('hidden');
         });
