@@ -878,11 +878,6 @@ label {
   margin-right: auto;
 }
 
-.mx-\[\%\] {
-  margin-left: %;
-  margin-right: %;
-}
-
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -933,6 +928,10 @@ label {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mr-\[0\%\] {
@@ -1019,6 +1018,10 @@ label {
   height: 240px;
 }
 
+.h-\[24px\] {
+  height: 24px;
+}
+
 .h-\[280px\] {
   height: 280px;
 }
@@ -1035,8 +1038,8 @@ label {
   height: 500px;
 }
 
-.h-\[570px\] {
-  height: 570px;
+.h-\[576px\] {
+  height: 576px;
 }
 
 .h-auto {
@@ -1075,6 +1078,10 @@ label {
   width: 17px;
 }
 
+.w-\[24px\] {
+  width: 24px;
+}
+
 .w-\[400px\] {
   width: 400px;
 }
@@ -1101,6 +1108,10 @@ label {
 
 .max-w-\[600px\] {
   max-width: 600px;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1166,6 +1177,10 @@ label {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1234,10 +1249,6 @@ label {
 
 .border {
   border-width: 1px;
-}
-
-.border-4 {
-  border-width: 4px;
 }
 
 .border-r {
@@ -1376,6 +1387,10 @@ label {
   padding-bottom: 2rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1448,10 +1463,6 @@ label {
   padding-top: 3rem;
 }
 
-.pt-14 {
-  padding-top: 3.5rem;
-}
-
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1482,18 +1493,6 @@ label {
 
 .pt-\[40px\] {
   padding-top: 40px;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pb-1 {
-  padding-bottom: 0.25rem;
 }
 
 .text-left {
@@ -1817,6 +1816,11 @@ label {
     margin-right: 1rem;
   }
 
+  .md\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:mx-\[1\%\] {
     margin-left: 1%;
     margin-right: 1%;
@@ -1832,6 +1836,11 @@ label {
     margin-right: 14%;
   }
 
+  .md\:mx-\[15\%\] {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
   .md\:mx-\[4\%\] {
     margin-left: 4%;
     margin-right: 4%;
@@ -1840,11 +1849,6 @@ label {
   .md\:mx-\[5\%\] {
     margin-left: 5%;
     margin-right: 5%;
-  }
-
-  .md\:mx-\[6\%\] {
-    margin-left: 6%;
-    margin-right: 6%;
   }
 
   .md\:mx-\[8\%\] {
@@ -1860,16 +1864,6 @@ label {
   .md\:my-14 {
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
-  }
-
-  .md\:mx-\[16\%\] {
-    margin-left: 16%;
-    margin-right: 16%;
-  }
-
-  .md\:mx-\[15\%\] {
-    margin-left: 15%;
-    margin-right: 15%;
   }
 
   .md\:mb-0 {
@@ -2004,8 +1998,8 @@ label {
     width: 320px;
   }
 
-  .md\:w-\[390px\] {
-    width: 390px;
+  .md\:w-\[384px\] {
+    width: 384px;
   }
 
   .md\:w-\[400px\] {
@@ -2030,6 +2024,10 @@ label {
 
   .md\:max-w-\[1037px\] {
     max-width: 1037px;
+  }
+
+  .md\:max-w-\[1100px\] {
+    max-width: 1100px;
   }
 
   .md\:max-w-\[1200px\] {
@@ -2068,6 +2066,10 @@ label {
     gap: 2.5rem;
   }
 
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
   .md\:gap-28 {
     gap: 7rem;
   }
@@ -2082,6 +2084,12 @@ label {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -2135,6 +2143,16 @@ label {
   .md\:px-\[1\%\] {
     padding-left: 1%;
     padding-right: 1%;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .md\:py-12 {
@@ -2345,6 +2363,11 @@ label {
     margin-right: 3rem;
   }
 
+  .lg\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
   .lg\:mx-28 {
     margin-left: 7rem;
     margin-right: 7rem;
@@ -2375,29 +2398,9 @@ label {
     margin-right: 20%;
   }
 
-  .lg\:mx-\[22\%\] {
-    margin-left: 22%;
-    margin-right: 22%;
-  }
-
-  .lg\:mx-\[24\%\] {
-    margin-left: 24%;
-    margin-right: 24%;
-  }
-
   .lg\:mx-\[27\%\] {
     margin-left: 27%;
     margin-right: 27%;
-  }
-
-  .lg\:mx-\[32\%\] {
-    margin-left: 32%;
-    margin-right: 32%;
-  }
-
-  .lg\:mx-\[6\%\] {
-    margin-left: 6%;
-    margin-right: 6%;
   }
 
   .lg\:mx-auto {
