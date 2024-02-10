@@ -1,34 +1,35 @@
 <footer class="bg-[#F3EEE8]">
-    <div class="mx-auto">
-        <div class="pt-28 md:pt-20 pb-8 md:pb-16 grid grid-cols-2 gap-2 lg:flex lg:items-center lg:justify-center lg:gap-16">
-            
-            {% for sm in page.footer.socialmedia %}
-                <div class="mb-8 md:w-full lg:w-auto flex items-center justify-center lg:mx-0 lg:mb-0">
+    <div class="mx-auto"> 
+        <div class="container mx-auto lg:mx-auto max-w-[1000px] lg:max-w-[1200px]">
+            <div class="pt-20 md:pt-20 pb-8 md:pb-8 lg:pb-14 grid grid-cols-2 lg:flex lg:justify-center md:ml-10 lg:ml-0 flex-wrap">
+                {% for sm in page.footer.socialmedia %}
+                <div class="mb-8 w-full md:w-1/2 lg:w-1/4 lg:flex lg:items-center lg:justify-center lg:mx-0 lg:mb-0 lg:ml-0">
                     <div class="md:inline-flex gap-2">
                         <div class="flex items-center justify-center md:items-start md:justify-start pb-3 ">
-                            <img src="{{ sm.image }}" alt="{{ sm.title }}" class="w-12 h-12 md:w-full md:h-auto">
+                            <img src="{{ sm.image }}" alt="{{ sm.title }}" class="w-14 h-14 md:w-full md:h-auto">
                         </div>
-                        <div class="flex-row text-center md:text-start space-y-1">
-                            <div class="text-3xl md:text-6xl">{{ sm.rating }}</div>
-                            <div class="text-gray-600 font-semibold">{{ sm.title }}</div>
-                            <div class="text-gray-600 text-xs md:text-sm font-serif">{{ sm.des }}</div>
+                        <div class="flex-row text-center md:text-start space-y-1 ftrtext">
+                            <div class="text-3xl md:text-6xl medium">{{ sm.rating }}</div>
+                            <div class="text-gray-600 font-bold tracking-wider">{{ sm.title }}</div>
+                            <div class="text-gray-600 text-xs md:text-base font-serif tracking-tight">{{ sm.des }}</div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-            
-        </div> 
+                {% endfor %}
+            </div>
+        </div>
+    </div> 
     
     <div class="mb-10">
-        <hr class="md:w-[90%] lg:w-[60%] mx-auto bg-gray-300 h-0.5"></hr>
+        <hr class="max-w-[800px] lg:max-w-[1200px] mx-auto bg-gray-300 h-0.5"></hr>
         <div class="flex justify-center items-center pt-20 pb-14">
             <img src="/images/footer/logo-black.svg" alt="logo" />
         </div>
         <div class="container mx-auto flex justify-center items-center text-center font-serif ">
-            <ul class="transform md:flex md:items-center md:w-auto md:space-x-6 space-y-2 md:space-y-0" id="menu">
+            <ul class="transform md:flex md:items-center md:w-auto md:space-x-7 space-y-2 md:space-y-0" id="menu">
                 {% for link in page.topmenu.links %}
                 {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
-                <li><a href="{{ link.href }}" class="tmenu oneline" aria-current="page">{{ link.title }}</a></li>
+                <li class="text-black hover:primary-clr text-sm md:text-base tracking-tight"><a href="{{ link.href }}" class="hover:no-underline" aria-current="page">{{ link.title }}</a></li>
                 {% elseif link.sub %}
                     <li>
                         <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline">
@@ -39,22 +40,22 @@
                         </button>
                     </li>
                 {% else %}
-                    <li><a href="{{ link.href }}" class="tmenu oneline">{{ link.title }}</a></li>
+                    <li class="text-black text-sm md:text-base tracking-tight hover:primary-clr"><a href="{{ link.href }}" class="hover:no-underline">{{ link.title }}</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>
         </div>
     </div> 
     <hr class="mx-auto h-0.5"></hr>
-    <div class="container mx-auto">
-        <div class="py-2 md:py-8 flex flex-col md:flex-row justify-between items-center font-serif text-gray-600 md:mx-0 lg:mx-48">
-            <p>© 2024 Heritage Hotel </p>
-            <a class="py-2 md:pl-10 lg:pl-16 inline-flex gap-6 md:mb-0">    
+    <div class="container mx-auto max-w-[1000px] lg:max-w-[1200px]">
+        <div class="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center text-sm font-serif text-gray-600 md:mx-0  space-y-2">
+            <div>© 2024 Heritage Hotel </div>
+            <a class="py-2 md:pl-10 lg:pl-16 inline-flex space-x-5 md:mb-0">    
                 {% for sm in site.social %}
                 <img src="{{sm.image}}" alt={{sm.name}} />
                 {% endfor %}
             </a>
-            <p>Powered by Heritage Hotel</p>
+            <div>Powered by Heritage Hotel</div>
         </div>
     </div>    
 </div> 

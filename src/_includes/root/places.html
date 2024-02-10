@@ -5,11 +5,11 @@
     <p class="text-gray-600 text-sm md:text-base font-serif lg:mx-28">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
 </div>
 </div>
-<div class="flex justify-center items-center pb-32">
+<div class="flex justify-center items-center pb-8 lg:pb-32">
     <div class="flex-row md:flex justify-around w-4/4">
       {% for p in page.root.places %}
       <div class="text-center c">
-        <img src="{{p.image}}" alt="{{p.name}}" class="w-full h-auto ">
+        <img src="{{p.image}}" alt="{{p.name}}" class="w-full h-auto">
         <div class="primary-clr text-xl md:text-3xl pt-2 pb-8 lg:pt-4 leading-snug font-bold">{{p.name}}</div>
       </div>
       {% endfor %}

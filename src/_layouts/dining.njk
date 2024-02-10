@@ -10,7 +10,7 @@ layout: default.njk
 
 <div class="mx-[4%] md:mx-[8%] lg:mx-[20%] pt-8 md:pt-12 lg:pt-24">
 <p class="primary-clr text-3xl md:text-6xl text-center font-semibold py-4 lg:py-6 leading-tight md:leading-snug">Gourmet Experiences</p>
-<p class="text-gray-600 text-sm md:text-base font-serif text-center md:mx-0 lg:mx-36">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
+<p class="text-gray-600 text-sm md:text-base font-serif text-center md:mx-0 lg:mx-auto lg:max-w-[900px]">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
  <div class="flex items-center justify-center pt-6 md:pt-8 lg:pt-8 pb-20 md:pb-20 lg:pb-20">
     <img src="/images/about-us/divider.svg" alt="divider">
  </div>
@@ -20,24 +20,28 @@ layout: default.njk
  {% set count=1 %}
         {% for d in page.dining.din %}
             {% if count%2 !=0 %}
-<div class="inline-flex relative lg:gap-80">
+<div class="inline-flex relative">
   <div>
-    <img src="{{d.image}}" alt="{{d.title}}" class="w-[900px] h-[350px] md:w-[1500px] md:h-[500px] object-none">
+    <img src="{{d.image}}" alt="{{d.title}}" class="w-[900px] h-[350px] md:w-[1500px] md:h-[500px] object-left left-0 object-none">
   </div>
-  <div class="absolute bg-[#F3EEE8] top-[55%] md:top-[72px] ml-[8%] mr-[0%] md:ml-[36%] md:mr-[12%] lg:ml-[49%] lg:mr-[20%] ">
+  <div class="absolute bg-[#F3EEE8] top-[55%] md:top-[72px] left-[10%] md:left-[40%] lg:left-[50%] max-w-[500px] md:max-w-[514px] lg:max-w-[580px]  ">
   <div class="mx-6 md:mx-12">
     <p class="primary-clr text-2xl md:text-5xl pt-4 md:pt-10 leading-snug font-semibold">{{d.title}}</p>
     <p class="text-gray-600 text-sm md:text-base font-serif leading-6 text-justify pt-2 md:pt-4">{{d.desc}}</p>
     <button class="primary-clr hover:text-black text-sm font-bold mb-8 mt-8 md:mb-12 md:mt-6">EXPLORE → </button>
     </div>
   </div>
-  <div class="w-[400px] h-[350px] md:w-[1000px] md:h-[500px] bg-white"></div>
+  <div >
+  <img src="/images/dining/whitebg.png" class="lg:w-[750px] h-[350px] md:h-[500px]  ">
+  </div>
    {% set count = count + 1 %}
 </div>
  {% else %}
-<div class="inline-flex relative lg:gap-80">
-  <div class="w-[400px] h-[350px] md:w-[900px] md:h-[500px] bg-white"></div>
-  <div class="absolute bg-[#F3EEE8] top-[55%] md:top-[72px] mr-[8%] ml-[0%] md:mr-[36%] md:ml-[6%] lg:mr-[49%] lg:ml-[20%] ">
+<div class="inline-flex relative">
+  <div>
+  <img src="/images/dining/whitebg.png" class="lg:w-[750px] h-[350px] md:h-[500px] ">
+  </div>
+  <div class="absolute bg-[#F3EEE8] top-[55%] md:top-[72px] right-[10%] md:right-[40%] lg:right-[50%] max-w-[500px] md:max-w-[514px] lg:max-w-[580px] ">
   <div class="mx-6 md:mx-12">
     <p class="primary-clr text-2xl md:text-5xl pt-4 md:pt-10 leading-snug font-semibold">{{d.title}}</p>
     <p class="text-gray-600 text-sm md:text-base font-serif leading-6 text-justify pt-2 md:pt-4">{{d.desc}}</p>
@@ -45,7 +49,7 @@ layout: default.njk
     </div>
   </div>
    <div>
-    <img src="{{d.image}}" alt="{{d.title}}" class="w-[900px] h-[350px] md:w-[1500px] md:h-[500px] object-none">
+    <img src="{{d.image}}" alt="{{d.title}}" class="w-[900px] h-[350px] md:w-[1500px] md:h-[500px] object-right right-0 object-none">
   </div>
    {% set count = count + 1 %}
 </div>

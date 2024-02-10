@@ -9,24 +9,24 @@
     "country": "India",
     "social": [
         {
-            "name": "facebook",
-            "href": "/",
-            "image": "/images/footer/fb-black.png"
-        },
-        {
             "name": "instagram",
             "href": "/",
             "image": "/images/footer/insta-black.png"
         },
         {
-            "name": "twitter",
+            "name": "facebook",
             "href": "/",
-            "image": "/images/footer/twitter-black.png"
+            "image": "/images/footer/fb-black.png"
         },
         {
             "name": "youtube",
             "href": "/",
             "image": "/images/footer/utube-black.png"
+        },
+        {
+            "name": "twitter",
+            "href": "/",
+            "image": "/images/footer/twitter-black.png"
         }
       ]
 }
