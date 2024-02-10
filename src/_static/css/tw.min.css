@@ -1519,6 +1519,14 @@ label {
   padding-top: 40px;
 }
 
+.pb-48 {
+  padding-bottom: 12rem;
+}
+
+.pb-56 {
+  padding-bottom: 14rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2310,6 +2318,10 @@ label {
 
   .md\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .md\:pb-36 {
+    padding-bottom: 9rem;
   }
 
   .md\:text-left {
