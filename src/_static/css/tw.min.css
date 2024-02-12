@@ -930,6 +930,10 @@ label {
   margin-left: auto;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -1231,16 +1235,8 @@ label {
   text-overflow: clip;
 }
 
-.whitespace-normal {
-  white-space: normal;
-}
-
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.text-wrap {
-  text-wrap: wrap;
 }
 
 .rounded {
@@ -1443,12 +1439,12 @@ label {
   padding-bottom: 0.75rem;
 }
 
-.pb-36 {
-  padding-bottom: 9rem;
-}
-
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-56 {
+  padding-bottom: 14rem;
 }
 
 .pb-8 {
@@ -1487,6 +1483,14 @@ label {
   padding-top: 3rem;
 }
 
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1495,8 +1499,16 @@ label {
   padding-top: 5rem;
 }
 
+.pt-24 {
+  padding-top: 6rem;
+}
+
 .pt-28 {
   padding-top: 7rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .pt-4 {
@@ -1517,14 +1529,6 @@ label {
 
 .pt-\[40px\] {
   padding-top: 40px;
-}
-
-.pb-48 {
-  padding-bottom: 12rem;
-}
-
-.pb-56 {
-  padding-bottom: 14rem;
 }
 
 .text-left {
@@ -1794,11 +1798,6 @@ label {
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
 
-.hover\:text-sm:hover {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1937,6 +1936,10 @@ label {
 
   .md\:ml-10 {
     margin-left: 2.5rem;
+  }
+
+  .md\:mr-0 {
+    margin-right: 0px;
   }
 
   .md\:mr-10 {
@@ -2252,6 +2255,10 @@ label {
     padding-bottom: 7rem;
   }
 
+  .md\:pb-36 {
+    padding-bottom: 9rem;
+  }
+
   .md\:pb-4 {
     padding-bottom: 1rem;
   }
@@ -2304,6 +2311,10 @@ label {
     padding-top: 6rem;
   }
 
+  .md\:pt-28 {
+    padding-top: 7rem;
+  }
+
   .md\:pt-3 {
     padding-top: 0.75rem;
   }
@@ -2318,10 +2329,6 @@ label {
 
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:pb-36 {
-    padding-bottom: 9rem;
   }
 
   .md\:text-left {
@@ -2370,6 +2377,10 @@ label {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:font-bold {
+    font-weight: 700;
   }
 
   .md\:leading-snug {
@@ -2808,8 +2819,8 @@ label {
     text-align: right;
   }
 
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

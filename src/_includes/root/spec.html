@@ -1,9 +1,9 @@
-<div class="pt-10 lg:pt-24">
+<div class="lg:pt-24">
     <div class="flex flex-col">
         {% set count=1 %}
         {% for sp in page.root.spec %}
         {% if count%2 !=0 %}
-        <div class="flex-row lg:inline-flex pt-12 md:pt-14 lg:pt-0">
+        <div class="flex-row lg:inline-flex pt-12 md:pt-12 lg:pt-0">
             <div class="lg:w-1/2 md:w-full">
                 <img src="{{sp.image}}" alt="{{sp.title}}" class="lg:w-full md:w-full w-full object-cover h-[240px] md:h-[500px] lg:h-[600px]" />
             </div>
@@ -13,7 +13,7 @@
                         <div class="container  w-full  md:max-w-[1037px] lg:max-w-[655px]">
                             <div class="mx-6 md:ml-10 lg:ml-[88px] md:mr-10 lg:mr-20 lg:py-8">
                                 <p class="primary-clr text-base md:text-lg font-bold">{{sp.num}}</p>
-                                <p class="primary-clr text-3xl lg:text-5xl lg:pt-2 leading-snug medium whitespace-nowrap">{{sp.title}}</p>
+                                <p class="primary-clr text-3xl md:text-5xl lg:pt-2 leading-snug medium whitespace-nowrap">{{sp.title}}</p>
                                 <p class="text-gray-800 text-sm md:text-base font-serif py-2 lg:py-4 semibold">{{sp.subh}}</p>
                                 <p class="text-gray-800 text-sm md:text-base font-serif leading-6 text-left ">{{sp.desc}}</p>
                                 <button class="primary-clr hover:text-black text-sm font-bold mt-6 md:mt-10">VIEW ROOMS → </button>
@@ -33,7 +33,7 @@
                         <div class="container lg:mx-auto w-full  md:max-w-[1037px] lg:max-w-[655px]">
                             <div class="mx-6 md:mr-10  lg:mr-8 lg:ml-[98px] md:ml-10  lg:py-8">
                                 <p class="primary-clr text-base md:text-lg font-bold">{{sp.num}}</p>
-                                <p class="primary-clr text-3xl lg:text-5xl lg:pt-2 leading-snug medium">{{sp.title}}</p>
+                                <p class="primary-clr text-3xl md:text-5xl lg:pt-2 leading-snug medium">{{sp.title}}</p>
                                 <p class="text-gray-800 text-sm md:text-base font-serif py-2 lg:py-4 semibold">{{sp.subh}}</p>
                                 <p class="text-gray-800 text-sm md:text-base font-serif leading-6 text-left">{{sp.desc}}</p>
                                 <button class="primary-clr hover:text-black text-sm font-bold mt-6 md:mt-10">VIEW ROOMS → </button>
