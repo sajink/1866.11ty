@@ -914,6 +914,10 @@ label {
   margin-bottom: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -938,6 +942,14 @@ label {
   margin-right: 0.75rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -952,46 +964,6 @@ label {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
-.mb-40 {
-  margin-bottom: 10rem;
-}
-
-.mb-32 {
-  margin-bottom: 8rem;
-}
-
-.mb-36 {
-  margin-bottom: 9rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
 }
 
 .block {
@@ -1070,6 +1042,10 @@ label {
   height: 350px;
 }
 
+.h-\[480px\] {
+  height: 480px;
+}
+
 .h-\[576px\] {
   height: 576px;
 }
@@ -1084,62 +1060,6 @@ label {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[880px\] {
-  height: 880px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-\[0px\] {
-  height: 0px;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
-.h-\[480px\] {
-  height: 480px;
-}
-
-.h-3 {
-  height: 0.75rem;
-}
-
-.h-3\/4 {
-  height: 75%;
-}
-
-.h-1\/4 {
-  height: 25%;
-}
-
-.h-2\/3 {
-  height: 66.666667%;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-1\/2 {
-  height: 50%;
-}
-
-.max-h-\[880px\] {
-  max-height: 880px;
 }
 
 .w-1\/2 {
@@ -1603,6 +1523,10 @@ label {
   padding-top: 0.75rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1621,22 +1545,6 @@ label {
 
 .pt-\[40px\] {
   padding-top: 40px;
-}
-
-.pt-0 {
-  padding-top: 0px;
-}
-
-.pt-40 {
-  padding-top: 10rem;
-}
-
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
 }
 
 .text-left {
@@ -1697,11 +1605,6 @@ label {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -2039,6 +1942,10 @@ label {
     margin-bottom: 1rem;
   }
 
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .md\:ml-0 {
     margin-left: 0px;
   }
@@ -2067,36 +1974,16 @@ label {
     margin-top: 2.5rem;
   }
 
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .md\:mt-6 {
     margin-top: 1.5rem;
   }
 
   .md\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .md\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
-  .md\:mb-8 {
-    margin-bottom: 2rem;
-  }
-
-  .md\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .md\:mb-2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .md\:mb-6 {
-    margin-bottom: 1.5rem;
-  }
-
-  .md\:mt-2 {
-    margin-top: 0.5rem;
   }
 
   .md\:mt-auto {
@@ -2151,24 +2038,12 @@ label {
     height: 500px;
   }
 
-  .md\:h-auto {
-    height: auto;
-  }
-
-  .md\:h-\[550px\] {
-    height: 550px;
-  }
-
-  .md\:h-\[55vh\] {
-    height: 55vh;
-  }
-
-  .md\:h-\[50px\] {
-    height: 50px;
-  }
-
   .md\:h-\[520px\] {
     height: 520px;
+  }
+
+  .md\:h-auto {
+    height: auto;
   }
 
   .md\:w-1\/2 {
@@ -2539,16 +2414,6 @@ label {
   .md\:leading-snug {
     line-height: 1.375;
   }
-
-  @media (min-width: 1024px) {
-    .md\:lg\:mt-6 {
-      margin-top: 1.5rem;
-    }
-
-    .md\:lg\:mb-16 {
-      margin-bottom: 4rem;
-    }
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2636,6 +2501,10 @@ label {
     margin-bottom: 0px;
   }
 
+  .lg\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .lg\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -2688,10 +2557,6 @@ label {
     margin-top: 2rem;
   }
 
-  .lg\:mb-16 {
-    margin-bottom: 4rem;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -2740,52 +2605,12 @@ label {
     height: 620px;
   }
 
+  .lg\:h-\[780px\] {
+    height: 780px;
+  }
+
   .lg\:h-screen {
     height: 100vh;
-  }
-
-  .lg\:h-\[1880px\] {
-    height: 1880px;
-  }
-
-  .lg\:h-\[880px\] {
-    height: 880px;
-  }
-
-  .lg\:h-\[88vh\] {
-    height: 88vh;
-  }
-
-  .lg\:h-\[8\] {
-    height: 8;
-  }
-
-  .lg\:h-\[80\] {
-    height: 80;
-  }
-
-  .lg\:h-\[80\%\] {
-    height: 80%;
-  }
-
-  .lg\:h-\[0\%\] {
-    height: 0%;
-  }
-
-  .lg\:h-\[90\%\] {
-    height: 90%;
-  }
-
-  .lg\:h-\[190\%\] {
-    height: 190%;
-  }
-
-  .lg\:h-\[80px\] {
-    height: 80px;
-  }
-
-  .lg\:h-\[850px\] {
-    height: 850px;
   }
 
   .lg\:w-1\/2 {
@@ -3020,10 +2845,6 @@ label {
 
   .lg\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .lg\:pt-1 {
-    padding-top: 0.25rem;
   }
 
   .lg\:text-right {
