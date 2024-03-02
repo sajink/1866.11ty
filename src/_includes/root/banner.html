@@ -1,13 +1,31 @@
-<div class="relative h-[50vh] md:h-[60vh] lg:h-[90vh] bg-cover bg-center" style="background-image: url('/images/hotel-bg.jpg');">
+<div class="relative h-[50vh] md:h-[60vh] lg:h-[90vh] bg-cover bg-center slideshow" style="background-image: url('/images/hotel-bg.jpg');">
     <div class="overlay"></div>
     <div class="relative z-1">
         {% include "header.html" %}
     </div>
-    <div class=""></div>
     <div class="pt-[40px] md:pt-[8%] lg:pt-[8%] flex items-center justify-center relative z-1">
         <div class="text-white text-center">
             <p class="text-base font-bold">WELCOME TO</p>
-            <p class="text-5xl medium md:text-9xl pt-4 shadow">Heritage 1866</p>
+            <p id="slideshowText" class="text-5xl medium md:text-9xl pt-4 shadow">Heritage 1866</p>
         </div>
     </div>   
 </div>
+
+<script>
+    var images = ['/images/hotel-bg.jpg', '/images/gallery/img1.jpg', '/images/gallery/img2.jpg', '/images/gallery/img3.jpg', '/images/gallery/img4.jpg'];
+    var currentIndex = 0;
+    var slideshowText = document.getElementById('slideshowText');
+    var slideshowContainer = document.querySelector('.slideshow');
+
+    function startSlideshow() {
+        setInterval(changeSlide, 3000); // Change image every 5 seconds
+    }
+
+    function changeSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        slideshowContainer.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+    }
+
+    startSlideshow();
+</script>
+

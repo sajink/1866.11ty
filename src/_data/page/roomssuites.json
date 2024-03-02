@@ -9,5 +9,21 @@
     ],
     "icons":[
         {"cube":"/images/rooms/cube.png","calt":"cube","wifi":"/images/rooms/wifi.png","walt":"wifi","snow":"/images/rooms/snow.png","salt":"snow","bed":"/images/rooms/bed.png","balt":"bed","breakfast":"/images/rooms/breakfast.png","bfalt":"breakfast"}
+    ],
+
+    "room_detail": [
+        {"image":"/images/roomdp/ac.png","title":"Air conditioner"},
+        {"image":"/images/roomdp/tv.png","title":"Cable TV"},
+        {"image":"/images/roomdp/wifi.png","title":"Wifi & Internet"},
+        {"image":"/images/roomdp/towel.png","title":"Towels"},
+        {"image":"/images/roomdp/slipper.png","title":"Slippers"},
+        {"image":"/images/roomdp/dryer.png","title":"Hair Dryer"},
+        {"image":"/images/roomdp/shampoo.png","title":"Shampoo"},
+        {"image":"/images/roomdp/espresso.png","title":"Espresso Machine"},
+        {"image":"/images/roomdp/box.png","title":"Safe Box"},
+        {"image":"/images/roomdp/drinks.png","title":"Welcome Drinks"},   
+        {"image":"/images/roomdp/pet.png","title":"Pet Friendly"},
+        {"image":"/images/roomdp/ref.png","title":"In-room Refrigerator"}
     ]
+
 }

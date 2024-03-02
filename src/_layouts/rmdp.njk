@@ -1,0 +1,339 @@
+---
+layout: base.njk
+---
+
+<div class="relative h-[38vh] md:h-[52vh] lg:h-[55vh] bg-cover bg-no-repeat"
+    style="background-image: url('/images/rooms/img2.jpg');">
+    <div class="overlay"></div>
+    <div class="relative z-1">
+        {% include "header.html" %}
+    </div>
+</div>
+<div
+    class="flex-row lg:flex mx-6 md:mx-14 lg:mx-0  max-w-[1100px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
+    <div class="container lg:ml-20">
+        <p class="primary-clr text-3xl md:text-5xl pt-6 md:pt-14 leading-snug medium">Deluxe room</p>
+        <p class="text-sm  font-serif pt-2 md:pt-3">560 ft² / 52 m² / Park View / 2 Guests</p>
+        <div class="inline-flex flex-wrap gap-4 md:space-x-6 pt-5">
+            <div class="flex items-center gap-2">
+                <img src="/images/roomdp/feet.png" class="">
+                <h6 class="text-sm font-medium">560 ft2</h6>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="/images/roomdp/guest.png" class="">
+                <h6 class="text-sm font-medium">2 Guests</h6>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="/images/roomdp/bed.png" class="">
+                <h6 class="text-sm font-medium">1 Bed</h6>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <img src="/images/roomdp/bathroom.png" class="">
+                <h6 class="text-sm font-medium">1 Bathroom</h6>
+            </div>
+        </div>
+        <div class="container  font-serif">
+            <p class="text-sm md:text-base  pt-4 md:pt-6 lg:pt-4 ">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus. </p>
+            <p class="text-sm md:text-base pt-2">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+                enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                Integer tincidunt. </p>
+        </div>
+
+        <div class="pt-6 md:pt-10">
+            <h4 class="primary-clr text-2xl md:text-3xl md:py-2 leading-snug medium">Room Amenities</h4>
+            <div class="grid md:grid-cols-2 gap-4 mt-4 font-serif">
+                {% for r in page.roomssuites.room_detail %}
+                <div class="flex items-center gap-4">
+                    <img src="{{ r.image }}" class="">
+                    <h6 class="text-sm md:text-base font-medium">{{ r.title }}</h6>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="pt-10">
+            <h4 class="primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
+            <ul class="list-disc text-sm md:text-base font-serif pt-4 space-y-2 ml-2">
+                <li>Private balcony</li>
+                <li>140x200 cm Elite bed</li>
+                <li>Upholstered seat beside the panoramic window</li>
+                <li>TV-UHD screen for watching mountaineering films</li>
+                <li>Writing desk with USB ports for documenting your adventures</li>
+                <li>Room safe for your top mountain photos</li>
+                <li>Service station with Lavazza coffee machine, kettle and tea</li>
+                <li>Bathroom with rain shower</li>
+                <li>Comfortable terry towels and bathrobes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mx-auto">
+        <div class="flex lg:justify-center pt-10 md:pt-24">
+            <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                <img src="/images/rooms/img1.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                    onclick="openFullScreen('/images/rooms/img1.jpg')" style="max-width: 100%;">
+                <img src="/images/rooms/img2.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                    onclick="openFullScreen('/images/rooms/img2.jpg')" style="max-width: 100%;">
+                <img src="/images/rooms/img3.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                    onclick="openFullScreen('/images/rooms/img3.jpg')" style="max-width: 100%;">
+                <img src="/images/rooms/img4.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                    onclick="openFullScreen('/images/rooms/img4.jpg')" style="max-width: 100%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal -->
+    <div id="myModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeFullScreen()">&times;</span>
+        <img class="modal-content" id="modalImg" style="max-width: 90%; max-height: 90%;">
+        <button class="next" onclick="nextImage()">&#10095;</button>
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+    </div>
+
+
+</div>
+
+<div class="pt-10 mx-6 md:mx-14 lg:mx-0 max-w-[800px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
+    <div class="primary-clr text-2xl md:text-3xl md:py-2 medium">Other Rooms</div>
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-10 pt-6">
+        <div class="overflow-hidden relative group">
+            <div
+                class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
+                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <div
+                        class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
+                        <div class="relative z-1 opacity-100">
+                            <p class="font-serif text-sm md:text-base">Welcome to your urban oasis inspired by the
+                                natural beauty and calming energy of Central Park. Relax on your private terrace or
+                                snuggle up in your king size bed and take in the views of Central Park.</p>
+                            <p class="font-serif text-sm md:text-base">Discover more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img alt=""
+                class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[500px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                src="/images/rooms/img1.jpg" />
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
+                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
+                    <div
+                        class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
+                        Apartment King</div>
+                    <div
+                        class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
+                        560 ft² / 52 m² / Park View / 2 Guests</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="overflow-hidden relative group">
+            <div
+                class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
+                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <div
+                        class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
+                        <div class="relative z-1 opacity-100">
+                            <p class="font-serif text-sm md:text-base">Welcome to your urban oasis inspired by the
+                                natural beauty and calming energy of Central Park. Relax on your private terrace or
+                                snuggle up in your king size bed and take in the views of Central Park.</p>
+                            <p class="font-serif text-sm md:text-base">Discover more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img alt=""
+                class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[500px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                src="/images/rooms/img2.jpg" />
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
+                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
+                    <div
+                        class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
+                        Apartment King</div>
+                    <div
+                        class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
+                        560 ft² / 52 m² / Park View / 2 Guests</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-hidden relative group">
+            <div
+                class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
+                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <div
+                        class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
+                        <div class="relative z-1 opacity-100">
+                            <p class="font-serif text-sm md:text-base">Welcome to your urban oasis inspired by the
+                                natural beauty and calming energy of Central Park. Relax on your private terrace or
+                                snuggle up in your king size bed and take in the views of Central Park.</p>
+                            <p class="font-serif text-sm md:text-base">Discover more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img alt=""
+                class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[500px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
+                src="/images/rooms/img4.jpg" />
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
+                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
+                    <div
+                        class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
+                        Apartment King</div>
+                    <div
+                        class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
+                        560 ft² / 52 m² / Park View / 2 Guests</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="flex-row md:flex pt-12 md:pt-16">
+    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
+        style="background-image: url('/images/rooms/img2.jpg');">
+        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
+
+            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">OUR LOCATION</div>
+            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Getting Here</div>
+            <div class="semibold  text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
+            <div class="semibold  text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
+            <div class="semibold  text-base text-center">Tel: +1 212-555-6699</div>
+            <div class="semibold  text-base text-center pb-4">Email: information@cozystay.com</div>
+            <button
+                class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                <a class="hover:no-underline" href="/">Get Directions</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
+        style="background-image: url('/images/rooms/img3.jpg');">
+        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
+            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">BOOK A ROOM</div>
+            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Spend Your Time With Us</div>
+            <div class="semibold  text-sm md:text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
+            <div class="semibold  text-sm md:text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
+            <div class="semibold  text-sm md:text-base text-center">Tel: +1 212-555-6699</div>
+            <div class="semibold  text-sm md:text-base text-center pb-4">Email: information@cozystay.com</div>
+            <button
+                class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                <a class="hover:no-underline" href="/">Reserve your stay</a>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    /* Modal container */
+    .modal {
+        position: fixed;
+        z-index: 99999;
+        padding-top: 100px;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* Change to column layout to position buttons vertically */
+    }
+
+    /* Modal content */
+    .modal-content {
+        margin: auto;
+        display: block;
+    }
+
+    /* Close button */
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Next button */
+    .next {
+        position: absolute;
+        right: 20px;
+        /* Adjust the right position */
+        top: calc(50% - 20px);
+        /* Center vertically */
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Previous button */
+    .prev {
+        position: absolute;
+        left: 20px;
+        /* Adjust the left position */
+        top: calc(50% - 20px);
+        /* Center vertically */
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
+
+<script>
+    // Open the modal
+    var images = [
+        "/images/rooms/img1.jpg",
+        "/images/rooms/img2.jpg",
+        "/images/rooms/img3.jpg",
+        "/images/rooms/img4.jpg"
+    ];
+    var currentIndex = 0;
+
+    function openFullScreen(imgSrc) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+        currentIndex = images.indexOf(imgSrc);
+    }
+
+    function closeFullScreen() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        var modalImg = document.getElementById("modalImg");
+        modalImg.src = images[currentIndex];
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        var modalImg = document.getElementById("modalImg");
+        modalImg.src = images[currentIndex];
+    }
+
+</script>
