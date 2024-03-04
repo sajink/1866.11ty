@@ -3,8 +3,9 @@ module.exports = {
   safelist: ['hline','vline'],
   theme: {
     fontFamily: {
+      fraunces: ['Fraunces', 'serif'],
+      serif: ['Baskervville', 'serif'],
       sans: ['EB Garamond', 'serif'],
-      serif: ['Karla', 'sans-serif'],
     },
   },
   plugins: [],

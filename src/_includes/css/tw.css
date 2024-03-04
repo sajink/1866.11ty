@@ -54,6 +54,7 @@
 
   .primary-clr {
       color: rgb(194, 154, 92);
+      @apply font-fraunces;
   }
 
   .ftrtext a {
@@ -96,6 +97,10 @@
 
 .social-icon:hover {
   filter: brightness(0) invert(0.9);
+}
+
+.learn_more{
+  @apply primary-clr hover:text-black text-sm mb-8 lg:mb-0 lg:mt-6 tracking-wider;
 }
 
 }
