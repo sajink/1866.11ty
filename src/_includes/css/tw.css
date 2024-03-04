@@ -22,21 +22,29 @@
   h1 {
     @apply text-slate-800 font-bold leading-normal text-xl;
   }
+
   h2 {
     @apply text-slate-800 font-bold leading-normal text-lg;
   }
+
   h3 {
     @apply text-slate-800 font-bold leading-normal;
   }
+
   h4 {
     @apply text-slate-800 font-bold leading-normal text-sm;
   }
-  table, table td, table th {
+
+  table,
+  table td,
+  table th {
     @apply border-collapse border border-gray-300;
   }
+
   label {
     @apply block mb-2 text-sm leading-tight text-slate-800 font-normal lg:leading-normal lg:text-base md:leading-normal md:text-base;
   }
+
   #leadForm input[type="text"] {
     @apply block w-full border border-gray-300 rounded leading-7 text-base text-slate-900 font-normal lg:text-base lg:leading-loose md:text-lg md:leading-loose pl-3;
 
@@ -52,9 +60,13 @@
     @apply border-gray-900 border-l mx-8 w-px h-full inline-block;
   }
 
+  .bg-white {
+    background-color: white !important;
+  }
+
   .primary-clr {
-      color: rgb(194, 154, 92);
-      @apply font-fraunces;
+    color: rgb(194, 154, 92);
+    @apply font-fraunces;
   }
 
   .ftrtext a {
@@ -74,7 +86,7 @@
   .semibold {
     @apply font-semibold;
   }
-  
+
   .overlay {
     position: absolute;
     top: 0;
@@ -82,25 +94,29 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.45);
- }
+  }
 
- .shadow {
-  text-shadow: 
-      0 0 5px rgba(0, 0, 0, 0.7),
-      0 0 30px rgba(0, 0, 0, 0.5),
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .shadow {
+    text-shadow:
+      0 0 15px rgba(0, 0, 0, 0.7),
+      0 0 20px rgba(0, 0, 0, 0.5),
       0 0 30px rgba(0, 0, 0, 0.3);
- }
- 
- .social-icon {
-  filter: brightness(0) invert(1);
-}
+  }
 
-.social-icon:hover {
-  filter: brightness(0) invert(0.9);
-}
+  .social-icon {
+    filter: brightness(0) invert(1);
+  }
 
-.learn_more{
-  @apply primary-clr hover:text-black text-sm mb-8 lg:mb-0 lg:mt-6 tracking-wider;
-}
+  .social-icon:hover {
+    filter: brightness(0) invert(0.9);
+  }
+
+  .learn_more {
+    @apply primary-clr hover:text-black text-sm mb-8 lg:mb-0 lg:mt-6 tracking-wider;
+  }
 
 }

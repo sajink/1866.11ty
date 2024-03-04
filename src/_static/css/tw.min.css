@@ -515,7 +515,9 @@ h4 {
   color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
-table, table td, table th {
+table,
+  table td,
+  table th {
   border-collapse: collapse;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -735,6 +737,10 @@ label {
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
+.bg-white {
+  background-color: white !important;
+}
+
 .primary-clr {
   color: rgb(194, 154, 92);
   font-family: Fraunces, serif;
@@ -767,10 +773,14 @@ label {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .shadow {
-  text-shadow: 
-      0 0 5px rgba(0, 0, 0, 0.7),
-      0 0 30px rgba(0, 0, 0, 0.5),
+  text-shadow:
+      0 0 15px rgba(0, 0, 0, 0.7),
+      0 0 20px rgba(0, 0, 0, 0.5),
       0 0 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -877,6 +887,10 @@ label {
 
 .order-1 {
   order: 1;
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .mx-2 {
@@ -1064,6 +1078,10 @@ label {
   height: 0.625rem;
 }
 
+.h-3 {
+  height: 0.75rem;
+}
+
 .h-96 {
   height: 24rem;
 }
@@ -1138,6 +1156,10 @@ label {
 
 .w-2\.5 {
   width: 0.625rem;
+}
+
+.w-3 {
+  width: 0.75rem;
 }
 
 .w-\[120px\] {
@@ -1294,6 +1316,12 @@ label {
   gap: 2rem;
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
@@ -1350,6 +1378,10 @@ label {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-md {
@@ -1413,6 +1445,11 @@ label {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1468,6 +1505,10 @@ label {
 .object-right {
   -o-object-position: right;
      object-position: right;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-2 {
@@ -1578,6 +1619,10 @@ label {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .pb-56 {
@@ -1902,6 +1947,10 @@ label {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:bg-white:hover {
+  background-color: white !important;
 }
 
 .hover\:primary-clr:hover {
@@ -2631,6 +2680,10 @@ label {
     position: relative;
   }
 
+  .lg\:bottom-\[8\%\] {
+    bottom: 8%;
+  }
+
   .lg\:left-\[50\%\] {
     left: 50%;
   }
@@ -3093,10 +3146,6 @@ label {
 
   .lg\:leading-tight {
     line-height: 1.25;
-  }
-
-  .lg\:leading-snug {
-    line-height: 1.375;
   }
 
   .lg\:tracking-widest {
