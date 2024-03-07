@@ -87,7 +87,7 @@
     @apply font-semibold;
   }
 
-  .overlay {
+  .overlay-bg {
     position: absolute;
     top: 0;
     left: 0;

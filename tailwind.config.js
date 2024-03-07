@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       fraunces: ['Fraunces', 'serif'],
-      serif: ['Baskervville', 'serif'],
-      sans: ['EB Garamond', 'serif'],
+      baskervville: ['Baskervville', 'serif'],
     },
   },
   plugins: [],

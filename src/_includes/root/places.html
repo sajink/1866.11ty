@@ -1,17 +1,34 @@
 <div class="mx-6 md:mx-[5%] lg:mx-0">
-    <div class="text-[#1A1A1A] text-sm text-center font-fraunces semibold tracking-widest pt-14 md:pt-20 lg:pt-40">LOCAL ATTRACTION</div>
-    <p class="primary-clr text-4xl md:text-6xl text-center md:py-2 leading-snug medium">Place of Interest</p>
+    <div class="text-[#1A1A1A] text-xs md:text-sm text-center font-fraunces semibold tracking-widest pt-14 md:pt-20 lg:pt-36">LOCAL EXPERIENCES</div>
+    <p class="primary-clr text-4xl md:text-6xl text-center md:py-4 leading-snug medium">Things To Do</p>
     <div class="mx-auto text-center lg:max-w-[1100px] pb-8 md:pb-16 ">
-    <p class="text-sm md:text-base font-serif lg:mx-28">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
+    <p class="text-sm md:text-base lg:mx-28">Delight in culinary treasures, wander historic forts, celebrate local festivals, and bask in mesmerising beach sunsets. Explore the warmth and essence of Thalassery.</p>
 </div>
 </div>
-<div class="flex justify-center items-center pb-8 lg:pb-32">
+<div class="flex justify-center items-center  pb-2 lg:pb-8">
     <div class="flex-row md:flex justify-around w-4/4">
       {% for p in page.root.places %}
       <div class="text-center c">
-        <img src="{{p.image}}" alt="{{p.name}}" class="w-full h-auto">
-        <div class="primary-clr text-xl md:text-3xl pt-3 pb-10 lg:pt-4 leading-snug font-bold">{{p.name}}</div>
+        <img src="{{p.image}}" alt="{{p.name}}" class="w-full h-[318px] md:h-[156px] lg:h-[316px] object-cover">
+        <div class="primary-clr text-xl md:text-2xl lg:text-3xl pt-3 pb-10 lg:pt-4 leading-snug semibold">{{p.name}}</div>
       </div>
       {% endfor %}
     </div>
+</div>
+
+<div class="flex items-center justify-center md:pt-0  pb-16 lg:pb-32">
+  <button
+      class="ftrtext lg:inline-block py-2 px-6 md:w-full md:max-w-[213px] primary-clr border text-sm flex items-center justify-center hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+      <a class="hover:no-underline" href="/experience">MORE EXPERIENCES</a>
+  </button>
+</div>
+
+<div  class="mx-auto text-center lg:max-w-[1100px]">
+  <div class="flex items-center justify-center">
+    <img src="/images/about-us/divider.svg" alt="divider">
+</div>
+  <div class="text-[#1A1A1A] text-base md:text-3xl text-center font-fraunces semibold py-6 md:py-16">Discover the charm of Thalassery at The Heritage 1866. Your unforgettable experience awaits!</div>
+  <div class="flex items-center justify-center pb-16">
+    <img src="/images/about-us/divider.svg" alt="divider">
+</div>
 </div>

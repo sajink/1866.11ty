@@ -6,71 +6,188 @@ layout: default.njk
     {% include "header.html" %}
     <p class="text-white text-center text-5xl md:text-9xl pb-12 md:py-12 lg:py-24">Rooms & Suites</p>
 </div>
-<div class="mx-6 md:mx-[10%] lg:mx-[27%]">
-    <div class="primary-clr text-4xl md:text-7xl text-center md:pb-4 leading-snug pt-12 md:pt-20 lg:pt-32">Raj Vilas Palace</div>
-    <p class="text-sm md:text-base font-serif text-center pb-8 md:pb-16">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
+
+
+
+<div class="mx-6 md:mx-[10%] lg:mx-[30%]">
+    <div class="text-[#1A1A1A] text-sm md:text-xs text-center font-bold pt-24 md:pt-28 lg:pt-28 tracking-widest font-fraunces">WELCOME TO RAJ VILAS PALACE</div>
+    <p class="primary-clr text-3xl md:text-4xl text-center  py-2 medium tracking-tight" style="line-height: 1.25;">Explore our refined accommodation options and find the perfect space for your stay.</p>
+    <p class="text-sm md:text-base   text-center pb-8 md:pb-14">All rooms have a bathroom with bathtub and/or shower, cable television/radio, free WIFI and mini bar. In addition, all rooms are equipped with a Nespresso coffee machine. Most rooms are carpeted, some have parquet flooring.</p>
 </div>
-<div class="px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pb-10 md:pb-20">
-    {% for r in page.roomssuites.rooms %}
-    <div class="md:mb-4 lg:mb-6">
-        <img src="{{r.image}}" alt="{{r.alt}}" class="w-full h-[280px] lg:h-[555px]">
-        <div class="pt-3">
-            <p class="text-2xl md:text-3xl font-fraunces semibold md:font-bold">{{r.title}}</p>
-            <p class="text-sm md:text-base font-serif tracking-tight">{{r.desc}}</p>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 pt-1 md:pt-4">
-                {% for i in page.roomssuites.icons %}
-                {% if r.space %}
-                <div class="inline-flex gap-4">
-                    <div class="pt-1">
-                        <img src="{{ i.cube }}" alt="{{ i.calt }}" class="w-[17px] h-[17px]">
-                    </div>
-                    <div class="text-sm md:text-base font-serif tracking-tight">{{ r.space }}</div>
-                </div>
-                {% endif %}
 
-                {% if r.wifi %}
-                <div class="inline-flex gap-4">
-                    <div class="pt-1">
-                        <img src="{{ i.wifi }}" alt="{{ i.walt }}" class="w-[17px] h-[17px]">
-                    </div>
-                    <div class="text-sm md:text-base font-serif tracking-tight">{{ r.wifi }}</div>
-                </div>
-                {% endif %}
+<div id="app" class="container mx-auto">
+    <div class="options flex justify-center mb-4 gap-6 text-base md:text-base font-bold">
+        <button class="option hover:primary-clr uppercase" @click="selectOption(0)" :class="{ 'yellow-underline': selectedOption === 0 }">Deluxe Suite</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(1)" :class="{ 'yellow-underline': selectedOption === 1 }">Royal Suite</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(2)" :class="{ 'yellow-underline': selectedOption === 2 }">Heritage Suite</button>
+    </div>
 
-                {% if r.ac %}
-                <div class="inline-flex gap-4">
-                    <div class="pt-1">
-                        <img src="{{ i.snow }}" alt="{{ i.salt }}" class="w-[17px] h-[17px]">
-                    </div>
-                    <div class="text-sm md:text-base font-serif tracking-tight">{{ r.ac }}</div>
-                </div>
-                {% endif %}
 
-                {% if r.bed %}
-                <div class="inline-flex gap-4">
-                    <div class="pt-1">
-                        <img src="{{ i.bed }}" alt="{{ i.balt }}" class="w-[17px] h-[17px]">
-                    </div>
-                    <div class="text-sm md:text-base font-serif tracking-tight">{{ r.bed }}</div>
-                </div>
-                {% endif %}
+    <div id="content">
+    {% set i=0 %}
+    {% for rm in page.roomssuites.room_type %}
+        <div id="content-{{ i }}" class="content" v-show="selectedOption === {{ i }}">
+            <div class="mx-[5%] md:mx-8 lg:mx-auto max-w-[400px] md:max-w-[900px] lg:max-w-[1300px]">
+                <div class="flex-row md:inline-flex pt-10 md:pt-20 pb-8 md:pb-16 lg:pb-20 md:space-x-10">
 
-                {% if r.breakfast %}
-                <div class="inline-flex gap-4">
-                    <div class="pt-1">
-                        <img src="{{ i.breakfast }}" alt="{{ i.bfalt }}" class="w-[17px] h-[17px]">
+                    <div class="flex-1 md:w-1/2">
+                        <img src="{{rm.image}}" alt={{rm.title}} class="w-[650px] h-[467px]">
                     </div>
-                    <div class="text-sm md:text-base font-serif tracking-tight">{{ r.breakfast }}</div>
+                    <div class="flex-1 md:mx-[1%] tracking-tight md:w-1/2">
+                        <div class="md:pt-4 lg:pt-10">
+                            <div class="mx-6 lg:py-8">
+                                <p class="text-xs lg:pt-2 semibold whitespace-nowrap tracking-wider">WELCOME TO COZYSTAY APARTHOTEL</p>
+                                <p class="primary-clr text-3xl md:text-5xl lg:pt-2 leading-snug medium whitespace-nowrap">{{rm.title}}</p>
+                                <p class="text-gray-800 text-sm md:text-base  ">{{rm.desc}}</p>
+                                <p class="primary-clr text-xs tracking-wider mt-6 md:mt-10">CALL US FOR MORE INFORMATION</p>
+                                <button class="hover:primary-clr text-black text-2xl tracking-wider">+41 22 345 66 77</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {% endif %}
-                {% endfor %}
 
+                <div class="flex justify-center">
+                    <div class="min-w-screen-lg">
+                        <div class="flex-row md:flex justify-between gap-11">
+                            {% for t in page.roomssuites.rooms_list %}
+                            {% if t.type == rm.title %}
+                            <div class="">
+                                <div style="overflow: hidden;">
+                                    <img src="{{t.image}}" alt={{t.title}} class="w-[404px] h-[269px] transition-transform hover:scale-105">
+                                </div>
+                                <div class="mt-4 w-[404px] text-center">
+                                    <h3 class="text-3xl font-fraunces">{{t.title}}</h3>
+                                    <p class="primary-clr text-sm">{{t.spec}}</p>
+                                    <p class="text-sm md:text-base text-gray-600 ">{{t.desc}}</p>
+                                    <button class="primary-clr hover:text-black text-sm md:text-base mt-2 md:mt-4">
+                                        <a href={{t.link}} class="hover:no-underline">Discover More → </a>
+                                    </button>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="/room-details">
-                <button class="focus:outline-none primary-clr hover:text-black text-sm lg:mb-0 mt-8 md:mt-8 lg:mt-8 tracking-widest">KNOW MORE →</button>
-            </a>
+        </div>
+         {% set i = i + 1 %}
+         {% endfor %}
+    </div>
+    
+</div>
 
+<div class="bg-[#EAE3DC]">
+    <div class="justify-center max-w-[400px] md:max-w-[850px] lg:max-w-[1300px] mx-8 lg:mx-auto mt-20 md:mt-24 py-10">
+        <div class="flex-row md:flex md:gap-20 lg:gap-40">
+            <div class="md:w-1/2">
+                <div class="text-xs">THE ESSENTIAL IN-ROOM AMENITIES</div>
+                <div class="text-2xl md:text-4xl medium mt-4 md:mt-6">Our spaces have all the essentials you need for your stay.</div>
+            </div>
+            <div class="text-sm md:text-base text-gray-600 md:w-1/2 mt-8 md:mt-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</div>
+        </div>
+
+        <div class="flex flex-wrap justify-left md:justify-center mt-8 md:mt-12 lg:mt-16">
+            <!-- First Row -->
+            {% for rm in page.roomssuites.room_essentials %}
+            <div class="w-full md:w-1/2 lg:w-1/4 md:p-4 lg:p-8">
+                <div>
+                    <img src="{{rm.image}}" alt={{rm.title}}>
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold">{{rm.title}}</h3>
+                        <p class="text-sm md:text-base text-gray-600">Lorem ipsum proin gravida velit auctor sde re sit amet space.</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
 </div>
+
+<div class="flex-row md:flex">
+    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
+         style="background-image: url('/images/rooms/img2.jpg');">
+        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
+
+            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">OUR LOCATION</div>
+            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Getting Here</div>
+            <div class="semibold  text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
+            <div class="semibold  text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
+            <div class="semibold  text-base text-center">Tel: +1 212-555-6699</div>
+            <div class="semibold  text-base text-center pb-4">Email: information@cozystay.com</div>
+            <button class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                <a class="hover:no-underline" href="/">Get Directions</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
+         style="background-image: url('/images/rooms/img3.jpg');">
+        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
+            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">BOOK A ROOM</div>
+            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Spend Your Time With Us</div>
+            <div class="semibold  text-sm md:text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
+            <div class="semibold  text-sm md:text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
+            <div class="semibold  text-sm md:text-base text-center">Tel: +1 212-555-6699</div>
+            <div class="semibold  text-sm md:text-base text-center pb-4">Email: information@cozystay.com</div>
+            <button class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                <a class="hover:no-underline" href="/">Reserve your stay</a>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            selectedOption: 0
+        },
+        methods: {
+            selectOption(option) {
+                this.selectedOption = option;
+            }
+        }
+    });
+</script>
+<script>
+    function showContent(index) {
+        // Hide all content divs
+        var contentDivs = document.querySelectorAll('.content');
+        contentDivs.forEach(function (div) {
+            div.style.display = 'none';
+        });
+
+        // Show the selected content div
+        var selectedContentDiv = document.getElementById('content-' + index);
+        if (selectedContentDiv) {
+            selectedContentDiv.style.display = 'block';
+        }
+    }
+
+    // Show the content for the default option (Option 1)
+    showContent(0);
+</script>
+<style>
+    .yellow-underline {
+        text-decoration: underline;
+        text-decoration-color: #C29A5C;
+        text-underline-offset: 8px; /* Distance of 2px from the text */
+        text-decoration-thickness: 3px; /* Underline thickness of 2px */
+    }
+</style>

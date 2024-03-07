@@ -24,6 +24,37 @@
         {"image":"/images/roomdp/drinks.png","title":"Welcome Drinks"},   
         {"image":"/images/roomdp/pet.png","title":"Pet Friendly"},
         {"image":"/images/roomdp/ref.png","title":"In-room Refrigerator"}
+    ],
+
+    "room_essentials": [
+        {"image":"/images/rooms/car.png","title":"Airport Pick-up Service"},
+        {"image":"/images/rooms/car.png","title":"Housekeeper Services"},
+        {"image":"/images/rooms/car.png","title":"Wifi & Internet"},
+        {"image":"/images/rooms/car.png","title":"Laundry Services"},
+        {"image":"/images/rooms/car.png","title":"Breakfast in Bed"},
+        {"image":"/images/rooms/car.png","title":"Private Parking Space"},
+        {"image":"/images/rooms/car.png","title":"Fitness Center"},
+        {"image":"/images/rooms/car.png","title":"Infinity Pool"}
+    ],
+
+    "room_type": [
+        {"image":"/images/rooms/img3.jpg","title":"Deluxe Suite","desc":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."},
+        {"image":"/images/rooms/img2.jpg","title":"Royal Suite","desc":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."},
+        {"image":"/images/rooms/img1.jpg","title":"Heritage Suite","desc":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."}
+    ],
+
+    "rooms_list":[
+        {"type":"Deluxe Suite","image":"/images/rooms/img1.jpg","title":"Deluxe Penthouse","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+        {"type":"Deluxe Suite","image":"/images/rooms/img2.jpg","title":"Avenue View Penthouse","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+        {"type":"Deluxe Suite","image":"/images/rooms/img3.jpg","title":"Park View Penthouse","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+
+        {"type":"Royal Suite","image":"/images/rooms/img1.jpg","title":"Deluxe","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+        {"type":"Royal Suite","image":"/images/rooms/img2.jpg","title":"Avenue View","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+        {"type":"Royal Suite","image":"/images/rooms/img3.jpg","title":"Park View","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+
+        {"type":"Heritage Suite","image":"/images/rooms/img1.jpg","title":"Penthouse","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+        {"type":"Heritage Suite","image":"/images/rooms/img2.jpg","title":"View Penthouse","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"},
+        {"type":"Heritage Suite","image":"/images/rooms/img3.jpg","title":"Park Penthouse","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Welcome to your urban oasis inspired by the natural beauty and calming energy of Central Park. Relax on your private terrace or snuggle up in your king size bed and take in the views of Central Park.","link":"/room-details"}
     ]
 
 }

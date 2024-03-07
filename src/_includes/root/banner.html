@@ -1,12 +1,12 @@
-<div class="relative h-[50vh] md:h-[60vh] lg:h-[90vh] bg-cover bg-center slideshow" style="background-image: url('/images/hotel-bg.jpg'); transition: background-image 0.5s ease;" onclick="changeSlide()">
-    <div class="overlay"></div>
+<div class="relative h-[50vh] md:h-[58vh] lg:h-[90vh] bg-cover bg-center slideshow" style="background-image: url('/images/home-slide/H1.jpeg');" onclick="changeSlide()">
+    <div class="overlay-bg"></div>
     <div class="relative z-1">
         {% include "header.html" %}
     </div>
-    <div class="pt-[40px] md:pt-[8%] lg:pt-[8%] flex items-center justify-center relative z-1">
+    <div class="pt-[40px] md:pt-20 lg:pt-44 flex items-center justify-center relative z-1">
         <div class="text-white text-center font-fraunces overflow-hidden">
-            <p class="text-sm semibold tracking-widest m-0 p-0">WELCOME TO</p>
-            <p id="slideshowText" class="text-5xl medium md:text-9xl pt-4 pb-5 shadow m-0 p-0">Heritage 1866</p>
+            <p class="text-3xl semibold tracking-widest m-0 p-0">Step Back in Time at</p>
+            <p id="slideshowText" class="text-5xl medium md:text-8xl lg:text-9xl pt-4 pb-5 shadow m-0 p-0">The Heritage 1866</p>
         </div>
     </div>
     <div class="absolute bottom-0 lg:bottom-[8%] left-0 right-0 flex justify-center mb-4">
@@ -15,14 +15,14 @@
 </div>
 
 <script>
-    var images = ['/images/hotel-bg.jpg', '/images/gallery/img1.jpg', '/images/gallery/img2.jpg', '/images/gallery/img3.jpg', '/images/gallery/img4.jpg', '/images/slide/img1.jpg', '/images/slide/img2.jpg', '/images/slide/img3.jpg', '/images/slide/img4.jpg', '/images/gallery/img3.jpg'];
+    var images = ['/images/home-slide/H1.jpeg', '/images/home-slide/H2.jpeg', '/images/home-slide/H3.jpeg', '/images/home-slide/H4.jpeg', '/images/home-slide/H5.jpeg', '/images/home-slide/H6.jpeg', '/images/home-slide/H7.jpeg', '/images/home-slide/H8.jpeg', '/images/home-slide/H9.jpeg', '/images/home-slide/H10.jpeg'];
     var currentIndex = 0;
     var slideshowText = document.getElementById('slideshowText');
     var slideshowContainer = document.querySelector('.slideshow');
     var dotContainer = document.getElementById('dotContainer');
 
     function startSlideshow() {
-        setInterval(changeSlide, 5000);
+        setInterval(changeSlide, 6000);
         updateDots();
     }
 
@@ -45,10 +45,10 @@
             if (i === currentIndex) {
                 dot.classList.add('bg-white');
             }
-            dot.addEventListener('click', function() {
+            dot.addEventListener('click', function () {
                 var newIndex = parseInt(this.getAttribute('data-index'));
                 if (newIndex !== currentIndex) {
-                    currentIndex = newIndex-1;
+                    currentIndex = newIndex - 1;
                     slideshowContainer.style.backgroundImage = 'url(' + images[currentIndex] + ')';
                     updateDots();
                 }

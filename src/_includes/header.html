@@ -8,7 +8,7 @@
                 <img src="/images/insta.png" alt="logo" class="social-icon">
             </a>                     
         </div>
-        <img class="pl-5 w-[120px] md:w-[175px] h-auto pt-2 md:pt-0" src="/images/site-logo.svg" alt="logo" />       
+        <img class="pl-5 w-[120px] md:w-[175px] h-auto pt-2 md:pt-0" src="/images/logo-white.svg" alt="logo" />       
         <button class="pr-0 md:pr-6">
             <a class="hover:no-underline hidden md:inline-block py-2 px-6 border border-white transition duration-200 hover:bg-white hover:primary-clr text-sm semibold tracking-widest" href="{{page.topmenu.cta.href}}">{{page.topmenu.cta.title}}</a>
         </button>
@@ -21,10 +21,10 @@
     </nav>
 
     <div class="container mx-auto flex justify-center items-center pt-5">
-        <ul class="hidden transform md:flex md:items-center md:w-auto md:space-x-6" id="menu">
+        <ul class="hidden transform md:flex md:items-center md:w-auto md:space-x-7" id="menu">
         {% for link in page.topmenu.links %}
         {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
-        <li><a href="{{ link.href }}" class="text-sm  font-bold uppercase" aria-current="page">{{ link.title }}</a></li>
+        <li><a href="{{ link.href }}" class="text-sm  semibold uppercase tracking-widest" aria-current="page">{{ link.title }}</a></li>
         {% elseif link.sub %}
             <li>
                 <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline uppercase">
@@ -35,7 +35,7 @@
                 </button>
             </li>
         {% else %}
-            <li><a href="{{ link.href }}" class="text-sm font-bold text-[#ffffffcc] hover:no-underline hover:text-white uppercase">{{ link.title }}</a></li>
+            <li><a href="{{ link.href }}" class="text-xs semibold text-[#ffffffcc] hover:no-underline hover:text-white uppercase tracking-widest">{{ link.title }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>
@@ -43,7 +43,7 @@
 
     <div class="navbar-menu z-50 hidden">
         <div class="navbar-backdrop fixed inset-0 opacity-0 z-40"></div>
-        <nav class="fixed top-20 left-0 flex flex-col py-4 px-4 bg-white border-r w-full z-50">
+        <nav class="absolute top-[91px] left-0 flex flex-col py-4 px-4 bg-white border-r w-full z-50">
             <div class="flex items-center ml-auto">
                 <button class="navbar-close">
                     <img class="rounded border" src="/images/close.png" alt="navbar-close">
@@ -57,16 +57,12 @@
                         {% elseif (link.href | replace('/', ''))==(page.url | replace('/', ''))  %}
                             <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-base font-bold leading-tight primary-clr" aria-current="page">{{ link.title }}</a></li>
                         {% else %}
-                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-base font-serif leading-tight text-gray-700">{{ link.title }}</a></li>
+                            <li class="mb-1"><a href="{{ link.href }}" class="block py-2 pl-3 pr-4 hover:no-underline hover:primary-clr text-base  font-baskervville leading-tight text-gray-700">{{ link.title }}</a></li>
                         {% endif %}
                     {% endfor %}
                 </ul>                                    
             </div>
-            <div class="mt-auto">
-                <div class="pt-4 px-20">
-                    <a class="block font-sans mb-2 py-2 hover:no-underline border text-center primary-clr hover:bg-yellow-600 hover:text-white border-yellow-600 text-base focus:ring-4 focus:outline-none" href="{{page.topmenu.cta.href}}">{{page.topmenu.cta.title}}</a>
-                </div>
-            </div>
+            
         </nav>
     </div>
 </div>

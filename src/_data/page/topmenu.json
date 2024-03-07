@@ -2,9 +2,9 @@
     "links": [
         {"title":"Home","href":"/"},
         {"title":"History","href":"/history"},
-        {"title":"Experience","href":"/experience"},
         {"title":"Rooms & Suites","href":"/rooms-suites"},
-        {"title":"Dining","href":"/dining"},
+        {"title":"Cuisine","href":"/cuisine"},
+        {"title":"Experiences","href":"/experience"},
         {"title":"Gallery","href":"/gallery"},
         {"title":"Contact","href":"/contact"}
     ],

@@ -2,6 +2,7 @@
 layout: base.njk
 ---
 
+<div class="bg-[#F3EEE8]">
 <div class="relative h-[38vh] md:h-[52vh] lg:h-[55vh] bg-cover bg-no-repeat"
     style="background-image: url('/images/rooms/img2.jpg');">
     <div class="overlay"></div>
@@ -13,7 +14,7 @@ layout: base.njk
     class="flex-row lg:flex mx-6 md:mx-14 lg:mx-0  max-w-[1100px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
     <div class="container lg:ml-20">
         <p class="primary-clr text-3xl md:text-5xl pt-6 md:pt-14 leading-snug medium">Deluxe room</p>
-        <p class="text-sm  font-serif pt-2 md:pt-3">560 ft² / 52 m² / Park View / 2 Guests</p>
+        <p class="text-sm    pt-2 md:pt-3">560 ft² / 52 m² / Park View / 2 Guests</p>
         <div class="inline-flex flex-wrap gap-4 md:space-x-6 pt-5">
             <div class="flex items-center gap-2">
                 <img src="/images/roomdp/feet.png" class="">
@@ -35,7 +36,7 @@ layout: base.njk
                 <h6 class="text-sm font-medium">1 Bathroom</h6>
             </div>
         </div>
-        <div class="container  font-serif">
+        <div class="container   ">
             <p class="text-sm md:text-base  pt-4 md:pt-6 lg:pt-4 ">Lorem ipsum dolor sit amet, consectetuer adipiscing
                 elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
                 parturient montes, nascetur ridiculus mus. </p>
@@ -47,10 +48,10 @@ layout: base.njk
 
         <div class="pt-6 md:pt-10">
             <h4 class="primary-clr text-2xl md:text-3xl md:py-2 leading-snug medium">Room Amenities</h4>
-            <div class="grid md:grid-cols-2 gap-4 mt-4 font-serif">
+            <div class="grid md:grid-cols-2 gap-4 mt-4  ">
                 {% for r in page.roomssuites.room_detail %}
                 <div class="flex items-center gap-4">
-                    <img src="{{ r.image }}" class="">
+                    <img src="{{ r.image }}" alt={{r.title}}>
                     <h6 class="text-sm md:text-base font-medium">{{ r.title }}</h6>
                 </div>
                 {% endfor %}
@@ -59,7 +60,7 @@ layout: base.njk
 
         <div class="pt-10">
             <h4 class="primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
-            <ul class="list-disc text-sm md:text-base font-serif pt-4 space-y-2 ml-2">
+            <ul class="list-disc text-sm md:text-base   pt-4 space-y-2 ml-2">
                 <li>Private balcony</li>
                 <li>140x200 cm Elite bed</li>
                 <li>Upholstered seat beside the panoramic window</li>
@@ -76,13 +77,13 @@ layout: base.njk
     <div class="container mx-auto">
         <div class="flex lg:justify-center pt-10 md:pt-24">
             <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
-                <img src="/images/rooms/img1.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                <img src="/images/rooms/img1.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
                     onclick="openFullScreen('/images/rooms/img1.jpg')" style="max-width: 100%;">
-                <img src="/images/rooms/img2.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                <img src="/images/rooms/img2.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
                     onclick="openFullScreen('/images/rooms/img2.jpg')" style="max-width: 100%;">
-                <img src="/images/rooms/img3.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                <img src="/images/rooms/img3.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
                     onclick="openFullScreen('/images/rooms/img3.jpg')" style="max-width: 100%;">
-                <img src="/images/rooms/img4.jpg" class="h-[250px] md:w-[400px] cursor-pointer"
+                <img src="/images/rooms/img4.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
                     onclick="openFullScreen('/images/rooms/img4.jpg')" style="max-width: 100%;">
             </div>
         </div>
@@ -99,7 +100,7 @@ layout: base.njk
 
 </div>
 
-<div class="pt-10 mx-6 md:mx-14 lg:mx-0 max-w-[800px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
+<div class="pt-10 lg:mx-0 max-w-[800px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
     <div class="primary-clr text-2xl md:text-3xl md:py-2 medium">Other Rooms</div>
     <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-10 pt-6">
         <div class="overflow-hidden relative group">
@@ -109,10 +110,10 @@ layout: base.njk
                     <div
                         class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
                         <div class="relative z-1 opacity-100">
-                            <p class="font-serif text-sm md:text-base">Welcome to your urban oasis inspired by the
+                            <p class="  text-sm md:text-base">Welcome to your urban oasis inspired by the
                                 natural beauty and calming energy of Central Park. Relax on your private terrace or
                                 snuggle up in your king size bed and take in the views of Central Park.</p>
-                            <p class="font-serif text-sm md:text-base">Discover more</p>
+                            <p class="  text-sm md:text-base">Discover more</p>
                         </div>
                     </div>
                 </div>
@@ -140,10 +141,10 @@ layout: base.njk
                     <div
                         class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
                         <div class="relative z-1 opacity-100">
-                            <p class="font-serif text-sm md:text-base">Welcome to your urban oasis inspired by the
+                            <p class="  text-sm md:text-base">Welcome to your urban oasis inspired by the
                                 natural beauty and calming energy of Central Park. Relax on your private terrace or
                                 snuggle up in your king size bed and take in the views of Central Park.</p>
-                            <p class="font-serif text-sm md:text-base">Discover more</p>
+                            <p class="  text-sm md:text-base">Discover more</p>
                         </div>
                     </div>
                 </div>
@@ -170,10 +171,10 @@ layout: base.njk
                     <div
                         class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
                         <div class="relative z-1 opacity-100">
-                            <p class="font-serif text-sm md:text-base">Welcome to your urban oasis inspired by the
+                            <p class="  text-sm md:text-base">Welcome to your urban oasis inspired by the
                                 natural beauty and calming energy of Central Park. Relax on your private terrace or
                                 snuggle up in your king size bed and take in the views of Central Park.</p>
-                            <p class="font-serif text-sm md:text-base">Discover more</p>
+                            <p class="  text-sm md:text-base">Discover more</p>
                         </div>
                     </div>
                 </div>
@@ -199,7 +200,7 @@ layout: base.njk
 
 
 
-<div class="flex-row md:flex pt-12 md:pt-16">
+<div class="flex-row md:flex pt-12 md:pt-16 pb-10">
     <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
         style="background-image: url('/images/rooms/img2.jpg');">
         <div class="overlay absolute inset-0 bg-black opacity-50"></div>
@@ -233,32 +234,34 @@ layout: base.njk
                 <a class="hover:no-underline" href="/">Reserve your stay</a>
             </button>
         </div>
-
     </div>
+</div>
 </div>
 
 <style>
     /* Modal container */
-    .modal {
-        position: fixed;
-        z-index: 99999;
-        padding-top: 100px;
-        top: 0;
-        width: 70%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        /* Change to column layout to position buttons vertically */
-    }
+   .modal {
+    position: fixed; /* Changed to fixed */
+    z-index: 99999;
+    top: 0;
+    left: 0; /* Added */
+    width: 100%; /* Changed to 100% */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-    /* Modal content */
+
     .modal-content {
-        margin: auto;
-        display: block;
-    }
+    margin: auto; /* Centers horizontally */
+    margin-top: 10vh; /* Centers vertically */
+    display: block;
+    width: 70%;
+    height: 80vh;
+}
 
     /* Close button */
     .close {

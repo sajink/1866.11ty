@@ -11,22 +11,22 @@
         {
             "name": "instagram",
             "href": "/",
-            "image": "/images/footer/insta-black.png"
+            "image": "/images/footer/insta-white.png"
         },
         {
             "name": "facebook",
             "href": "/",
-            "image": "/images/footer/fb-black.png"
+            "image": "/images/footer/fb-white.png"
         },
         {
             "name": "youtube",
             "href": "/",
-            "image": "/images/footer/utube-black.png"
+            "image": "/images/footer/utube-white.png"
         },
         {
             "name": "twitter",
             "href": "/",
-            "image": "/images/footer/twitter-black.png"
+            "image": "/images/footer/twitter-white.png"
         }
       ]
 }
