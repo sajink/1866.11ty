@@ -1,4 +1,4 @@
-<footer class="bg-cover" style="background-image: url('/images/footer/Home Footer.jpeg');">
+<footer class="bg-[#F3EEE8]">
     <!-- <div class="mx-auto"> 
         <div class="container mx-auto lg:mx-auto max-w-[1000px] lg:max-w-[1200px]">
             <div class="mr-2 md:mr-0 pt-20 md:pt-20 pb-8 md:pb-8 lg:pb-14 grid grid-cols-2 lg:flex lg:justify-center md:ml-10 lg:ml-0 flex-wrap">
@@ -22,16 +22,18 @@
     
     <div class="md:mb-10 font-baskervville">
         <div class="flex justify-center items-center pt-6 md:pt-10 pb-4">
-            <img src="/images/logo-white.svg" alt="logo" class="w-[150px] h-[200px]" />
+            <a href="/">
+            <img src="/images/logo-black.svg" alt="logo" class="w-[170px] h-[220px]"/>
+        </a>
         </div>
         <div class="container mx-auto flex justify-center items-center text-center">
             <ul class="transform md:flex md:items-center md:w-auto md:space-x-7 space-y-2 md:space-y-0" id="menu">
                 {% for link in page.topmenu.links %}
                 {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
-                <li class="text-white hover:primary-clr text-sm md:text-base tracking-tight"><a href="{{ link.href }}" class="hover:no-underline" aria-current="page">{{ link.title }}</a></li>
+                <li class="text-black hover:primary-clr text-sm md:text-base tracking-tight"><a href="{{ link.href }}" class="hover:no-underline" aria-current="page">{{ link.title }}</a></li>
                 {% elseif link.sub %}
                     <li>
-                        <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-white text-sm font-normal leading-tight oneline">
+                        <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline">
                             {{ link.title }}
                             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
@@ -39,13 +41,13 @@
                         </button>
                     </li>
                 {% else %}
-                    <li class="text-white text-sm md:text-base tracking-tight hover:primary-clr"><a href="{{ link.href }}" class="hover:no-underline">{{ link.title }}</a></li>
+                    <li class="text-black text-sm md:text-base tracking-tight hover:primary-clr"><a href="{{ link.href }}" class="hover:no-underline">{{ link.title }}</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>
         </div>
     </div> 
-    <div class="container mx-auto max-w-[1000px] lg:max-w-[1200px] text-white">
+    <div class="container mx-auto max-w-[1000px] lg:max-w-[1200px] text-black">
         <div class="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center text-sm md:mx-0  space-y-2">
             <div>Managed by Plain Canvas LLP</div>
             <a class="py-2 md:pl-10 lg:pl-16 inline-flex space-x-5 md:mb-0">    

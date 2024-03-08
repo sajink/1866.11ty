@@ -8,26 +8,29 @@
 <div class="flex justify-center items-center  pb-2 lg:pb-8">
     <div class="flex-row md:flex justify-around w-4/4">
       {% for p in page.root.places %}
-      <div class="text-center c">
+      <div class="text-center">
+        <a href="/experience" class="hover:no-underline">
         <img src="{{p.image}}" alt="{{p.name}}" class="w-full h-[318px] md:h-[156px] lg:h-[316px] object-cover">
-        <div class="primary-clr text-xl md:text-2xl lg:text-3xl pt-3 pb-10 lg:pt-4 leading-snug semibold">{{p.name}}</div>
+        <div class="primary-clr text-xl md:text-xl lg:text-2xl pt-3 pb-10 lg:pt-4 leading-snug semibold space-x-4 text-wrap">{{p.name}}</div>
+        </a>
       </div>
       {% endfor %}
     </div>
 </div>
 
-<div class="flex items-center justify-center md:pt-0  pb-16 lg:pb-32">
+<div class="flex items-center justify-center md:pt-0  pb-12 lg:pb-24">
   <button
       class="ftrtext lg:inline-block py-2 px-6 md:w-full md:max-w-[213px] primary-clr border text-sm flex items-center justify-center hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
       <a class="hover:no-underline" href="/experience">MORE EXPERIENCES</a>
   </button>
 </div>
 
-<div  class="mx-auto text-center lg:max-w-[1100px]">
+<div  class="mx-auto text-center lg:max-w-[1100px] pt-4">
   <div class="flex items-center justify-center">
     <img src="/images/about-us/divider.svg" alt="divider">
 </div>
-  <div class="text-[#1A1A1A] text-base md:text-3xl text-center font-fraunces semibold py-6 md:py-10">Discover the charm of Thalassery at The Heritage 1866. Your unforgettable experience awaits!</div>
+  <div class="primary-clr text-3xl md:text-6xl text-center py-6 md:py-10 pt-5 medium tracking-tight leading-10 lg:leading-12 w-full max-w-[1000px] md:max-w-[1100px] lg:max-w-[1250px] lg:h-max-[307px] mx-auto text-clip overflow-hidden"
+  style="line-height: 1.5;">Discover the charm of Thalassery at The Heritage 1866. Your unforgettable experience awaits!</div>
   <div class="flex items-center justify-center pb-16">
     <img src="/images/about-us/divider.svg" alt="divider">
 </div>

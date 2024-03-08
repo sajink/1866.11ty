@@ -48,7 +48,7 @@ layout: base.njk
 
         <div class="pt-6 md:pt-10">
             <h4 class="primary-clr text-2xl md:text-3xl md:py-2 leading-snug medium">Room Amenities</h4>
-            <div class="grid md:grid-cols-2 gap-4 mt-4  ">
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {% for r in page.roomssuites.room_detail %}
                 <div class="flex items-center gap-4">
                     <img src="{{ r.image }}" alt={{r.title}}>
@@ -60,7 +60,7 @@ layout: base.njk
 
         <div class="pt-10">
             <h4 class="primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
-            <ul class="list-disc text-sm md:text-base   pt-4 space-y-2 ml-2">
+            <ul class="list-disc text-sm md:text-base pt-4 space-y-3 ml-2">
                 <li>Private balcony</li>
                 <li>140x200 cm Elite bed</li>
                 <li>Upholstered seat beside the panoramic window</li>
@@ -74,35 +74,50 @@ layout: base.njk
         </div>
     </div>
 
-    <div class="container mx-auto">
-        <div class="flex lg:justify-center pt-10 md:pt-24">
-            <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
-                <img src="/images/rooms/img1.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                    onclick="openFullScreen('/images/rooms/img1.jpg')" style="max-width: 100%;">
-                <img src="/images/rooms/img2.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                    onclick="openFullScreen('/images/rooms/img2.jpg')" style="max-width: 100%;">
-                <img src="/images/rooms/img3.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                    onclick="openFullScreen('/images/rooms/img3.jpg')" style="max-width: 100%;">
-                <img src="/images/rooms/img4.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                    onclick="openFullScreen('/images/rooms/img4.jpg')" style="max-width: 100%;">
-            </div>
+<div class="container mx-auto">
+    <div class="lg:flex lg:justify-center pt-10 md:pt-24">
+        <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+            <img src="/images/rooms/img1.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
+                onclick="showModal('/images/rooms/img1.jpg')" style="max-width: 100%;">
+            <img src="/images/rooms/img2.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
+                onclick="showModal('/images/rooms/img2.jpg')" style="max-width: 100%;">
+            <img src="/images/rooms/img3.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
+                onclick="showModal('/images/rooms/img3.jpg')" style="max-width: 100%;">
+            <img src="/images/rooms/img4.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
+                onclick="showModal('/images/rooms/img4.jpg')" style="max-width: 100%;">
         </div>
     </div>
+</div>
 
-    <!-- The modal -->
-    <div id="myModal" class="modal" style="display: none;">
-        <span class="close" onclick="closeFullScreen()">&times;</span>
-        <img class="modal-content" id="modalImg" style="max-width: 90%; max-height: 90%;">
-        <button class="next" onclick="nextImage()">&#10095;</button>
-        <button class="prev" onclick="prevImage()">&#10094;</button>
-    </div>
+<!-- The Modal -->
+<div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+
+    <!-- Previous arrow -->
+    <button class="absolute top-1/2 left-4 text-white text-3xl" onclick="prevImage()">&#10094;</button>
+    
+    <!-- The close button -->
+    <a class="absolute top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+        onclick="closeModal()">&times;</a>
+
+    <!-- Next arrow -->
+    <button class="absolute top-1/2 right-4 text-white text-3xl" onclick="nextImage()">&#10095;</button>
+
+    <!-- A big image will be displayed here -->
+    <img id="modal-img" class="w-full h-full lg:h-[80vh] lg:w-[90%] object-cover" />
+</div>
+
 
 
 </div>
 
-<div class="pt-10 lg:mx-0 max-w-[800px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
-    <div class="primary-clr text-2xl md:text-3xl md:py-2 medium">Other Rooms</div>
-    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-10 pt-6">
+
+<div class="flex items-center justify-center pt-16">
+        <img src="/images/about-us/divider.svg" alt="divider">
+    </div>  
+
+<div class="pt-10 mx-4 md:mx-10 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] lg:h-max-[307px] lg:mx-auto ">
+    <div class="primary-clr text-2xl md:text-3xl md:py-8 medium">Other Rooms</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10 pt-6">
         <div class="overflow-hidden relative group">
             <div
                 class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
@@ -201,36 +216,36 @@ layout: base.njk
 
 
 <div class="flex-row md:flex pt-12 md:pt-16 pb-10">
-    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
+    <div class="relative md:w-1/2 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] h-[439px] bg-cover bg-center"
         style="background-image: url('/images/rooms/img2.jpg');">
-        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
+        <div class="overlay-bg absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-1 text-white text-center  md:my-8 lg:my-20 space-y-1">
 
-            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">OUR LOCATION</div>
+            <div class="primary-clr font-bold  text-xs text-center pt-12 md:pt-8 lg:pt-2">OUR LOCATION</div>
             <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Getting Here</div>
             <div class="semibold  text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
             <div class="semibold  text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
             <div class="semibold  text-base text-center">Tel: +1 212-555-6699</div>
             <div class="semibold  text-base text-center pb-4">Email: information@cozystay.com</div>
             <button
-                class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                class="lg:inline-block py-2 px-3 md:pb-8 lg:pb-0 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
                 <a class="hover:no-underline" href="/">Get Directions</a>
             </button>
         </div>
     </div>
 
-    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
+    <div class="relative md:w-1/2 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] h-[439px] bg-cover bg-center"
         style="background-image: url('/images/rooms/img3.jpg');">
-        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
-            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">BOOK A ROOM</div>
+        <div class="overlay-bg absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-1 text-white text-center  md:my-8 lg:my-20 space-y-1">
+            <div class="primary-clr font-bold  text-xs text-center pt-12 md:pt-8 lg:pt-2">BOOK A ROOM</div>
             <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Spend Your Time With Us</div>
             <div class="semibold  text-sm md:text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
             <div class="semibold  text-sm md:text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
             <div class="semibold  text-sm md:text-base text-center">Tel: +1 212-555-6699</div>
             <div class="semibold  text-sm md:text-base text-center pb-4">Email: information@cozystay.com</div>
             <button
-                class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
+                class="lg:inline-block py-2 px-3 md:pb-8 lg:pb-0 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
                 <a class="hover:no-underline" href="/">Reserve your stay</a>
             </button>
         </div>
@@ -238,105 +253,45 @@ layout: base.njk
 </div>
 </div>
 
-<style>
-    /* Modal container */
-   .modal {
-    position: fixed; /* Changed to fixed */
-    z-index: 99999;
-    top: 0;
-    left: 0; /* Added */
-    width: 100%; /* Changed to 100% */
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-    .modal-content {
-    margin: auto; /* Centers horizontally */
-    margin-top: 10vh; /* Centers vertically */
-    display: block;
-    width: 70%;
-    height: 80vh;
-}
-
-    /* Close button */
-    .close {
-        color: white;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 35px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    /* Next button */
-    .next {
-        position: absolute;
-        right: 20px;
-        /* Adjust the right position */
-        top: calc(50% - 20px);
-        /* Center vertically */
-        color: white;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    /* Previous button */
-    .prev {
-        position: absolute;
-        left: 20px;
-        /* Adjust the left position */
-        top: calc(50% - 20px);
-        /* Center vertically */
-        color: white;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-</style>
-
-
 <script>
-    // Open the modal
+    // Get the modal by id
+    var modal = document.getElementById("modal");
+
+    // Get the modal image tag
+    var modalImg = document.getElementById("modal-img");
+
+    // Images array
     var images = [
         "/images/rooms/img1.jpg",
         "/images/rooms/img2.jpg",
         "/images/rooms/img3.jpg",
         "/images/rooms/img4.jpg"
     ];
+
+    // Current image index
     var currentIndex = 0;
 
-    function openFullScreen(imgSrc) {
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("modalImg");
-        modal.style.display = "block";
-        modalImg.src = imgSrc;
-        currentIndex = images.indexOf(imgSrc);
+    // this function is called when a small image is clicked
+    function showModal(src) {
+        modal.classList.remove('hidden');
+        modalImg.src = src;
+        
     }
 
-    function closeFullScreen() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
+    // this function is called when the close button is clicked
+    function closeModal() {
+        modal.classList.add('hidden');
     }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        var modalImg = document.getElementById("modalImg");
-        modalImg.src = images[currentIndex];
-    }
-
+    // Function to show the previous image
     function prevImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
-        var modalImg = document.getElementById("modalImg");
         modalImg.src = images[currentIndex];
     }
 
+    // Function to show the next image
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex];
+    }
 </script>
