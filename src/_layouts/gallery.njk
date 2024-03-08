@@ -7,8 +7,16 @@ layout: base.njk
 <div class="lg:top-[425px] px-6 md:px-10 pb-16 md:pb-28">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
         {% for img in page.gallery.photos %}
-        <img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover">
+        <img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer"
+            onclick="showModal('{{img.image}}')" />
         {% endfor %}
     </div>
 </div>
+<div id="modal"
+    class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+    <a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+        onclick="closeModal()">&times;</a>
+    <img id="modal-img" class="max-w-[800px] max-h-[600px] object-cover" />
+</div>
+
     
