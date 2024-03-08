@@ -828,6 +828,10 @@ label {
   right: 0px;
 }
 
+.right-8 {
+  right: 2rem;
+}
+
 .right-\[10\%\] {
   right: 10%;
 }
@@ -840,12 +844,24 @@ label {
   top: 50%;
 }
 
+.top-6 {
+  top: 1.5rem;
+}
+
 .top-\[55\%\] {
   top: 55%;
 }
 
 .top-\[91px\] {
   top: 91px;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
 }
 
 .z-10 {
@@ -1120,6 +1136,14 @@ label {
 
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-h-\[600px\] {
+  max-height: 600px;
 }
 
 .w-1\/2 {
@@ -1453,6 +1477,10 @@ label {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
@@ -1582,6 +1610,26 @@ label {
   padding-bottom: 2rem;
 }
 
+.py-\[40vh\] {
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+}
+
+.py-\[0vh\] {
+  padding-top: 0vh;
+  padding-bottom: 0vh;
+}
+
+.py-\[20vh\] {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.py-\[10vh\] {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1700,6 +1748,18 @@ label {
 
 .pt-\[40px\] {
   padding-top: 40px;
+}
+
+.pt-\[40\] {
+  padding-top: 40;
+}
+
+.pt-\[40v\] {
+  padding-top: 40v;
+}
+
+.pt-\[40vh\] {
+  padding-top: 40vh;
 }
 
 .text-left {
@@ -2291,6 +2351,18 @@ label {
     height: 100vh;
   }
 
+  .md\:h-\[80vh\] {
+    height: 80vh;
+  }
+
+  .md\:h-\[0vh\] {
+    height: 0vh;
+  }
+
+  .md\:h-\[90vh\] {
+    height: 90vh;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2381,6 +2453,10 @@ label {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -2477,6 +2553,10 @@ label {
     padding: 1rem;
   }
 
+  .md\:p-\[50vh\] {
+    padding: 50vh;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2540,6 +2620,31 @@ label {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:py-\[50vh\] {
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+  }
+
+  .md\:py-\[0vh\] {
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+  }
+
+  .md\:py-\[20vh\] {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+  }
+
+  .md\:py-\[10vh\] {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  .md\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .md\:pb-10 {
@@ -2646,6 +2751,18 @@ label {
     padding-top: 2rem;
   }
 
+  .md\:pt-\[20\] {
+    padding-top: 20;
+  }
+
+  .md\:pt-\[5\] {
+    padding-top: 5;
+  }
+
+  .md\:pt-\[50vh\] {
+    padding-top: 50vh;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -2727,6 +2844,12 @@ label {
 
   .md\:tracking-tighter {
     letter-spacing: -0.05em;
+  }
+
+  @media (min-width: 1024px) {
+    .md\:lg\:h-screen {
+      height: 100vh;
+    }
   }
 }
 
@@ -2954,6 +3077,10 @@ label {
     height: 100vh;
   }
 
+  .lg\:h-\[80vh\] {
+    height: 80vh;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -2996,6 +3123,10 @@ label {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[90\%\] {
+    width: 90%;
   }
 
   .lg\:max-w-\[1000px\] {
@@ -3110,6 +3241,10 @@ label {
     padding: 2rem;
   }
 
+  .lg\:p-\[50vh\] {
+    padding: 50vh;
+  }
+
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -3133,6 +3268,31 @@ label {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:py-\[50vh\] {
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+  }
+
+  .lg\:py-\[5vh\] {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .lg\:py-\[vh\] {
+    padding-top: vh;
+    padding-bottom: vh;
+  }
+
+  .lg\:py-\[2vh\] {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  .lg\:py-\[20vh\] {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
   }
 
   .lg\:pb-12 {
@@ -3221,6 +3381,26 @@ label {
 
   .lg\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .lg\:pt-\[44\] {
+    padding-top: 44;
+  }
+
+  .lg\:pt-\[5\] {
+    padding-top: 5;
+  }
+
+  .lg\:pt-\[50\] {
+    padding-top: 50;
+  }
+
+  .lg\:pt-\[50v\] {
+    padding-top: 50v;
+  }
+
+  .lg\:pt-\[50vh\] {
+    padding-top: 50vh;
   }
 
   .lg\:text-left {
