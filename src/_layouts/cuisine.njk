@@ -8,50 +8,50 @@ layout: default.njk
 </div>
 
 <div class="mx-[4%] md:mx-[8%] lg:mx-[20%] pt-8 md:pt-12 lg:pt-24">
-    <p class="primary-clr text-3xl md:text-6xl text-center medium py-4 lg:py-6 leading-tight md:leading-snug">Gourmet Experiences</p>
-    <p class="md:leading-tight text-sm md:text-base   text-center md:mx-0 lg:mx-auto lg:max-w-[900px]">Phasellus vitae volutpat donec at felis mauris tincidunt elit vel eu aenean commodo, tincidunt elementum et dictum scelerisque tempus amet eget viverra lectus tristique suspendisse tortor feugiat eu lacinia sed elementum in iaculis sapien cursus odio massa gravida ut molestie sed vel senectus donec nunc nunc nec laoreet.</p>
-    <div class="flex items-center justify-center pt-6 md:pt-8 lg:pt-8 pb-20 md:pb-20 lg:pb-20">
+    <p class="primary-clr text-3xl md:text-6xl text-center medium py-4 lg:py-6 leading-tight md:leading-snug">Thalassery: The Melting Pot of Culinary Treasures from Arabia, Malabar, and Beyond</p>
+    <div class="flex items-center justify-center pt-6 md:pt-8 lg:pt-8 pb-8 md:pb-8 lg:pb-20">
         <img src="/images/about-us/divider.svg" alt="divider">
     </div>
 </div>
 
-<div class="space-y-56 md:space-y-16 pb-56 md:pb-36">
-    {% set count=1 %}
-    {% for d in page.dining.din %}
-    {% if count%2 !=0 %}
-    <div class="inline-flex relative">
-        <div>
-            <img src="{{d.image}}" alt="{{d.title}}" class="w-[900px] h-[350px] md:w-[1500px] md:h-[500px] object-left left-0 object-none">
+<div class="mx-[5%] md:mx-[15%] lg:mx-0 pt-4 md:pt-6 space-y-10">
+    <div class="mx-auto lg:max-w-[700px] text-base md:text-lg text-left">
+    <p>Thalassery cuisine, a blend of Arabian, Persian, and local Malabari food is the most popular sub-cuisine of the state. Thalassery biriyani, a recipe that originated here, is the most popular ethnic brand and synonymous with biriyani from Kerala.</p>
+    <p>Kerala's familiarity with foreign flavours came from the Greeks, Romans, Portuguese, Dutch, English, and most extensively, the Arab traders, whose use of spice and herbs have been absorbed in ever so many ways by the locals.</p>
+    <p>Drawing from the Arab influences, Mappila food is the best example of the integration of local and borrowed food traditions: one community whose food to this day carries the ingredients with intense aromas, a legacy of the ancient ties with West Asia.</p>
+    <p>The Arab traders who came on extended stays, considering their dependence on the monsoon winds to sail in and out of the ports, married local women and the offspring born out of such alliances became "Mappila', the term signifying the status of the son-in-law. Certain techniques used in the preparation of the meals in Mappila kitchens have undeniably come from the Arab. In a land, where coconut oil is the cooking medium, the generous use of ghee or clarified butter is probably a practice drawn from the Arabs, who are said to have used ghee made from cattle.</p>
+     <p>The ubiquitous biryani is prefixed with the name of the place it belongs to - Mughlai, Lucknowi, Awadi, and the Hyderabadi are just some of the popular biryanis. In Kerala, it is the richly-flavoured Kozhikode biryani and the Thalassery biryani which carry the elements of the Arab world, beginning with the clay oven in which it is cooked to the generous use of spices, including saffron. Unlike other biryani dishes Thalassery biryani is made using kaima/jeerakasala, an Indian aromatic rice instead of the usual basmati rice.</p>
+    <p>A biryani meal is incomplete unless washed down with a Sulaimani - the black tea with a dash of lemon, and honey, if you so prefer it. The name is believed to have been lent to this simple drink by the Sulaymani Bohras (Sulaymanis), a community from Saudi Arabia and Yemen.</p>
+    </div>
+</div>
+<div class="mx-auto max-w-full md:max-w-[1100px]">
+    <div class="flex-row md:inline-flex gap-2 md:gap-8 lg:gap-12 mx-[5%] pt-16 md:pt-20">
+        <div class="md:py-10 space-y-10 md:space-y-6 lg:space-y-10">
+            <img src="/images/dining/Cuisine Left Top.jpeg" alt="image2"
+                class="w-full h-[300px] md:w-[320px] md:h-[170px] lg:h-[220px] object-cover">
+            <img src="/images/dining/Cuisine Left Bottom.jpeg" alt="image3"
+                class="w-full h-[300px] md:w-[320px] md:h-[170px] lg:h-[220px] object-cover">
         </div>
-        <div class="absolute bg-[#F3EEE8] top-[55%] md:top-[72px] left-[10%] md:left-[40%] lg:left-[50%] max-w-[500px] md:max-w-[514px] lg:max-w-[580px]  ">
-            <div class="mx-6 md:mx-12">
-                <p class="primary-clr text-2xl md:text-5xl pt-4 md:pt-10 leading-snug medium">{{d.title}}</p>
-                <p class="text-sm md:text-base   leading-6 text-justify pt-2 md:pt-4 lg:leading-tight">{{d.desc}}</p>
-                <button class="primary-clr hover:text-black text-sm mb-8 mt-8 md:mb-12 md:mt-6 leading-widest">EXPLORE → </button>
+        <div class="inline-flex gap-8 md:gap-12 w-full md:w-auto">
+            <div class="py-10 md:py-0 w-1/2 md:w-full">
+                <img src="/images/dining/Cuisine Centre Big.jpeg" alt="image1"
+                    class="w-full h-[300px] md:w-[400px] lg:w-[350px] md:h-[450px] lg:h-[550px] object-cover">
+            </div>
+            <div class="py-10  w-1/2 md:w-full">
+                <img src="/images/dining/Cuisine Right Side Big.jpeg" alt="image4"
+                    class="w-full h-[300px] md:w-[320px] md:h-[360px] lg:h-[480px] object-cover">
             </div>
         </div>
-        <div>
-            <img src="/images/dining/whitebg.png" class="lg:w-[750px] h-[350px] md:h-[500px]  ">
-        </div>
-        {% set count = count + 1 %}
     </div>
-    {% else %}
-    <div class="inline-flex relative">
-        <div>
-            <img src="/images/dining/whitebg.png" class="lg:w-[750px] h-[350px] md:h-[500px] ">
-        </div>
-        <div class="absolute bg-[#F3EEE8] top-[55%] md:top-[72px] right-[10%] md:right-[40%] lg:right-[50%] max-w-[500px] md:max-w-[514px] lg:max-w-[580px] ">
-            <div class="mx-6 md:mx-12">
-                <p class="primary-clr text-2xl md:text-5xl pt-4 md:pt-10 leading-snug medium">{{d.title}}</p>
-                <p class="text-sm md:text-base   leading-6 text-justify pt-2 md:pt-4 lg:leading-tight">{{d.desc}}</p>
-                <button class="primary-clr hover:text-black text-sm mb-8 mt-8 md:mb-12 md:mt-6 leading-widest">EXPLORE → </button>
-            </div>
-        </div>
-        <div>
-            <img src="{{d.image}}" alt="{{d.title}}" class="w-[900px] h-[350px] md:w-[1500px] md:h-[500px] object-right right-0 object-none">
-        </div>
-        {% set count = count + 1 %}
-    </div>
-    {% endif %}
-    {% endfor %}
+</div>
+<div class="mx-[5%] md:mx-[15%] lg:mx-0 md:pt-14 space-y-10">
+    <div class="mx-auto text-center lg:max-w-[700px]">
+    <p class="text-xl md:text-2xl text-left semibold primary-clr">Thalassery Snacks</p>
+    <p class="text-base md:text-lg text-left pt-2">After biryani, Thalassery is known for its variety of local snacks. There are sweet and spicy variants and they are predominantly non-vegetarian.</p>
+    <p class="text-base md:text-lg text-left">Some popular examples include ari pathiri, chatti pathiri, arikkadukka (stuffed fried mussels), kallummakaya (mussels) fry, as well as sweeteners such as aleesa and Kadalapparippu ada. The sweeteners are mostly used as snacks to be consumed in the afternoon or early evening.</p>
+    <p class="text-base md:text-lg text-left">Chatti pathiri is similar to lasagne where layers of spiced (masala) beef or chicken mixture are placed between layers of egg-dipped pancakes and baked in the oven. It is especially served in Malabar Muslim weddings and reception parties.</p>
+    <p class="text-base md:text-lg text-left">The Asian green mussel is favoured in Thalassery dishes. The mussel is called Kallummakaya (fruit on the stone) or kadukka. They grow on rocky surfaces in the Arabian Sea. The dishes include kallummakaya porichathu (fried mussel), arikkadukka (stuffed-in-shell mussel, steamed and fried), kallumakkaya ularthiyathu (mussel stir-fry), kallumakkaya achar (mussel pickles). Elambakka (clams) are also popular.</p>
+    <p class="text-base md:text-lg text-left">Muttamala and muttasirka are traditional sweets made using egg, where muttamala is yellow noodle-like made of egg-yolk and muttasirka is white-colored, made of egg whites. Tharipola, pazham nirachatu (fried banana filled with grated coconut sugar or jaggery), unnakaya, jaayi pola, chatti pathiri and ari pathiri are other local dishes.</p>
+    <p class="text-base md:text-lg text-left">Unnakkai, also known as kaai ada, is a spindle-shaped sweet dessert made of sweet plantains. It is a famous Malabar snack often served at weddings, Iftar parties and other festivities. It is prepared by stuffing plantain with flavoured coconut (and optionally with egg) and fried in ghee.</p>
+    </div> 
 </div>
