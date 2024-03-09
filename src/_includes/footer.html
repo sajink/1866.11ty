@@ -30,7 +30,7 @@
             <ul class="transform md:flex md:items-center md:w-auto md:space-x-7 space-y-2 md:space-y-0" id="menu">
                 {% for link in page.topmenu.links %}
                 {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
-                <li class="text-black hover:primary-clr text-sm md:text-base tracking-tight"><a href="{{ link.href }}" class="hover:no-underline" aria-current="page">{{ link.title }}</a></li>
+                <li class="text-black hover:primary-clr text-base md:text-lg tracking-tight"><a href="{{ link.href }}" class="hover:no-underline" aria-current="page">{{ link.title }}</a></li>
                 {% elseif link.sub %}
                     <li>
                         <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline">
@@ -41,14 +41,14 @@
                         </button>
                     </li>
                 {% else %}
-                    <li class="text-black text-sm md:text-base tracking-tight hover:primary-clr"><a href="{{ link.href }}" class="hover:no-underline">{{ link.title }}</a></li>
+                    <li class="text-black text-base md:text-lg tracking-tight hover:primary-clr"><a href="{{ link.href }}" class="hover:no-underline">{{ link.title }}</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>
         </div>
     </div> 
     <div class="container mx-auto max-w-[1000px] lg:max-w-[1200px] text-black">
-        <div class="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center text-sm md:mx-0  space-y-2">
+        <div class="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center text-base md:mx-0  space-y-2">
             <div>Managed by Plain Canvas LLP</div>
             <a class="py-2 md:pl-10 lg:pl-16 inline-flex space-x-5 md:mb-0">    
                 {% for sm in site.social %}
