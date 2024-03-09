@@ -17,11 +17,10 @@ layout: default.njk
         <img src="/images/about-us/divider.svg" alt="divider">
     </div>
     <div class="mx-[3%] md:mx-[14%] lg:mx-0">
-        <div class="mx-auto text-center lg:max-w-[700px] pb-1 tracking-tight">
-            <p class="text-sm md:text-base   text-left">Phasellus vitae volutpat donec at felis
-                Thalassery, is a coastal town located in Kannur district in the northern part of Kerala, India. Steeped in history, culture, and natural beauty, Thalassery is a hidden gem for travellers seeking an offbeat beach destination in Kerala.</p>
-            <p class="text-sm md:text-base   mt-5 text-left">It offers a blend of historical charm, authentic cuisines, and cultural diversity that sets it apart as a must-visit destination in Kerala. As you explore this historic coastal town, you’ll uncover the rich tapestry of its heritage and the warm hospitality of its people.</p>
-            <p class="text-sm md:text-base text-left">The name Thalassey is synonymous with biryani, spices, and Theyyam.</p>
+        <div class="mx-auto text-center lg:max-w-[700px] pb-1 tracking-tight text-base md:text-lg">
+            <p class="text-left">Thalassery, is a coastal town located in Kannur district in the northern part of Kerala, India. Steeped in history, culture, and natural beauty, Thalassery is a hidden gem for travellers seeking an offbeat beach destination in Kerala.</p>
+            <p class="text-left mt-5">It offers a blend of historical charm, authentic cuisines, and cultural diversity that sets it apart as a must-visit destination in Kerala. As you explore this historic coastal town, you’ll uncover the rich tapestry of its heritage and the warm hospitality of its people.</p>
+            <p class="text-left">The name Thalassey is synonymous with biryani, spices, and Theyyam.</p>
         </div>
     </div>
 </div>
@@ -30,63 +29,84 @@ layout: default.njk
 <div class="mx-auto max-w-full md:max-w-[1100px]">
     <div class="flex-row md:inline-flex gap-2 md:gap-8 lg:gap-12 mx-[5%] pt-16 md:pt-20">
         <div class="md:py-10 space-y-10 md:space-y-6 lg:space-y-10">
-            <img src="/images/history/img2.jpg" alt="image2"
+            <img src="/images/history/History Left Top.jpeg" alt="image2"
                 class="w-full h-[300px] md:w-[320px] md:h-[170px] lg:h-[220px] object-cover">
-            <img src="/images/history/img3.jpg" alt="image3"
+            <img src="/images/history/History Left Bottom.jpeg" alt="image3"
                 class="w-full h-[300px] md:w-[320px] md:h-[170px] lg:h-[220px] object-cover">
         </div>
         <div class="inline-flex gap-8 md:gap-12 w-full md:w-auto">
             <div class="py-10 md:py-0 w-1/2 md:w-full">
-                <img src="/images/history/img1.jpg" alt="image1"
+                <img src="/images/history/History Centre Bigg.jpeg" alt="image1"
                     class="w-full h-[300px] md:w-[400px] lg:w-[350px] md:h-[450px] lg:h-[550px] object-cover">
             </div>
             <div class="py-10  w-1/2 md:w-full">
-                <img src="/images/history/img4.jpg" alt="image4"
+                <img src="/images/history/History Right Side Big.jpeg" alt="image4"
                     class="w-full h-[300px] md:w-[320px] md:h-[360px] lg:h-[480px] object-cover">
             </div>
         </div>
     </div>
 </div>
 
-<div class="mx-[5%] md:mx-[15%] lg:mx-0 pt-4 md:pt-6">
-    <div class="mx-auto text-center lg:max-w-[700px] pb-8 md:pb-16 tracking-tight">
-        <p class="text-sm md:text-base   text-left">Dictum egestas eleifend pulvinar imperdiet
-            sit venenatis porttitor egestas ut auctor purus suspendisse in arcu condimentum risus at phasellus nulla
-            aenean tristique dui quis blandit tellus sed pellentesque eu arcu, vestibulum donec.</p>
-        <p class="text-sm md:text-base   text-left">Nisl adipiscing blandit pulvinar faucibus
-            faucibus feugiat tincidunt gravida elit elementum, proin nisl nunc, urna, ac dictum tellus quis faucibus
-            curabitur morbi dui in.</p>
+<div class="mx-[5%] md:mx-[15%] lg:mx-0 pt-4 md:pt-6 space-y-10">
+{% for h in page.history.hist1 %}
+    <div class="mx-auto text-center lg:max-w-[700px]">
+    <p class="text-lg md:text-xl text-left semibold primary-clr">{{h.title}}</p>
+    <p class="text-base md:text-lg text-left">{{h.desc}}</p>
     </div>
+    {% endfor %}  
 </div>
 
-<div class="mx-[5%] md:mx-8 lg:mx-auto max-w-full md:max-w-[1100px]">
-    <div class="flex-row md:inline-flex pt-8 pb-8 md:pb-20 lg:pb-40 md:space-x-10">
-        <div class="lg:ml-16">
-            <img src="/images/history/img5.jpg" alt="image5" class="w-full md:w-[384px] h-[576px] object-cover">
+
+<div class="mx-auto max-w-full md:max-w-[1100px]">
+    <div class="flex-row md:inline-flex gap-2 md:gap-8 lg:gap-12 mx-[5%] pt-16 md:pt-20">
+        <div class="md:py-10 space-y-10 md:space-y-6 lg:space-y-10">
+            <img src="/images/history/History of the Home- Left Top.jpeg" alt="image2"
+                class="w-full h-[300px] md:w-[320px] md:h-[170px] lg:h-[220px] object-cover">
+            <img src="/images/history/History  of The Home- Left Bottom.jpeg" alt="image3"
+                class="w-full h-[300px] md:w-[320px] md:h-[170px] lg:h-[220px] object-cover">
         </div>
-        <div class="flex-1 md:mx-[1%] tracking-tight">
-            <div class="lg:mx-16">
-                <p class="text-sm md:text-base   text-left">Euismod cras habitant dictum turpis
-                    interdum non scelerisque in tincidunt diam fringilla sapien, cursus velit rutrum est nulla lectus
-                    molestie magna enim in sed pharetra est pretium nisl lacus lobortis nam scelerisque augue cursus
-                    eget pellentesque in semper netus convallis arcu lorem amet curabitur phasellus suspendisse.</p>
-                <p class="text-sm md:text-base   text-left">Amet diam scelerisque adipiscing
-                    elementum mauris velit vitae sem urna diam sollicitudin lacus posuere arcu sem sit ultrices enim et
-                    sed dolor risus.</p>
-                <div class="md:mr-10 items-center pt-4">
-                    <div class="flex flex-col md:flex-row">
-                        <img src="/images/history/quote-icon.png" alt="quoteicon"
-                            class="mr-3 w-[24px] h-[24px] md:mr-3 md:w-[24px] md:h-[24px]">
-                        <p class="text-sm md:text-base   semibold md:ml-1 tracking-normal">Volutpat diam proin at phasellus
-                            faucibus enim at viverra urna pretium elit egestas in magna turpis ut ac ut sit sit arcu
-                            nulla feugiat justo, facilisis luctus mattis adipiscing sed ut.</p>
-                    </div>
-                    <div class="text-sm md:text-lg   text-left pb-4 md:pl-[8%]">Owner of Raj
-                        Vilas Palace</div>
-                </div>
-                <p class="text-sm md:text-base   text-left">Velit vitae sem urna diam
-                    sollicitudin lacus posuere arcu sem sit ultrices enim et sed dolor risus.</p>
+        <div class="inline-flex gap-8 md:gap-12 w-full md:w-auto">
+            <div class="py-10 md:py-0 w-1/2 md:w-full">
+                <img src="/images/history/History of the Home Centre Big.jpeg" alt="image1"
+                    class="w-full h-[300px] md:w-[400px] lg:w-[350px] md:h-[450px] lg:h-[550px] object-cover">
+            </div>
+            <div class="py-10  w-1/2 md:w-full">
+                <img src="/images/history/History of The Home- Right Side.jpeg" alt="image4"
+                    class="w-full h-[300px] md:w-[320px] md:h-[360px] lg:h-[480px] object-cover">
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="mx-[5%] md:mx-[15%] lg:mx-0 pt-4 md:pt-6 space-y-10">
+{% for h in page.history.hist2 %}
+    <div class="mx-auto text-center lg:max-w-[700px]">
+    <p class="text-lg md:text-xl text-left semibold primary-clr">{{h.title}}</p>
+    <p class="text-base md:text-lg text-left">{{h.desc}}</p>
+    </div>
+    {% endfor %}  
+</div>
+
+<div class="mx-[5%] md:mx-8 lg:mx-auto max-w-full md:max-w-[1100px]">
+    <div class="flex-row md:inline-flex pt-16 md:space-x-10">
+        <div class="lg:ml-16">
+            <img src="/images/history/Rairu Nair.jpeg" alt="image5" class="w-full md:w-[400px] h-[576px]">
+        </div>
+        <div class="flex-1 md:mx-[1%]">
+            <div class="lg:mx-16 pt-4 text-left lg:max-w-[450px]">
+                <p>As implied by the brand name, the story of this esteemed residence traces its origins to the year 1866. With a legacy spanning 158 years, this distinguished residence belonged to the late Sri Chathoth Ryru Nair - a man of unwavering spirit, a freedom fighter, disciple of Mahatma Gandhi, accomplished businessman, and a prominent social figure.</p>
+                <p>Built over a century ago by the late Rao Bahadur T.V. Narayanan Nair, the main house and "Padippura'' (Gatehouse) initiated the metamorphosis of this home. Sri Narayanan Nair, a District Judge under British rule, preserved the existing structure while constructing a traditional "ettu kettu," the Purathalath house, which later became known as the "Judge Bungalow." After his demise in 1940, the house fell into bad times without proper upkeep and maintenance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto lg:max-w-[700px] text-left md:pt-4 lg:pt-10">
+    <p>In 1994, Sri Chathoth Ryru Nair (C. R. Nair) and his wife Smt. Mundani Narayani Kutty Amma acquired Judge Bungalow from his elder brother K.P.N. Nair, who had purchased the house from the Judge's heirs in 1979. For over 25 years, C. R. Nair passionately renovated and refurbished the house, hosting celebrities and dignitaries. Some rooms were removed to create the present "nalu kettu'' structure.Following the demise of Ryru Nair and Narayani Kutty Amma, their children decided to preserve the historic mansion, transforming it into a Heritage Home focused on Responsible Tourism. </p>
+     <p>The Judge Bungalow has, for decades, been a silent witness to history, hosting dignitaries from various walks of life. Now, as it transforms into a premium heritage homestay, it continues the legacy of warm hospitality, comfortable accommodation, and authentic local delicacies.</p>
+     <p>The project was inaugurated by the Hon'ble Chief Minister of Kerala, Sri Pinaray Vijayan, on 12 January 2023. The property has now been officially branded as "The Heritage 1866" at Judge Bungalow</p>
+     <p>The traditional Kerala style architecture immerses guests in a vintage opulence, adorned with fine wooden decor and elegant antique furniture. What makes Heritage 1866 even more special is its collection of treasured artefacts, including a kooja (water pitcher) gifted to Ryru Nair by Netaji Subhas Chandra Bose himself.</p>
+     <p>Guests have the opportunity to delve into the myriad offerings of the historic towns of Thalassery, Kannur and Mahe. From the serenity of village life to captivating Theyyam performances, renowned local cuisine, unspoiled beaches, Kalari to coir and beedi making, a diverse range of authentic local experiences awaits them.</p>
+     <p>Step into Heritage 1866, and immerse yourself in the fine blend of rich history, timeless elegance and warm hospitality.</p>
+    </div>
+</div>
+   
