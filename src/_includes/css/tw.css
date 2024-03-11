@@ -122,9 +122,4 @@
     @apply text-sm md:text-lg text-center md:text-left w-full max-w-[1200px] lg:max-w-[1200px] lg:mx-auto;
   }
 
-  .slideshow {
-    transition: 0.5s all ease-in-out;
-    -moz-transition: 1s all ease-in-out;
-    -webkit-transition: 1s all ease-in-out;
-  }
 }

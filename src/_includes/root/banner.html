@@ -13,3 +13,56 @@
         <div id="dotContainer" class="flex space-x-2"></div>
     </div>
 </div>
+
+<script>
+    var images = ['/images/home-slide/H1.jpeg', '/images/home-slide/H21.jpeg', '/images/home-slide/H3.jpeg', '/images/home-slide/H4.jpeg', '/images/home-slide/H5.jpeg', '/images/home-slide/H6.jpeg', '/images/home-slide/H7.jpeg', '/images/home-slide/H8.jpeg', '/images/home-slide/H9.jpeg', '/images/home-slide/H10.jpeg'];
+    var currentIndex = 0;
+    var slideshowText = document.getElementById('slideshowText');
+    var slideshowContainer = document.querySelector('.slideshow');
+    var dotContainer = document.getElementById('dotContainer');
+
+    function startSlideshow() {
+        setInterval(changeSlide, 6000);
+        updateDots();
+    }
+
+    function changeSlide(index) {
+        if (typeof index === 'undefined') {
+            currentIndex = (currentIndex + 1) % images.length;
+        } else {
+            currentIndex = index;
+        }
+        slideshowContainer.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+        updateDots();
+    }
+
+    function updateDots() {
+        dotContainer.innerHTML = '';
+        for (var i = 0; i < images.length; i++) {
+            var dot = document.createElement('div');
+            dot.className = 'w-3 h-3 rounded-full bg-gray-500 cursor-pointer';
+            dot.setAttribute('data-index', i);
+            if (i === currentIndex) {
+                dot.classList.add('bg-white');
+            }
+            dot.addEventListener('click', function () {
+                var newIndex = parseInt(this.getAttribute('data-index'));
+                if (newIndex !== currentIndex) {
+                    currentIndex = newIndex - 1;
+                    slideshowContainer.style.backgroundImage = 'url(' + images[currentIndex] + ')';
+                    updateDots();
+                }
+            });
+            dotContainer.appendChild(dot);
+        }
+    }
+
+    startSlideshow();
+</script>
+<style>
+    .slideshow {
+	transition: 0.5s all ease-in-out;
+	-moz-transition: 1s all ease-in-out;
+	-webkit-transition: 1s all ease-in-out;
+    }
+</style>
