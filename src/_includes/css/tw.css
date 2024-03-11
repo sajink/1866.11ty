@@ -66,7 +66,6 @@
 
   .primary-clr {
     color: rgb(194, 154, 92);
-    @apply font-fraunces;
   }
 
   .ftrtext a {
@@ -120,6 +119,10 @@
   }
   .abt-text{
     @apply text-sm md:text-lg text-center md:text-left w-full max-w-[1200px] lg:max-w-[1200px] lg:mx-auto;
+  }
+
+  a.text-decoration-none:hover {
+    text-decoration: none;
   }
 
 }
