@@ -848,12 +848,20 @@ label {
   left: 1rem;
 }
 
+.left-6 {
+  left: 1.5rem;
+}
+
 .right-0 {
   right: 0px;
 }
 
 .right-4 {
   right: 1rem;
+}
+
+.right-6 {
+  right: 1.5rem;
 }
 
 .right-8 {
@@ -876,16 +884,12 @@ label {
   top: 91px;
 }
 
-.left-8 {
-  left: 2rem;
+.left-1\/2 {
+  left: 50%;
 }
 
-.left-6 {
-  left: 1.5rem;
-}
-
-.right-6 {
-  right: 1.5rem;
+.right-1\/2 {
+  right: 50%;
 }
 
 .z-10 {
@@ -1143,6 +1147,10 @@ label {
   height: 576px;
 }
 
+.h-\[90vh\] {
+  height: 90vh;
+}
+
 .h-auto {
   height: auto;
 }
@@ -1153,22 +1161,6 @@ label {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[90vh\] {
-  height: 90vh;
-}
-
-.max-h-\[600px\] {
-  max-height: 600px;
-}
-
-.max-h-full {
-  max-height: 100%;
-}
-
-.max-h-\[90vh\] {
-  max-height: 90vh;
 }
 
 .w-1\/2 {
@@ -1189,6 +1181,10 @@ label {
 
 .w-\[120px\] {
   width: 120px;
+}
+
+.w-\[1500px\] {
+  width: 1500px;
 }
 
 .w-\[170px\] {
@@ -1219,14 +1215,6 @@ label {
   width: 100vw;
 }
 
-.w-\[900px\] {
-  width: 900px;
-}
-
-.w-\[1500px\] {
-  width: 1500px;
-}
-
 .max-w-\[1000px\] {
   max-width: 1000px;
 }
@@ -1243,6 +1231,10 @@ label {
   max-width: 400px;
 }
 
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
 .max-w-\[600px\] {
   max-width: 600px;
 }
@@ -1255,30 +1247,6 @@ label {
   max-width: 100%;
 }
 
-.max-w-\[90\] {
-  max-width: 90;
-}
-
-.max-w-\[90\%\] {
-  max-width: 90%;
-}
-
-.max-w-\[900px\] {
-  max-width: 900px;
-}
-
-.max-w-\[00px\] {
-  max-width: 00px;
-}
-
-.max-w-\[700px\] {
-  max-width: 700px;
-}
-
-.max-w-\[500px\] {
-  max-width: 500px;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1289,6 +1257,21 @@ label {
 
 .translate-y-4 {
   --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2362,26 +2345,6 @@ label {
     max-width: 950px;
   }
 
-  .md\:max-w-\[100px\] {
-    max-width: 100px;
-  }
-
-  .md\:max-w-\[1000px\] {
-    max-width: 1000px;
-  }
-
-  .md\:max-w-\[00px\] {
-    max-width: 00px;
-  }
-
-  .md\:max-w-\[000px\] {
-    max-width: 000px;
-  }
-
-  .md\:max-w-\[90px\] {
-    max-width: 90px;
-  }
-
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -2700,13 +2663,6 @@ label {
     line-height: 1rem;
   }
 
-  @media (min-width: 768px) {
-    .md\:md\:text-6xl {
-      font-size: 3.75rem;
-      line-height: 1;
-    }
-  }
-
   .md\:leading-snug {
     line-height: 1.375;
   }
@@ -2929,10 +2885,6 @@ label {
     height: 711px;
   }
 
-  .lg\:h-\[780px\] {
-    height: 780px;
-  }
-
   .lg\:h-\[80vh\] {
     height: 80vh;
   }
@@ -3033,6 +2985,10 @@ label {
     max-width: 455px;
   }
 
+  .lg\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
   .lg\:max-w-\[655px\] {
     max-width: 655px;
   }
@@ -3041,24 +2997,40 @@ label {
     max-width: 700px;
   }
 
-  .lg\:max-w-\[900px\] {
-    max-width: 900px;
+  .lg\:max-w-\[950px\] {
+    max-width: 950px;
   }
 
   .lg\:max-w-\[00px\] {
     max-width: 00px;
   }
 
-  .lg\:max-w-\[100px\] {
-    max-width: 100px;
+  .lg\:max-w-\[800px\] {
+    max-width: 800px;
+  }
+
+  .lg\:max-w-\[900px\] {
+    max-width: 900px;
+  }
+
+  .lg\:max-w-\[0px\] {
+    max-width: 0px;
+  }
+
+  .lg\:max-w-\[80px\] {
+    max-width: 80px;
+  }
+
+  .lg\:max-w-\[860px\] {
+    max-width: 860px;
+  }
+
+  .lg\:max-w-\[850px\] {
+    max-width: 850px;
   }
 
   .lg\:max-w-\[90px\] {
     max-width: 90px;
-  }
-
-  .lg\:max-w-\[950px\] {
-    max-width: 950px;
   }
 
   .lg\:flex-none {
@@ -3265,13 +3237,13 @@ label {
     line-height: 1;
   }
 
-  .lg\:text-8xl {
-    font-size: 6rem;
+  .lg\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
-  .lg\:text-6xl {
-    font-size: 3.75rem;
+  .lg\:text-8xl {
+    font-size: 6rem;
     line-height: 1;
   }
 

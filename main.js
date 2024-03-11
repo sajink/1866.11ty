@@ -39,12 +39,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-var modal = document.getElementById("modal");
-    var modalImg = document.getElementById("modal-img");
-    function showModal(src) {
-        modal.classList.remove('hidden');
-        modalImg.src = src;
-    }
-    function closeModal() {
-        modal.classList.add('hidden');
-    }
