@@ -1,12 +1,12 @@
 {
     "title": "The Heritage 1866",
     "name": "The Heritage 1866",
+    "name2":"Judge Bungalow",
     "email": "stay@heritage1866.com",
     "phone": " +91 9876543210",
-    "address": "Judge Bungalow, Melur Village",
-    "place": "Thalassery, Kannur District", 
+    "place": "Melur Village ,Thalassery",
+    "district": "Kannur District", 
     "state": "Kerala",      
-    "pin": "670105",
     "country": "INDIA",
     "social": [
         {

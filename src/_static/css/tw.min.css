@@ -515,15 +515,6 @@ h4 {
   color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
-table,
-  table td,
-  table th {
-  border-collapse: collapse;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
 label {
   margin-bottom: 0.5rem;
   display: block;
@@ -911,6 +902,11 @@ a.text-decoration-none:hover {
   margin: 0px;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -964,21 +960,6 @@ a.text-decoration-none:hover {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-}
-
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 
 .mb-1 {
@@ -1097,8 +1078,8 @@ a.text-decoration-none:hover {
   height: 179px;
 }
 
-.h-\[200px\] {
-  height: 200px;
+.h-\[210px\] {
+  height: 210px;
 }
 
 .h-\[240px\] {
@@ -1197,8 +1178,8 @@ a.text-decoration-none:hover {
   width: 1830px;
 }
 
-.w-\[200px\] {
-  width: 200px;
+.w-\[210px\] {
+  width: 210px;
 }
 
 .w-\[35px\] {
@@ -1255,14 +1236,6 @@ a.text-decoration-none:hover {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[296px\] {
-  max-width: 296px;
-}
-
-.max-w-\[740px\] {
-  max-width: 740px;
 }
 
 .flex-1 {
@@ -1589,6 +1562,11 @@ a.text-decoration-none:hover {
   padding-right: 2rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1622,11 +1600,6 @@ a.text-decoration-none:hover {
 .py-\[6vh\] {
   padding-top: 6vh;
   padding-bottom: 6vh;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pb-1 {
@@ -1918,10 +1891,6 @@ a.text-decoration-none:hover {
 
 .underline {
   text-decoration-line: underline;
-}
-
-.no-underline {
-  text-decoration-line: none;
 }
 
 .opacity-0 {
@@ -2245,8 +2214,8 @@ a.text-decoration-none:hover {
     height: 180px;
   }
 
-  .md\:h-\[210px\] {
-    height: 210px;
+  .md\:h-\[240px\] {
+    height: 240px;
   }
 
   .md\:h-\[351px\] {
@@ -2305,8 +2274,8 @@ a.text-decoration-none:hover {
     width: 175px;
   }
 
-  .md\:w-\[210px\] {
-    width: 210px;
+  .md\:w-\[240px\] {
+    width: 240px;
   }
 
   .md\:w-\[250px\] {
@@ -2439,16 +2408,16 @@ a.text-decoration-none:hover {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
   .md\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
   .md\:p-0 {
@@ -2658,11 +2627,6 @@ a.text-decoration-none:hover {
     line-height: 1;
   }
 
-  .md\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
   .md\:text-9xl {
     font-size: 8rem;
     line-height: 1;
@@ -2756,11 +2720,6 @@ a.text-decoration-none:hover {
   .lg\:mx-\[20\%\] {
     margin-left: 20%;
     margin-right: 20%;
-  }
-
-  .lg\:mx-\[27\%\] {
-    margin-left: 27%;
-    margin-right: 27%;
   }
 
   .lg\:mx-\[30\%\] {

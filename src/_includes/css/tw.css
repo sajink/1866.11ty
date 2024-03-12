@@ -35,11 +35,6 @@
     @apply text-slate-800 font-bold leading-normal text-sm;
   }
 
-  table,
-  table td,
-  table th {
-    @apply border-collapse border border-gray-300;
-  }
 
   label {
     @apply block mb-2 text-sm leading-tight text-slate-800 font-normal lg:leading-normal lg:text-base md:leading-normal md:text-base;
