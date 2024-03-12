@@ -1,5 +1,5 @@
 <header>
-<div class="text-white lg:container lg:mx-auto font-baskervville">
+<div class="text-white lg:container lg:mx-auto font-fraunces">
     <nav class="py-4 md:py-5 flex justify-between items-center md:px-[1%]">
         <div class="hidden md:block">
             <a class=" text-3xl font-bold leading-none md:pl-6 inline-flex gap-6">          
@@ -27,15 +27,6 @@
         {% for link in page.topmenu.links %}
         {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
         <li><a href="{{ link.href }}" class="text-sm  semibold uppercase tracking-widest" aria-current="page">{{ link.title }}</a></li>
-        {% elseif link.sub %}
-            <li>
-                <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:p-0 md:w-auto text-gray-900 text-sm font-normal leading-tight oneline uppercase">
-                    {{ link.title }}
-                    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                    </svg>
-                </button>
-            </li>
         {% else %}
             <li><a href="{{ link.href }}" class="text-xs semibold text-[#ffffffcc] hover:no-underline hover:text-white uppercase tracking-widest">{{ link.title }}</a></li>
         {% endif %}
