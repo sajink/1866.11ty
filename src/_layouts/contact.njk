@@ -6,15 +6,21 @@ layout: default.njk
     {% include "header.html" %}
     <p class="font-fraunces text-white text-center text-5xl md:text-9xl pb-12 md:py-12 lg:py-24">Contact</p>
 </div>
-<div class="mx-6 md:mx-[10%] lg:mx-[27%] font-fraunces font-semibold tracking-normal lg:tracking-widest text-center text-xl md:text-3xl">
+<div class="mx-0 md:mx-[5%] lg:mx-[20%] font-fraunces font-semibold tracking-normal lg:tracking-widest text-center text-xl md:text-3xl md:space-y-2">
     <div class="flex items-center justify-center pt-12 md:pt-20">
         <img src="/images/contact/location.png" alt="location">
     </div>
-    <p class="text-sm md:text-base font-bold tracking-widest md:pt-3">LOCATION</p>
+    <p class="text-sm md:text-base font-bold tracking-widest py-1 md:py-3">LOCATION</p>
     <div>{{ site.name }}, {{ site.address }},</div>
-    <div>{{ site.place }}{{ site.pin}}, {{ site.country}}.</div>
-    <p class="md:pt-3">{{ site.phone }}</p>
-    <p class="md:pt-3">{{ site.email }}</p>
+    <div>{{ site.place }}</div> 
+    <div>{{ site.state }},{{ site.country }}</div>
+     <div>{{ site.pin}}</div>
+     <div class="pt-5">
+    <a class="hover:no-underline" href="tel:{{ site.phone }}">{{ site.phone }}</a>
+    </div>
+   <div class="pt-4">
+    <a class="hover:no-underline" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
     <div class="flex items-center justify-center py-10">
         <img src="/images/about-us/divider.svg" alt="divider">
     </div>

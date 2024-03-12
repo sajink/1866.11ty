@@ -966,6 +966,21 @@ a.text-decoration-none:hover {
   margin-bottom: 0.75rem;
 }
 
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1240,6 +1255,14 @@ a.text-decoration-none:hover {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-\[296px\] {
+  max-width: 296px;
+}
+
+.max-w-\[740px\] {
+  max-width: 740px;
 }
 
 .flex-1 {
@@ -1601,6 +1624,11 @@ a.text-decoration-none:hover {
   padding-bottom: 6vh;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1890,6 +1918,10 @@ a.text-decoration-none:hover {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .opacity-0 {
@@ -2411,6 +2443,12 @@ a.text-decoration-none:hover {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
   .md\:p-0 {
