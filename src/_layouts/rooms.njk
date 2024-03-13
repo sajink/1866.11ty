@@ -11,12 +11,12 @@ layout: default.njk
 
 <div class="mx-6 md:mx-[10%] lg:mx-[30%]">
     <div class="text-[#1A1A1A] text-sm md:text-xs text-center font-bold pt-24 md:pt-28 lg:pt-28 tracking-widest font-fraunces">WELCOME TO RAJ VILAS PALACE</div>
-    <p class="primary-clr text-3xl md:text-4xl text-center  py-2 medium tracking-tight" style="line-height: 1.25;">Explore our refined accommodation options and find the perfect space for your stay.</p>
+    <p class="font-fraunces primary-clr text-3xl md:text-4xl text-center  py-2 medium tracking-tight" style="line-height: 1.25;">Explore our refined accommodation options and find the perfect space for your stay.</p>
     <p class="text-sm md:text-base   text-center pb-8 md:pb-14">All rooms have a bathroom with bathtub and/or shower, cable television/radio, free WIFI and mini bar. In addition, all rooms are equipped with a Nespresso coffee machine. Most rooms are carpeted, some have parquet flooring.</p>
 </div>
 
 <div id="app" class="container mx-auto">
-    <div class="options flex justify-center mb-4 gap-6 text-base md:text-base font-bold">
+    <div class="options flex justify-center mb-4 gap-6 text-base md:text-base font-bold font-fraunces">
         <button class="option hover:primary-clr uppercase" @click="selectOption(0)" :class="{ 'yellow-underline': selectedOption === 0 }">Deluxe Suite</button>
         <button class="option hover:primary-clr uppercase" @click="selectOption(1)" :class="{ 'yellow-underline': selectedOption === 1 }">Royal Suite</button>
         <button class="option hover:primary-clr uppercase" @click="selectOption(2)" :class="{ 'yellow-underline': selectedOption === 2 }">Heritage Suite</button>
@@ -37,7 +37,7 @@ layout: default.njk
                         <div class="md:pt-4 lg:pt-10">
                             <div class="mx-6 lg:py-8">
                                 <p class="text-xs lg:pt-2 semibold whitespace-nowrap tracking-wider">WELCOME TO COZYSTAY APARTHOTEL</p>
-                                <p class="primary-clr text-3xl md:text-5xl lg:pt-2 leading-snug medium whitespace-nowrap">{{rm.title}}</p>
+                                <p class="font-fraunces primary-clr text-3xl md:text-5xl lg:pt-2 leading-snug medium whitespace-nowrap">{{rm.title}}</p>
                                 <p class="text-gray-800 text-sm md:text-base  ">{{rm.desc}}</p>
                                 <p class="primary-clr text-xs tracking-wider mt-6 md:mt-10">CALL US FOR MORE INFORMATION</p>
                                 <button class="hover:primary-clr text-black text-2xl tracking-wider">+41 22 345 66 77</button>
@@ -82,7 +82,7 @@ layout: default.njk
         <div class="flex-row md:flex md:gap-20 lg:gap-40">
             <div class="md:w-1/2">
                 <div class="text-xs">THE ESSENTIAL IN-ROOM AMENITIES</div>
-                <div class="text-2xl md:text-4xl medium mt-4 md:mt-6">Our spaces have all the essentials you need for your stay.</div>
+                <div class="font-fraunces text-2xl md:text-4xl medium mt-4 md:mt-6">Our spaces have all the essentials you need for your stay.</div>
             </div>
             <div class="text-sm md:text-base text-gray-600 md:w-1/2 mt-8 md:mt-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</div>
         </div>
@@ -94,7 +94,7 @@ layout: default.njk
                 <div>
                     <img src="{{rm.image}}" alt={{rm.title}}>
                     <div class="mt-4">
-                        <h3 class="text-lg font-semibold">{{rm.title}}</h3>
+                        <h3 class="font-fraunces text-lg font-fraunces">{{rm.title}}</h3>
                         <p class="text-sm md:text-base text-gray-600">Lorem ipsum proin gravida velit auctor sde re sit amet space.</p>
                     </div>
                 </div>
@@ -104,41 +104,6 @@ layout: default.njk
     </div>
 </div>
 
-<div class="flex-row md:flex">
-    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
-         style="background-image: url('/images/rooms/img2.jpg');">
-        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
-
-            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">OUR LOCATION</div>
-            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Getting Here</div>
-            <div class="semibold  text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
-            <div class="semibold  text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
-            <div class="semibold  text-base text-center">Tel: +1 212-555-6699</div>
-            <div class="semibold  text-base text-center pb-4">Email: information@cozystay.com</div>
-            <button class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
-                <a class="hover:no-underline" href="/">Get Directions</a>
-            </button>
-        </div>
-    </div>
-
-    <div class="relative md:w-1/2 h-[45vh] md:h-[50vh] lg:h-[55vh] bg-cover bg-center"
-         style="background-image: url('/images/rooms/img3.jpg');">
-        <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-1 text-white text-center md:my-24 space-y-1">
-            <div class="primary-clr font-bold  text-xs text-center pt-20 md:pt-2">BOOK A ROOM</div>
-            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Spend Your Time With Us</div>
-            <div class="semibold  text-sm md:text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
-            <div class="semibold  text-sm md:text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
-            <div class="semibold  text-sm md:text-base text-center">Tel: +1 212-555-6699</div>
-            <div class="semibold  text-sm md:text-base text-center pb-4">Email: information@cozystay.com</div>
-            <button class="lg:inline-block py-2 px-3 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
-                <a class="hover:no-underline" href="/">Reserve your stay</a>
-            </button>
-        </div>
-
-    </div>
-</div>
 
 <div  class="mx-auto text-center lg:max-w-[1100px] pt-10 md:pt-14 lg:pt-16">
   <div class="flex items-center justify-center">

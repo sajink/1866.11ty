@@ -5,18 +5,18 @@ layout: base.njk
 {% include "header.html" %} 
 <p class="font-fraunces text-white text-center text-5xl md:text-9xl pb-12 md:py-12 lg:py-24">Gallery</p>
 <div class="lg:top-[425px] px-6 md:px-10 pb-16 md:pb-28">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        {% for img in page.gallery.photos %}
-        <img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer" onclick="showModal('{{img.image}}')"/>
-        {% endfor %}
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {% for img in page.gallery.photos %}
+            <img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer" onclick="showModal('{{img.image}}')"/>
+            {% endfor %}
+        </div>
     </div>
-</div>
-<div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
-    <a class="fixed z-90 left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="previousImage()"><img src="/images/gallery/left-arrow.png"></a>
-    <a class="fixed z-90 right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="nextImage()"><img src="/images/gallery/right-arrow.png"></a>
-    <a class="fixed z-90 top-2 right-2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()"><img src="/images/gallery/close.png"></a>
-    <img id="modal-img" class="max-w-[400px] h-[800px] md:max-w-[800px] md:max-h-[900px] lg:w-[1830px] lg:h-[90vh] object-cover" />
-</div>
+    <div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+        <a class="fixed z-90 left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="previousImage()"><img src="/images/gallery/left-arrow.png"></a>
+        <a class="fixed z-90 right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="nextImage()"><img src="/images/gallery/right-arrow.png"></a>
+        <a class="fixed z-90 top-2 right-2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()"><img src="/images/gallery/close.png"></a>
+        <img id="modal-img" class="max-w-[500px] h-[800px] md:max-w-[800px] md:max-h-[900px] lg:w-[1830px] lg:h-[90vh] object-cover" />
+    </div>
 <div  class="mx-auto text-center lg:max-w-[1100px] pt-4">
   <div class="flex items-center justify-center">
     <img src="/images/about-us/divider.svg" alt="divider">
@@ -27,29 +27,36 @@ layout: base.njk
     <img src="/images/about-us/divider.svg" alt="divider">
   </div>
 </div>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     var currentImageIndex = 0;
     var images = [{% for img in page.gallery.photos %} '{{img.image}}', {% endfor %}];
 
     function showModal(imageUrl) {
-        document.getElementById('modal-img').src = imageUrl;
-        document.getElementById('modal').classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
+        $('#modal-img').fadeOut(400, function() {
+            $(this).attr('src', imageUrl).fadeIn(400);
+        });
+        $('#modal').removeClass('hidden');
+        $('body').css('overflow', 'hidden');
         currentImageIndex = images.indexOf(imageUrl);
     }
 
     function closeModal() {
-        document.getElementById('modal').classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        $('#modal').addClass('hidden');
+        $('body').css('overflow', 'auto');
     }
 
     function nextImage() {
         currentImageIndex = (currentImageIndex + 1) % images.length;
-        document.getElementById('modal-img').src = images[currentImageIndex];
+        $('#modal-img').animate({ left: '100%', opacity: 0 }, 300, function() {
+            $(this).attr('src', images[currentImageIndex]).css({ left: '-100%', opacity: 0 }).animate({ left: '0', opacity: 1 }, 400);
+        });
     }
 
     function previousImage() {
         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        document.getElementById('modal-img').src = images[currentImageIndex];
+        $('#modal-img').animate({ left: '-100%', opacity: 0 }, 300, function() {
+            $(this).attr('src', images[currentImageIndex]).css({ left: '100%', opacity: 0 }).animate({ left: '0', opacity: 1 }, 400);
+        });
     }
 </script>
