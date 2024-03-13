@@ -786,8 +786,8 @@ label {
   width: 100%;
   max-width: 1200px;
   text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -905,6 +905,11 @@ a.text-decoration-none:hover {
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .mx-2 {
@@ -1104,10 +1109,6 @@ a.text-decoration-none:hover {
 
 .h-\[439px\] {
   height: 439px;
-}
-
-.h-\[45vh\] {
-  height: 45vh;
 }
 
 .h-\[467px\] {
@@ -1658,10 +1659,6 @@ a.text-decoration-none:hover {
   padding-top: 0.5rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
-}
-
 .pt-24 {
   padding-top: 6rem;
 }
@@ -2091,11 +2088,6 @@ a.text-decoration-none:hover {
     margin-right: auto;
   }
 
-  .md\:my-24 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-  }
-
   .md\:my-8 {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -2211,10 +2203,6 @@ a.text-decoration-none:hover {
 
   .md\:h-\[500px\] {
     height: 500px;
-  }
-
-  .md\:h-\[50vh\] {
-    height: 50vh;
   }
 
   .md\:h-\[52vh\] {
@@ -2599,11 +2587,6 @@ a.text-decoration-none:hover {
 
   .md\:text-7xl {
     font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .md\:text-9xl {
-    font-size: 8rem;
     line-height: 1;
   }
 
@@ -3180,6 +3163,11 @@ a.text-decoration-none:hover {
 
   .lg\:text-8xl {
     font-size: 6rem;
+    line-height: 1;
+  }
+
+  .lg\:text-9xl {
+    font-size: 8rem;
     line-height: 1;
   }
 

@@ -4,7 +4,7 @@ layout: default.njk
 
 <div class="bg-[#111827]">
     {% include "header.html" %}
-    <p class="font-fraunces text-white text-center text-5xl md:text-9xl pb-12 md:py-12 lg:py-24">Beyond Beaches & Biryani</p>
+    <p class="font-fraunces text-white text-center text-4xl md:text-7xl lg:text-9xl pb-12 md:py-12 lg:py-24 mx-10">Beyond Beaches & Biryani</p>
 </div>
 <div class="mx-[2%] md:mx-[4%] pt-12 md:pt-24 lg:pt-32">
     <div class="text-[#1A1A1A] text-sm md:text-lg text-center font-bold tracking-widest font-Fraunces upper-case">History of Thalassery & The Home</div>
@@ -53,9 +53,14 @@ layout: default.njk
     {% endfor %}
 </div>
 <div class="mx-[5%] md:mx-8 lg:mx-auto max-w-full md:max-w-[1100px]">
-    <div class="mx-auto text-center lg:max-w-[1250px] pt-8">
+    <div class="hidden md:block mx-auto text-center lg:max-w-[1250px] pt-8">
         <p class="font-fraunces primary-clr text-3xl md:text-6xl text-center medium py-2 md:py-6 leading-tight md:tracking-tight md:tracking-normal" style="line-height: 1.25;">
             History of The Heritage 1866
+        </p>
+    </div>
+    <div class="block md:hidden mx-auto text-center lg:max-w-[1250px] pt-8">
+        <p class="font-fraunces primary-clr text-3xl md:text-6xl text-center medium py-2 md:py-6 leading-tight md:tracking-tight md:tracking-normal" style="line-height: 1.25;">
+            History of <br> The Heritage 1866
         </p>
     </div>
     <div class="flex items-center justify-center pt-4 md:pt-6 lg:pt-4 pb-4 md:pb-12 lg:pb-10">

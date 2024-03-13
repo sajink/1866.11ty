@@ -113,7 +113,7 @@
     @apply primary-clr hover:text-black text-sm mb-8 lg:mb-0 lg:mt-6 tracking-wider;
   }
   .abt-text{
-    @apply text-sm md:text-lg text-center md:text-left w-full max-w-[1200px] lg:max-w-[1200px] lg:mx-auto;
+    @apply text-base md:text-lg text-center md:text-left w-full max-w-[1200px] lg:max-w-[1200px] lg:mx-auto;
   }
 
   a.text-decoration-none:hover {
