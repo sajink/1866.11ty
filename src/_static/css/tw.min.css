@@ -1873,10 +1873,6 @@ a.text-decoration-none:hover {
   opacity: 0.5;
 }
 
-.opacity-80 {
-  opacity: 0.8;
-}
-
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -2800,12 +2796,12 @@ a.text-decoration-none:hover {
     height: 393px;
   }
 
-  .lg\:h-\[480px\] {
-    height: 480px;
+  .lg\:h-\[400px\] {
+    height: 400px;
   }
 
-  .lg\:h-\[500px\] {
-    height: 500px;
+  .lg\:h-\[480px\] {
+    height: 480px;
   }
 
   .lg\:h-\[550px\] {
