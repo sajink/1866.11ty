@@ -1023,10 +1023,6 @@ a.text-decoration-none:hover {
   margin-top: 1.25rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1111,10 +1107,6 @@ a.text-decoration-none:hover {
   height: 439px;
 }
 
-.h-\[467px\] {
-  height: 467px;
-}
-
 .h-\[500px\] {
   height: 500px;
 }
@@ -1171,10 +1163,6 @@ a.text-decoration-none:hover {
   width: 404px;
 }
 
-.w-\[650px\] {
-  width: 650px;
-}
-
 .w-\[80px\] {
   width: 80px;
 }
@@ -1205,6 +1193,10 @@ a.text-decoration-none:hover {
 
 .max-w-\[400px\] {
   max-width: 400px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .max-w-\[600px\] {
@@ -1800,10 +1792,6 @@ a.text-decoration-none:hover {
   letter-spacing: -0.05em;
 }
 
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-
 .tracking-widest {
   letter-spacing: 0.1em;
 }
@@ -2095,10 +2083,6 @@ a.text-decoration-none:hover {
 
   .md\:mb-10 {
     margin-bottom: 2.5rem;
-  }
-
-  .md\:mb-16 {
-    margin-bottom: 4rem;
   }
 
   .md\:mb-6 {
@@ -2876,6 +2860,10 @@ a.text-decoration-none:hover {
     width: 350px;
   }
 
+  .lg\:w-\[404px\] {
+    width: 404px;
+  }
+
   .lg\:w-\[600px\] {
     width: 600px;
   }
@@ -3054,10 +3042,6 @@ a.text-decoration-none:hover {
 
   .lg\:pb-16 {
     padding-bottom: 4rem;
-  }
-
-  .lg\:pb-20 {
-    padding-bottom: 5rem;
   }
 
   .lg\:pb-24 {
