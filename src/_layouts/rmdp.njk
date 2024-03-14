@@ -13,37 +13,32 @@ layout: base.njk
 <div
     class="flex-row lg:flex mx-6 md:mx-14 lg:mx-0  max-w-[1100px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
     <div class="container lg:ml-20">
-        <p class="primary-clr text-3xl md:text-5xl pt-6 md:pt-14 leading-snug medium">Deluxe room</p>
-        <p class="text-sm    pt-2 md:pt-3">560 ft² / 52 m² / Park View / 2 Guests</p>
+        <p class="primary-clr text-3xl md:text-5xl pt-6 md:pt-14 leading-snug medium">{{title}}</p>
+        <p class="text-sm pt-2 md:pt-3">{{ rspec }}</p>
         <div class="inline-flex flex-wrap gap-4 md:space-x-6 pt-5">
             <div class="flex items-center gap-2">
-                <img src="/images/roomdp/feet.png" class="">
+                <img src="/images/roomdp/feet.png">
                 <h6 class="text-sm font-medium">560 ft2</h6>
             </div>
 
             <div class="flex items-center gap-2">
-                <img src="/images/roomdp/guest.png" class="">
+                <img src="/images/roomdp/guest.png">
                 <h6 class="text-sm font-medium">2 Guests</h6>
             </div>
 
             <div class="flex items-center gap-2">
-                <img src="/images/roomdp/bed.png" class="">
+                <img src="/images/roomdp/bed.png">
                 <h6 class="text-sm font-medium">1 Bed</h6>
             </div>
 
             <div class="flex items-center gap-2">
-                <img src="/images/roomdp/bathroom.png" class="">
+                <img src="/images/roomdp/bathroom.png">
                 <h6 class="text-sm font-medium">1 Bathroom</h6>
             </div>
         </div>
-        <div class="container   ">
-            <p class="text-sm md:text-base  pt-4 md:pt-6 lg:pt-4 ">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. </p>
-            <p class="text-sm md:text-base pt-2">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-                enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                Integer tincidunt. </p>
+        <div class="container">
+            <p class="text-sm md:text-base  pt-4 md:pt-6 lg:pt-4 ">{{ para1 }}</p>
+            <p class="text-sm md:text-base pt-2">{{ para2 }}</p>
         </div>
 
         <div class="pt-6 md:pt-10">
@@ -61,15 +56,9 @@ layout: base.njk
         <div class="pt-10">
             <h4 class="primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
             <ul class="list-disc text-sm md:text-base pt-4 space-y-3 ml-2">
-                <li>Private balcony</li>
-                <li>140x200 cm Elite bed</li>
-                <li>Upholstered seat beside the panoramic window</li>
-                <li>TV-UHD screen for watching mountaineering films</li>
-                <li>Writing desk with USB ports for documenting your adventures</li>
-                <li>Room safe for your top mountain photos</li>
-                <li>Service station with Lavazza coffee machine, kettle and tea</li>
-                <li>Bathroom with rain shower</li>
-                <li>Comfortable terry towels and bathrobes</li>
+            {% for inc in included %}
+               <li>{{ inc }}</li>
+            {% endfor %}
             </ul>
         </div>
     </div>

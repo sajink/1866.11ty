@@ -4,51 +4,36 @@ layout: default.njk
 
 <div class="bg-[#111827]">
     {% include "header.html" %}
-    <p class="font-fraunces text-white text-center text-4xl md:text-7xl lg:text-9xl pb-12 md:py-12 lg:py-24 mx-10">Rooms & Suites</p>
+    <p class="font-fraunces text-white text-center text-4xl md:text-7xl lg:text-9xl pb-12 md:py-12 lg:py-24 mx-10">Suites & Rooms</p>
 </div>
 
 
 
 <div class="mx-6 md:mx-[10%] lg:mx-[30%]">
-    <div class="text-[#1A1A1A] text-sm md:text-xs text-center font-bold pt-24 md:pt-28 lg:pt-28 tracking-widest font-fraunces">WELCOME TO RAJ VILAS PALACE</div>
+    <div class="text-[#1A1A1A] text-sm md:text-xs text-center font-bold pt-24 md:pt-28 lg:pt-28 tracking-widest font-fraunces">WELCOME TO THE HERITAGE 1866</div>
     <p class="font-fraunces primary-clr text-3xl md:text-4xl text-center  py-2 medium tracking-tight" style="line-height: 1.25;">Explore our refined accommodation options and find the perfect space for your stay.</p>
     <p class="text-sm md:text-base   text-center pb-8 md:pb-14">All rooms have a bathroom with bathtub and/or shower, cable television/radio, free WIFI and mini bar. In addition, all rooms are equipped with a Nespresso coffee machine. Most rooms are carpeted, some have parquet flooring.</p>
 </div>
 
 <div id="app" class="container mx-auto">
-    <div class="options flex justify-center mb-4 gap-6 text-base md:text-base font-bold font-fraunces">
-        <button class="option hover:primary-clr uppercase" @click="selectOption(0)" :class="{ 'yellow-underline': selectedOption === 0 }">Deluxe Suite</button>
-        <button class="option hover:primary-clr uppercase" @click="selectOption(1)" :class="{ 'yellow-underline': selectedOption === 1 }">Royal Suite</button>
-        <button class="option hover:primary-clr uppercase" @click="selectOption(2)" :class="{ 'yellow-underline': selectedOption === 2 }">Heritage Suite</button>
-    </div>
-
+    <div class="options flex justify-center mb-4 gap-6 text-base md:text-base font-bold font-fraunces flex-wrap">
+        <button class="option hover:primary-clr uppercase" @click="selectOption(-1)" :class="{ 'yellow-underline': selectedOption === -1 }">All Rooms</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(0)" :class="{ 'yellow-underline': selectedOption === 0 }">The Heritage Grand Suite</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(1)" :class="{ 'yellow-underline': selectedOption === 1 }">Premium Deluxe Suites</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(2)" :class="{ 'yellow-underline': selectedOption === 2 }">Deluxe Suites</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(3)" :class="{ 'yellow-underline': selectedOption === 3 }">Standard Double Room</button>
+        <button class="option hover:primary-clr uppercase" @click="selectOption(4)" :class="{ 'yellow-underline': selectedOption === 4 }">Single Rooms</button>
+    </div> 
 
     <div id="content">
     {% set i=0 %}
     {% for rm in page.roomssuites.room_type %}
-        <div id="content-{{ i }}" class="content" v-show="selectedOption === {{ i }}">
+        <div id="content-{{ i }}" class="content" v-show="selectedOption === {{ i }} || selectedOption === -1">
             <div class="mx-[5%] md:mx-8 lg:mx-auto max-w-[400px] md:max-w-[900px] lg:max-w-[1300px]">
-                <div class="flex-row md:inline-flex pt-10 md:pt-20 pb-8 md:pb-16 lg:pb-20 md:space-x-10">
-
-                    <div class="flex-1 md:w-1/2">
-                        <img src="{{rm.image}}" alt={{rm.title}} class="w-[650px] h-[467px]">
-                    </div>
-                    <div class="flex-1 md:mx-[1%] tracking-tight md:w-1/2">
-                        <div class="md:pt-4 lg:pt-10">
-                            <div class="mx-6 lg:py-8">
-                                <p class="text-xs lg:pt-2 semibold whitespace-nowrap tracking-wider">WELCOME TO COZYSTAY APARTHOTEL</p>
-                                <p class="font-fraunces primary-clr text-3xl md:text-5xl lg:pt-2 leading-snug medium whitespace-nowrap">{{rm.title}}</p>
-                                <p class="text-gray-800 text-sm md:text-base  ">{{rm.desc}}</p>
-                                <p class="primary-clr text-xs tracking-wider mt-6 md:mt-10">CALL US FOR MORE INFORMATION</p>
-                                <button class="hover:primary-clr text-black text-2xl tracking-wider">+41 22 345 66 77</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <p class="font-fraunces primary-clr text-3xl md:text-5xl lg:pt-8 leading-snug medium whitespace-nowrap py-10 text-center">{{rm.title}}</p>
                 <div class="flex justify-center">
                     <div class="min-w-screen-lg">
-                        <div class="flex-row md:flex justify-between gap-11">
+                        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-11">
                             {% for t in page.roomssuites.rooms_list %}
                             {% if t.type == rm.title %}
                             <div class="">
@@ -129,15 +114,20 @@ layout: default.njk
     new Vue({
         el: '#app',
         data: {
-            selectedOption: 0
+            selectedOption: -1 // Default to show all rooms
         },
         methods: {
             selectOption(option) {
                 this.selectedOption = option;
             }
+        },
+        mounted() {
+            // Show the content for the default option (All Rooms)
+            showContent(-1);
         }
     });
 </script>
+
 <script>
     function showContent(index) {
         // Hide all content divs
@@ -152,9 +142,6 @@ layout: default.njk
             selectedContentDiv.style.display = 'block';
         }
     }
-
-    // Show the content for the default option (Option 1)
-    showContent(0);
 </script>
 <style>
     .yellow-underline {
