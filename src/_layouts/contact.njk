@@ -15,7 +15,7 @@ layout: default.njk
     <div>{{ site.name2 }}</div>
     <div>{{ site.place }}</div> 
     <div>{{ site.district }}</div> 
-    <div>{{ site.state }},{{ site.country }}</div>
+    <div>{{ site.state }}, {{ site.country }}</div>
      <div class="pt-8">
     <a class="hover:primary-clr hover:no-underline" href="tel:{{ site.phone }}">{{ site.phone }}</a>
     </div>
@@ -41,9 +41,9 @@ layout: default.njk
                 </div>
             </div>
             <div class="mb-5">
-                <label for="email" class="block   font-bold text-sm">Email <span class="text-red-500">*</span></label>
+                <label for="email" class="block   font-bold text-sm">Email</label>
                 <div class="rounded-md shadow">
-                    <input type="email" name="email" id="email" placeholder="example@domain.com" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border " required />
+                    <input type="email" name="email" id="email" placeholder="example@domain.com" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border " />
                 </div>
             </div>
             <div class="mb-5">
@@ -53,7 +53,7 @@ layout: default.njk
                 </div>
             </div>
             <div class="mb-3">
-                <label for="message" class="block   font-bold text-sm">Comment or Message <span class="text-red-500">*</span></label>
+                <label for="message" class="block   font-bold text-sm">Your Message <span class="text-red-500">*</span></label>
                 <div class="rounded-md">
                     <textarea rows="4" name="message" id="message" placeholder="Type your message" class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus-dotted-border" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);" required></textarea>
                 </div>

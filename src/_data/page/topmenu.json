@@ -2,14 +2,14 @@
     "links": [
         {"title":"Home","href":"/"},
         {"title":"History","href":"/history"},
-        {"title":"Rooms & Suites","href":"/rooms-suites"},
+        {"title":"Suites & Rooms","href":"/rooms-suites"},
         {"title":"Cuisine","href":"/cuisine"},
         {"title":"Experiences","href":"/experience"},
         {"title":"Gallery","href":"/gallery"},
         {"title":"Contact","href":"/contact"}
     ],
     "cta": {
-        "title": "BOOK NOW",
+        "title": "BOOKING",
         "href": "/contact"
     }
 }
