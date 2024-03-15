@@ -11,14 +11,13 @@ layout: default.njk
 
 <div class="flex justify-center">
 <div class="max-w-[420px] md:max-w-[750px] lg:max-w-[780px]">
-    <p class="font-fraunces primary-clr text-2xl md:text-4xl text-center py-4 pt-10 md:pt-20 medium tracking-tight" style="line-height: 1.25;">STAYING AT THE HERITAGE 1866</p>
+    <p class="font-fraunces primary-clr text-sm md:text-base text-center lg:py-4 pt-10 md:pt-16 lg:pt-20 medium tracking-widest" style="line-height: 1.25;">STAYING AT THE HERITAGE 1866</p>
     <p class="text-sm md:text-base text-center pb-8 md:pb-14">The heritage home offers 12 spacious vintage bedrooms, each with attached bathrooms.
 Each room is meticulously attended to, ensuring a delightful stay for our esteemed guests.
 
 The rooms are named after native flowers of our region.</p>
 </div>
 </div>
-
 <div id="app" class="container mx-auto">
     <div class="options flex justify-center mb-4 gap-6 text-sm md:text-base font-bold font-fraunces flex-wrap">
         <button class="option hover:primary-clr uppercase" @click="selectOption(-1)" :class="{ 'yellow-underline': selectedOption === -1 }">All Rooms</button>
@@ -37,15 +36,19 @@ The rooms are named after native flowers of our region.</p>
                         <div class="min-w-screen-lg">
                             <div class="">
                                 <div class="">
+                                  <a href="/rooms/grand_suite/suryakanthi">
                                     <div style="overflow: hidden;">
                                         <img src="/images/roomdp/Heritage Grand Suite- Suryakanthi/Heritage Grand Suite- Main.jpeg" alt="image" class="w-full lg:w-[650px] h-[350px] md:h-[400px] lg:h-[450px] transition-transform hover:scale-105">
                                     </div>
+                                    </a>
                                     <div class="flex justify-center">
                                     <div class="mt-4 max-w-[400px] md:max-w-[600px] lg:max-w-[550px] text-center">
+                                        <a href="/rooms/grand_suite/suryakanthi" class="hover:no-underline">
                                         <h3 class="text-3xl font-fraunces">Suryakanthi</h3>
+                                        </a>
                                         <p class="text-sm md:text-base text-gray-600 ">Exquisite river-facing suite, with its own private staircase and huge open veranda, the king size bedroom has a magnificent panoramic view of the lush mangroves and the pristine Anjarakandy river.</p>
                                         <button class="primary-clr hover:text-black text-sm md:text-base mt-2 md:mt-4 lg:mb-8">
-                                            <a href=/rooms/grand_suite/suryakanthi class="hover:no-underline">View Room → </a>
+                                            <a href="/rooms/grand_suite/suryakanthi" class="hover:no-underline">View Room → </a>
                                         </button>
                                     </div>
                                     </div>
@@ -65,11 +68,15 @@ The rooms are named after native flowers of our region.</p>
                                 {% for t in page.roomssuites.rooms_list %}
                                 {% if t.type == rm.title %}
                                 <div class="">
+                                  <a href="{{t.link}}">
                                     <div style="overflow: hidden;">
                                         <img src="{{t.image}}" alt={{t.title}} class="w-[404px] h-[269px] transition-transform hover:scale-105">
                                     </div>
+                                    </a>
                                     <div class="mt-4 max-w-[400px] md:max-w-[600px] lg:max-w-[404px] text-center">
+                                        <a href="{{t.link}}" class="hover:no-underline">
                                         <h3 class="text-3xl font-fraunces">{{t.title}}</h3>
+                                        </a>
                                         <p class="text-sm md:text-base text-gray-600 ">{{t.desc}}</p>
                                         <button class="primary-clr hover:text-black text-sm md:text-base mt-2 md:mt-4">
                                             <a href={{t.link}} class="hover:no-underline">View Room → </a>

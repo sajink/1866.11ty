@@ -2534,6 +2534,10 @@ a.text-decoration-none:hover {
     padding-top: 2rem;
   }
 
+  .md\:pt-1 {
+    padding-top: 0.25rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -2907,6 +2911,10 @@ a.text-decoration-none:hover {
     max-width: 455px;
   }
 
+  .lg\:max-w-\[550px\] {
+    max-width: 550px;
+  }
+
   .lg\:max-w-\[655px\] {
     max-width: 655px;
   }
@@ -2921,38 +2929,6 @@ a.text-decoration-none:hover {
 
   .lg\:max-w-\[950px\] {
     max-width: 950px;
-  }
-
-  .lg\:max-w-\[04px\] {
-    max-width: 04px;
-  }
-
-  .lg\:max-w-\[604px\] {
-    max-width: 604px;
-  }
-
-  .lg\:max-w-\[60px\] {
-    max-width: 60px;
-  }
-
-  .lg\:max-w-\[6px\] {
-    max-width: 6px;
-  }
-
-  .lg\:max-w-\[px\] {
-    max-width: px;
-  }
-
-  .lg\:max-w-\[550px\] {
-    max-width: 550px;
-  }
-
-  .lg\:max-w-\[50px\] {
-    max-width: 50px;
-  }
-
-  .lg\:max-w-\[650px\] {
-    max-width: 650px;
   }
 
   .lg\:flex-none {
@@ -3049,6 +3025,11 @@ a.text-decoration-none:hover {
   .lg\:py-\[16vh\] {
     padding-top: 16vh;
     padding-bottom: 16vh;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .lg\:pb-10 {
