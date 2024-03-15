@@ -1235,6 +1235,10 @@ a.text-decoration-none:hover {
   max-width: 100%;
 }
 
+.max-w-\[420px\] {
+  max-width: 420px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2330,6 +2334,14 @@ a.text-decoration-none:hover {
     max-width: 100px;
   }
 
+  .md\:max-w-\[800px\] {
+    max-width: 800px;
+  }
+
+  .md\:max-w-\[750px\] {
+    max-width: 750px;
+  }
+
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -2991,6 +3003,14 @@ a.text-decoration-none:hover {
 
   .lg\:max-w-\[404px\] {
     max-width: 404px;
+  }
+
+  .lg\:max-w-\[800px\] {
+    max-width: 800px;
+  }
+
+  .lg\:max-w-\[780px\] {
+    max-width: 780px;
   }
 
   .lg\:flex-none {
