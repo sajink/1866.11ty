@@ -1027,6 +1027,10 @@ a.text-decoration-none:hover {
   margin-top: 2rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1099,12 +1103,12 @@ a.text-decoration-none:hover {
   height: 32px;
 }
 
-.h-\[38vh\] {
-  height: 38vh;
+.h-\[350px\] {
+  height: 350px;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-\[38vh\] {
+  height: 38vh;
 }
 
 .h-\[439px\] {
@@ -1139,28 +1143,12 @@ a.text-decoration-none:hover {
   height: 100vh;
 }
 
-.h-\[40px\] {
-  height: 40px;
+.h-\[450px\] {
+  height: 450px;
 }
 
-.h-\[px\] {
-  height: px;
-}
-
-.h-\[36px\] {
-  height: 36px;
-}
-
-.h-\[360px\] {
-  height: 360px;
-}
-
-.h-\[30px\] {
-  height: 30px;
-}
-
-.h-\[350px\] {
-  height: 350px;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .w-1\/2 {
@@ -1201,6 +1189,14 @@ a.text-decoration-none:hover {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[650p\] {
+  width: 650p;
+}
+
+.w-\[650px\] {
+  width: 650px;
 }
 
 .max-w-\[1000px\] {
@@ -2322,6 +2318,18 @@ a.text-decoration-none:hover {
     max-width: 950px;
   }
 
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .md\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+
+  .md\:max-w-\[100px\] {
+    max-width: 100px;
+  }
+
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -2869,6 +2877,10 @@ a.text-decoration-none:hover {
     height: 100vh;
   }
 
+  .lg\:h-\[450px\] {
+    height: 450px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -2977,6 +2989,10 @@ a.text-decoration-none:hover {
     max-width: 950px;
   }
 
+  .lg\:max-w-\[404px\] {
+    max-width: 404px;
+  }
+
   .lg\:flex-none {
     flex: none;
   }
@@ -3021,6 +3037,12 @@ a.text-decoration-none:hover {
     gap: 10rem;
   }
 
+  .lg\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -3037,12 +3059,6 @@ a.text-decoration-none:hover {
     --tw-space-y-reverse: 0;
     margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:p-8 {
@@ -3169,6 +3185,10 @@ a.text-decoration-none:hover {
 
   .lg\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .lg\:pt-1 {
+    padding-top: 0.25rem;
   }
 
   .lg\:text-left {

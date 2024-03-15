@@ -1,6 +1,7 @@
 ---
-title: Suryakanthi
-roomtype: grand-suite
+title: Pavizhamalli
+category: premium_deluxe
+roomtype: Premium Deluxe Suites
 bg_image: "/images/rooms/img2.jpg"
 rspec: 560 ft² / 52 m² / Park View / 2 Guests
 spec:
@@ -21,13 +22,13 @@ included:
 - Bathroom with rain shower
 - Comfortable terry towels and bathrobes
 images: 
-  - src: "/images/rooms/img1.jpg"
+  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite - A.jpeg"
     alt: "image 1"
-  - src: "/images/LoRa/p3.jpg"
+  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite-D.jpeg"
     alt: "image 2"
-  - src: "/images/LoRa/p2.jpg"
+  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite- E.jpeg"
     alt: "image 3"
-  - src: "/images/LoRa/p5.jpg"
+  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite -F.jpeg"
     alt: "image 4"
 
 ---

@@ -61,143 +61,65 @@ layout: base.njk
         </div>
     </div>
 
-<div class="container mx-auto">
-    <div class="lg:flex lg:justify-center pt-10 md:pt-24">
-        <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-            <img src="/images/rooms/img1.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                onclick="showModal('/images/rooms/img1.jpg')" style="max-width: 100%;">
-            <img src="/images/rooms/img2.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                onclick="showModal('/images/rooms/img2.jpg')" style="max-width: 100%;">
-            <img src="/images/rooms/img3.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                onclick="showModal('/images/rooms/img3.jpg')" style="max-width: 100%;">
-            <img src="/images/rooms/img4.jpg" class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                onclick="showModal('/images/rooms/img4.jpg')" style="max-width: 100%;">
+    <div class="container mx-auto">
+        <div class="lg:flex lg:justify-center pt-10 md:pt-24">
+            <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+                {% for image in images %}
+                <img src="{{ image.src }}" alt={{ image.alt }} class="h-[250px] w-full md:w-[400px] cursor-pointer"
+                    onclick="showModal('{{ image.src }}')" style="max-width: 100%;">
+                {% endfor %}
+            </div>
         </div>
     </div>
-</div>
 
-<!-- The Modal -->
-<div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
-
-    <!-- Previous arrow -->
-    <button class="absolute top-1/2 left-4 text-white text-3xl" onclick="prevImage()">&#10094;</button>
-    
-    <!-- The close button -->
-    <a class="absolute top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
-        onclick="closeModal()">&times;</a>
-
-    <!-- Next arrow -->
-    <button class="absolute top-1/2 right-4 text-white text-3xl" onclick="nextImage()">&#10095;</button>
-
-    <!-- A big image will be displayed here -->
-    <img id="modal-img" class="w-full h-full lg:h-[80vh] lg:w-[90%] object-cover" />
-</div>
-
-
+    <div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+        <button class="absolute top-1/2 left-4 text-white text-3xl" onclick="prevImage()">&#10094;</button>
+        <a class="absolute top-6 right-8 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()">&times;</a>
+        <button class="absolute top-1/2 right-4 text-white text-3xl" onclick="nextImage()">&#10095;</button>
+        <img id="modal-img" class="w-full h-full lg:h-[80vh] lg:w-[90%] object-cover" />
+    </div>
 
 </div>
 
 
-<div class="flex items-center justify-center pt-16">
+    <div class="flex items-center justify-center pt-16">
         <img src="/images/about-us/divider.svg" alt="divider">
     </div>  
 
-<div class="pt-10 mx-4 md:mx-10 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] lg:h-max-[307px] lg:mx-auto ">
+<div class="pt-10 mx-4 md:mx-10 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] lg:h-max-[307px] lg:mx-auto">
     <div class="primary-clr text-2xl md:text-3xl md:py-8 medium">Other Rooms</div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10 pt-6">
-        <div class="overflow-hidden relative group">
-            <div
-                class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
-                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                    <div
-                        class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
-                        <div class="relative z-1 opacity-100">
-                            <p class="  text-sm md:text-base">Welcome to your urban oasis inspired by the
-                                natural beauty and calming energy of Central Park. Relax on your private terrace or
-                                snuggle up in your king size bed and take in the views of Central Park.</p>
-                            <p class="  text-sm md:text-base">Discover more</p>
+
+        {% set room_counter = 0 %}
+        {% for rm in page.roomssuites.rooms_list %}
+            {% if room_counter < 3 and rm.title != title %}
+                <div class="overflow-hidden relative group">
+                    <div class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
+                        <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                            <div class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
+                                <div class="relative z-1 opacity-100">
+                                    <p class="text-sm md:text-base">{{ rm.desc }}</p>
+                                    <p class="text-sm md:text-base">Discover more</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img alt="" class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out" src="{{ rm.image }}" />
+                    <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
+                        <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
+                            <div class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">{{ rm.title }}</div>
+                            <div class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">{{ rm.details }}</div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <img alt=""
-                class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                src="/images/rooms/img1.jpg" />
-            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
-                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
-                    <div
-                        class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
-                        Apartment King</div>
-                    <div
-                        class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
-                        560 ft² / 52 m² / Park View / 2 Guests</div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="overflow-hidden relative group">
-            <div
-                class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
-                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                    <div
-                        class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
-                        <div class="relative z-1 opacity-100">
-                            <p class="  text-sm md:text-base">Welcome to your urban oasis inspired by the
-                                natural beauty and calming energy of Central Park. Relax on your private terrace or
-                                snuggle up in your king size bed and take in the views of Central Park.</p>
-                            <p class="  text-sm md:text-base">Discover more</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img alt=""
-                class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                src="/images/rooms/img2.jpg" />
-            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
-                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
-                    <div
-                        class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
-                        Apartment King</div>
-                    <div
-                        class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
-                        560 ft² / 52 m² / Park View / 2 Guests</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="overflow-hidden relative group">
-            <div
-                class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
-                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                    <div
-                        class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
-                        <div class="relative z-1 opacity-100">
-                            <p class="  text-sm md:text-base">Welcome to your urban oasis inspired by the
-                                natural beauty and calming energy of Central Park. Relax on your private terrace or
-                                snuggle up in your king size bed and take in the views of Central Park.</p>
-                            <p class="  text-sm md:text-base">Discover more</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img alt=""
-                class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out"
-                src="/images/rooms/img4.jpg" />
-            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
-                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
-                    <div
-                        class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
-                        Apartment King</div>
-                    <div
-                        class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
-                        560 ft² / 52 m² / Park View / 2 Guests</div>
-                </div>
-            </div>
-        </div>
+                {% set room_counter = room_counter + 1 %}
+            {% endif %}
+        {% endfor %}
 
     </div>
 </div>
+
+
 
 
 
@@ -240,44 +162,29 @@ layout: base.njk
 </div>
 
 <script>
-    // Get the modal by id
     var modal = document.getElementById("modal");
-
-    // Get the modal image tag
     var modalImg = document.getElementById("modal-img");
 
-    // Images array
-    var images = [
-        "/images/rooms/img1.jpg",
-        "/images/rooms/img2.jpg",
-        "/images/rooms/img3.jpg",
-        "/images/rooms/img4.jpg"
+    var imagePaths = [
+        {% for image in images %}
+            "{{ image.src }}"{% if not loop.last %},{% endif %}
+        {% endfor %}
     ];
 
-    // Current image index
     var currentIndex = 0;
-
-    // this function is called when a small image is clicked
     function showModal(src) {
         modal.classList.remove('hidden');
         modalImg.src = src;
-        
     }
-
-    // this function is called when the close button is clicked
     function closeModal() {
         modal.classList.add('hidden');
     }
-
-    // Function to show the previous image
     function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        modalImg.src = images[currentIndex];
+        currentIndex = (currentIndex - 1 + imagePaths.length) % imagePaths.length;
+        modalImg.src = imagePaths[currentIndex];
     }
-
-    // Function to show the next image
     function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        modalImg.src = images[currentIndex];
+        currentIndex = (currentIndex + 1) % imagePaths.length;
+        modalImg.src = imagePaths[currentIndex];
     }
 </script>
