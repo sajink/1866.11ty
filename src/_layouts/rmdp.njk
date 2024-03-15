@@ -1,17 +1,14 @@
 ---
-layout: base.njk
+layout: default.njk
 ---
 
-<div class="bg-[#F3EEE8]">
-<div class="bg-[#111827] h-[38vh] md:h-[52vh] lg:h-[55vh] bg-cover bg-no-repeat">
-    <div class="relative z-1">
-        {% include "header.html" %}
-    </div>
+<div class="bg-[#111827]">
+    {% include "header.html" %}
+    <p class="font-fraunces text-white text-center text-4xl md:text-7xl lg:text-8xl pb-12 md:py-12 lg:py-24 mx-10">{{ roomtype }}</p>
 </div>
-<div
-    class="flex-row lg:flex mx-6 md:mx-14 lg:mx-0  max-w-[1100px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
+<div class="flex-row lg:flex mx-6 md:mx-14 lg:mx-0  max-w-[1100px] lg:w-full lg:max-w-[1350px] lg:h-max-[307px] lg:mx-auto ">
     <div class="container lg:ml-20">
-        <p class="primary-clr text-3xl md:text-5xl pt-6 md:pt-14 leading-snug medium">{{title}}</p>
+        <p class="font-fraunces primary-clr text-3xl md:text-5xl pt-6 md:pt-14 leading-snug medium">{{title}}</p>
         <p class="text-sm pt-2 md:pt-3">{{ rspec }}</p>
         <div class="inline-flex flex-wrap gap-4 md:space-x-6 pt-5">
             <div class="flex items-center gap-2">
@@ -40,8 +37,8 @@ layout: base.njk
         </div>
 
         <div class="pt-6 md:pt-10">
-            <h4 class="primary-clr text-2xl md:text-3xl md:py-2 leading-snug medium">Room Amenities</h4>
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <h4 class="font-fraunces primary-clr text-2xl md:text-3xl md:py-2 leading-snug medium">Room Amenities</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 {% for r in page.roomssuites.room_detail %}
                 <div class="flex items-center gap-4">
                     <img src="{{ r.image }}" alt={{r.title}}>
@@ -52,11 +49,11 @@ layout: base.njk
         </div>
 
         <div class="pt-10">
-            <h4 class="primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
+            <h4 class="font-fraunces primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
             <ul class="list-disc text-sm md:text-base pt-4 space-y-3 ml-2">
-            {% for inc in included %}
-               <li>{{ inc }}</li>
-            {% endfor %}
+                {% for inc in included %}
+                <li>{{ inc }}</li>
+                {% endfor %}
             </ul>
         </div>
     </div>
@@ -66,15 +63,17 @@ layout: base.njk
             <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
                 {% for image in images %}
                 <img src="{{ image.src }}" alt={{ image.alt }} class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                    onclick="showModal('{{ image.src }}')" style="max-width: 100%;">
+                     onclick="showModal('{{ image.src }}')" style="max-width: 100%;">
                 {% endfor %}
             </div>
         </div>
     </div>
 
-    <div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+    <div id="modal"
+         class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
         <button class="absolute top-1/2 left-4 text-white text-3xl" onclick="prevImage()">&#10094;</button>
-        <a class="absolute top-6 right-8 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()">&times;</a>
+        <a class="absolute top-6 right-8 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)"
+           onclick="closeModal()">&times;</a>
         <button class="absolute top-1/2 right-4 text-white text-3xl" onclick="nextImage()">&#10095;</button>
         <img id="modal-img" class="w-full h-full lg:h-[80vh] lg:w-[90%] object-cover" />
     </div>
@@ -82,83 +81,45 @@ layout: base.njk
 </div>
 
 
-    <div class="flex items-center justify-center pt-16">
-        <img src="/images/about-us/divider.svg" alt="divider">
-    </div>  
+<div class="flex items-center justify-center pt-16">
+    <img src="/images/about-us/divider.svg" alt="divider">
+</div>
 
 <div class="pt-10 mx-4 md:mx-10 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] lg:h-max-[307px] lg:mx-auto">
-    <div class="primary-clr text-2xl md:text-3xl md:py-8 medium">Other Rooms</div>
+    <div class="font-fraunces primary-clr text-2xl md:text-3xl md:py-8 medium">Other Rooms</div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10 pt-6">
 
         {% set room_counter = 0 %}
         {% for rm in page.roomssuites.rooms_list %}
-            {% if room_counter < 3 and rm.title != title %}
-                <div class="overflow-hidden relative group">
-                    <div class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
-                        <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-                            <div class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
-                                <div class="relative z-1 opacity-100">
-                                    <p class="text-sm md:text-base">{{ rm.desc }}</p>
-                                    <p class="text-sm md:text-base">Discover more</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <img alt="" class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out" src="{{ rm.image }}" />
-                    <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
-                        <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
-                            <div class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">{{ rm.title }}</div>
-                            <div class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">{{ rm.details }}</div>
+        {% if room_counter < 3 and rm.title !=title %}
+        <div class="overflow-hidden relative group">
+            <div class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
+                <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <div class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
+                        <div class="relative z-1 opacity-100">
+                            <p class="text-sm md:text-base">{{ rm.desc }}</p>
+                            <p class="text-sm md:text-base">Discover more</p>
                         </div>
                     </div>
                 </div>
-                {% set room_counter = room_counter + 1 %}
-            {% endif %}
+            </div>
+            <img class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out" src="{{ rm.image }}" />
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
+                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
+                    <div class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
+                        {{ rm.title }}
+                    </div>
+                    <div class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
+                        {{ rm.details }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% set room_counter = room_counter + 1 %}
+        {% endif %}
         {% endfor %}
 
     </div>
-</div>
-
-
-
-
-
-<!-- <div class="flex-row md:flex pt-12 md:pt-16 pb-10">
-    <div class="relative md:w-1/2 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] h-[439px] bg-cover bg-center"
-        style="background-image: url('/images/rooms/img2.jpg');">
-        <div class="overlay-bg absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-1 text-white text-center  md:my-8 lg:my-20 space-y-1">
-
-            <div class="primary-clr font-bold  text-xs text-center pt-12 md:pt-8 lg:pt-2">OUR LOCATION</div>
-            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Getting Here</div>
-            <div class="semibold  text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
-            <div class="semibold  text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
-            <div class="semibold  text-base text-center">Tel: +1 212-555-6699</div>
-            <div class="semibold  text-base text-center pb-4">Email: information@cozystay.com</div>
-            <button
-                class="lg:inline-block py-2 px-3 md:pb-8 lg:pb-0 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
-                <a class="hover:no-underline" href="/">Get Directions</a>
-            </button>
-        </div>
-    </div>
-
-    <div class="relative md:w-1/2 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] h-[439px] bg-cover bg-center"
-        style="background-image: url('/images/rooms/img3.jpg');">
-        <div class="overlay-bg absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-1 text-white text-center  md:my-8 lg:my-20 space-y-1">
-            <div class="primary-clr font-bold  text-xs text-center pt-12 md:pt-8 lg:pt-2">BOOK A ROOM</div>
-            <div class="semibold  text-2xl md:text-3xl lg:text-4xl text-center py-2">Spend Your Time With Us</div>
-            <div class="semibold  text-sm md:text-base text-center pt-2">CozyStay Aparthotel Times Square</div>
-            <div class="semibold  text-sm md:text-base text-center">415 6th Avenue, New York, New York, USA, 10018</div>
-            <div class="semibold  text-sm md:text-base text-center">Tel: +1 212-555-6699</div>
-            <div class="semibold  text-sm md:text-base text-center pb-4">Email: information@cozystay.com</div>
-            <button
-                class="lg:inline-block py-2 px-3 md:pb-8 lg:pb-0 text-sm tracking-widest text-white border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200">
-                <a class="hover:no-underline" href="/">Reserve your stay</a>
-            </button>
-        </div>
-    </div>
-</div> -->
 </div>
 
 <script>
@@ -167,9 +128,9 @@ layout: base.njk
 
     var imagePaths = [
         {% for image in images %}
-            "{{ image.src }}"{% if not loop.last %},{% endif %}
+        "{{ image.src }}"{% if not loop.last %}, {% endif %}
         {% endfor %}
-    ];
+        ];
 
     var currentIndex = 0;
     function showModal(src) {
