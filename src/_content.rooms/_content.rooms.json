@@ -1,0 +1,4 @@
+{
+    "permalink": "/room/{{ page.fileSlug }}/index.html",
+    "layout": "rmdp.njk"
+}
