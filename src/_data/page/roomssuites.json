@@ -38,7 +38,6 @@
     ],
 
     "room_type": [
-        {"image":"/images/roomdp/Heritage Grand Suite- Suryakanthi/Heritage Grand Suite- Main.jpeg","title":"The Heritage Grand Suite","mtitle":"","desc":"Exquisite river-facing suite, with its own private staircase and huge open  veranda, the king size bedroom has a magnificent panoramic view of the lush mangroves and the pristine Anjarakandy river."},
         {"image":"/images/rooms/Premium Deluxe Suite 2.jpeg","title":"Premium Deluxe Suites","mtitle":"Premium Deluxe Suites","desc":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."},
         {"image":"/images/rooms/Deluxe Suite 1.jpeg","title":"Deluxe Suites","mtitle":"Deluxe Suites","desc":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."},
         {"image":"/images/rooms/Standard Double Room.jpeg","title":"Standard Double Room","mtitle":"Standard Double Room","desc":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."},
@@ -46,7 +45,6 @@
     ],
 
     "rooms_list":[
-        {"type":"The Heritage Grand Suite","image":"/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite - A.jpeg","title":"Suryakanthi","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Exquisite river-facing suite, with its own private staircase and huge open  veranda, the king size bedroom has a magnificent panoramic view of the lush mangroves and the pristine Anjarakandy river.","link":"/suryakanthi"},
 
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 1- Pavizhamalli/Premium Deluxe Suite 2- Main.jpeg","title":"Pavizhamalli","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"On one side,this suite has views of the river and, on the other, it faces the central courtyard, overlooking a fragrant night- blooming Pavizhamalli tree.","link":"/room-details"},
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe Suite 4- Main.jpeg","title":"Parijatham","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Very spacious room adjacent to a “Nadumuttam”, (small traditional inner courtyard), where one can watch the rain in all its fury during the monsoon season.","link":"/room-details"},
