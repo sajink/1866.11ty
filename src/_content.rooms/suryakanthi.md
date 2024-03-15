@@ -1,5 +1,6 @@
 ---
 title: Suryakanthi
+roomtype: grand-suite
 bg_image: "/images/rooms/img2.jpg"
 rspec: 560 ft² / 52 m² / Park View / 2 Guests
 spec:

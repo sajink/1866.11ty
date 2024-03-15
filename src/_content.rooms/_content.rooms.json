@@ -1,4 +1,4 @@
 {
-    "permalink": "/room/{{ page.fileSlug }}/index.html",
+    "permalink": "/room/{{ roomtype }}/{{ page.fileSlug }}/index.html",
     "layout": "rmdp.njk"
 }
