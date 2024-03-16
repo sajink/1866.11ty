@@ -1127,6 +1127,10 @@ a.text-decoration-none:hover {
   height: 100vh;
 }
 
+.h-\[0vh\] {
+  height: 0vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -2193,6 +2197,14 @@ a.text-decoration-none:hover {
 
   .md\:h-\[90vh\] {
     height: 90vh;
+  }
+
+  .md\:h-\[0vh\] {
+    height: 0vh;
+  }
+
+  .md\:h-\[60vh\] {
+    height: 60vh;
   }
 
   .md\:w-1\/2 {
