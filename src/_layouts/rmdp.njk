@@ -33,7 +33,6 @@ layout: default.njk
         </div>
         <div class="container">
             <p class="text-sm md:text-base  pt-4 md:pt-6 lg:pt-4 ">{{ para1 }}</p>
-            <p class="text-sm md:text-base pt-2">{{ para2 }}</p>
         </div>
 
         <div class="pt-6 md:pt-10">
@@ -47,36 +46,25 @@ layout: default.njk
                 {% endfor %}
             </div>
         </div>
+    </div>
 
-        <div class="pt-10">
-            <h4 class="font-fraunces primary-clr text-2xl md:text-3xl md:py-2 medium">What’s included in this suite?</h4>
-            <ul class="list-disc text-sm md:text-base pt-4 space-y-3 ml-2">
-                {% for inc in included %}
-                <li>{{ inc }}</li>
-                {% endfor %}
-            </ul>
+<div class="container mx-auto">
+    <div class="lg:flex lg:justify-center pt-10 md:pt-24">
+        <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+            {% for image in images %}
+            <img src="{{ image.src }}" alt="{{ image.alt }}" class="h-[250px] w-full md:w-[400px] cursor-pointer object-cover"
+                onclick="showModal('{{ image.src }}')" style="max-width: 100%;">
+            {% endfor %}
         </div>
     </div>
+</div>
 
-    <div class="container mx-auto">
-        <div class="lg:flex lg:justify-center pt-10 md:pt-24">
-            <div class="grid lg:items-end gap-6 grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
-                {% for image in images %}
-                <img src="{{ image.src }}" alt={{ image.alt }} class="h-[250px] w-full md:w-[400px] cursor-pointer"
-                     onclick="showModal('{{ image.src }}')" style="max-width: 100%;">
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-    <div id="modal"
-         class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
-        <button class="absolute top-1/2 left-4 text-white text-3xl" onclick="prevImage()">&#10094;</button>
-        <a class="absolute top-6 right-8 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)"
-           onclick="closeModal()">&times;</a>
-        <button class="absolute top-1/2 right-4 text-white text-3xl" onclick="nextImage()">&#10095;</button>
-        <img id="modal-img" class="w-full h-full lg:h-[80vh] lg:w-[90%] object-cover" />
-    </div>
+<div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+    <button class="absolute top-1/2 left-4 text-white text-3xl" onclick="prevImage()">&#10094;</button>
+    <a class="absolute top-6 right-8 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()">&times;</a>
+    <button class="absolute top-1/2 right-4 text-white text-3xl" onclick="nextImage()">&#10095;</button>
+    <img id="modal-img" class="h-[40vh] w-[70%] md:h-[50vh] md:w-[70%] lg:h-[80vh] lg:w-[90%] object-cover"/>
+</div>
 
 </div>
 
@@ -85,67 +73,111 @@ layout: default.njk
     <img src="/images/about-us/divider.svg" alt="divider">
 </div>
 
-<div class="pt-10 mx-4 md:mx-10 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] lg:h-max-[307px] lg:mx-auto">
-    <div class="font-fraunces primary-clr text-2xl md:text-3xl md:py-8 medium">Other Rooms</div>
+<div class="pt-10 mx-4 md:mx-10 max-w-[800px] md:max-w-[950px] lg:max-w-[1210px] lg:h-max-[307px] lg:mx-auto" id="other-rooms-section">
+    <div class="font-fraunces primary-clr text-2xl md:text-5xl md:py-8 medium">Other Rooms</div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10 pt-6">
-
-        {% set room_counter = 0 %}
+        {% for room in otherrooms %}
         {% for rm in page.roomssuites.rooms_list %}
-        {% if room_counter < 3 and rm.title !=title %}
+        {% if rm.title == room %}
         <div class="overflow-hidden relative group">
+        <a href="{{ rm.link }}">
             <div class="z-20 opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out cursor-pointer absolute bg-[#C29A5C] from-[#C29A5C]/80 to-transparent inset-0 pt-30 text-white flex items-end">
                 <div class="opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
                     <div class="transform-gpu p-4 space-y-3 text-xl translate-y-4 pb-10 transform transition duration-300 ease-in-out">
                         <div class="relative z-1 opacity-100">
                             <p class="text-sm md:text-base">{{ rm.desc }}</p>
-                            <p class="text-sm md:text-base">Discover more</p>
+                            <p class="text-sm md:text-base">View room →</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </a>
             <img class="object-cover w-full h-[250px] md:w-[500px] md:h-[400px] lg:h-[400px] aspect-square group-hover:scale-110 transition duration-300 ease-in-out" src="{{ rm.image }}" />
             <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white z-10">
-                <div class="relative z-1 text-white ml-4 flex flex-col justify-end h-full bottom-10 space-y-1">
-                    <div class="semibold text-2xl md:text-2xl lg:text-3xl py-2 opacity-100 group-hover:opacity-0 duration-300">
+                <div class="relative z-1 text-white text-center flex flex-col justify-end h-full bottom-4">
+                    <div class="font-fraunces semibold text-2xl md:text-2xl lg:text-3xl opacity-100 group-hover:opacity-0 duration-300">
                         {{ rm.title }}
                     </div>
-                    <div class="semibold text-sm md:text-base py-2 opacity-100 group-hover:opacity-0 transition duration-300 ease-in-out">
-                        {{ rm.details }}
-                    </div>
+                     <p class="primary-clr text-base md:text-lg semibold opacity-100 group-hover:opacity-0">{{ rm.type }}</p>
                 </div>
             </div>
         </div>
-        {% set room_counter = room_counter + 1 %}
         {% endif %}
         {% endfor %}
-
+        {% endfor %}
+    </div>
+    <div class="flex items-center justify-center py-6 md:py-10">
+        <button
+            class="py-2 px-6 text-xs tracking-widest medium primary-clr border hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200 font-baskervville">
+            <a class="hover:no-underline" href="/rooms-suites">VIEW ALL ROOMS →</a>
+        </button>
     </div>
 </div>
+
+
+
+<style>
+    /* Added CSS for transitions */
+    #modal {
+        transition: opacity 0.3s ease;
+    }
+
+    #modal.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #modal:not(.hidden) {
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
 
 <script>
     var modal = document.getElementById("modal");
     var modalImg = document.getElementById("modal-img");
+    var otherRoomsSection = document.getElementById("other-rooms-section");
 
     var imagePaths = [
         {% for image in images %}
         "{{ image.src }}"{% if not loop.last %}, {% endif %}
         {% endfor %}
-        ];
+    ];
 
     var currentIndex = 0;
+
     function showModal(src) {
-        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
         modalImg.src = src;
+        otherRoomsSection.style.display = 'none';
+        setTimeout(() => {
+            modal.classList.remove('hidden');
+        }, 10); // Adding a small delay to allow for transition effect
     }
+
     function closeModal() {
         modal.classList.add('hidden');
+        otherRoomsSection.style.display = 'block';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 100); // Transition duration is 300ms
     }
+
+    function changeImage(index) {
+        modal.classList.add('hidden');
+        setTimeout(() => {
+            modalImg.src = imagePaths[index];
+            modal.classList.remove('hidden');
+        }, 200); // Transition duration is 300ms
+    }
+
     function prevImage() {
         currentIndex = (currentIndex - 1 + imagePaths.length) % imagePaths.length;
-        modalImg.src = imagePaths[currentIndex];
+        changeImage(currentIndex);
     }
+
     function nextImage() {
         currentIndex = (currentIndex + 1) % imagePaths.length;
-        modalImg.src = imagePaths[currentIndex];
+        changeImage(currentIndex);
     }
 </script>

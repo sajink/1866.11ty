@@ -12,18 +12,11 @@
     ],
 
     "room_detail": [
-        {"image":"/images/roomdp/ac.png","title":"Air conditioner"},
-        {"image":"/images/roomdp/tv.png","title":"Cable TV"},
         {"image":"/images/roomdp/wifi.png","title":"Wifi & Internet"},
+        {"image":"/images/roomdp/ac.png","title":"Air conditioner"},
         {"image":"/images/roomdp/towel.png","title":"Towels"},
-        {"image":"/images/roomdp/slipper.png","title":"Slippers"},
-        {"image":"/images/roomdp/dryer.png","title":"Hair Dryer"},
-        {"image":"/images/roomdp/shampoo.png","title":"Shampoo"},
-        {"image":"/images/roomdp/espresso.png","title":"Espresso Machine"},
-        {"image":"/images/roomdp/box.png","title":"Safe Box"},
-        {"image":"/images/roomdp/drinks.png","title":"Welcome Drinks"},   
-        {"image":"/images/roomdp/pet.png","title":"Pet Friendly"},
-        {"image":"/images/roomdp/ref.png","title":"In-room Refrigerator"}
+        {"image":"/images/roomdp/shampoo.png","title":"Soap"},
+        {"image":"/images/roomdp/dental.png","title":"Dental kit"}
     ],
 
     "room_essentials": [
@@ -47,7 +40,7 @@
     "rooms_list":[
 
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 1- Pavizhamalli/Premium Deluxe Suite 2- Main.jpeg","title":"Pavizhamalli","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"On one side,this suite has views of the river and, on the other, it faces the central courtyard, overlooking a fragrant night- blooming Pavizhamalli tree.","link":"/rooms/premium_deluxe/pavizhamalli"},
-        {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe Suite 4- Main.jpeg","title":"Parijatham","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Very spacious room adjacent to a “Nadumuttam”, (small traditional inner courtyard), where one can watch the rain in all its fury during the monsoon season.","link":"/rooms/premium_deluxe/parijatham"},
+        {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe Suite 4- Main.jpeg","title":"Parijatham","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Very spacious room adjacent to a “Nadumuttam” (small traditional inner courtyard), where one can watch the rain in all its fury during the monsoon season.","link":"/rooms/premium_deluxe/parijatham"},
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 3- Neelathamara/Premium Deluxe Suite 1- Main.jpeg","title":"Neelathamara","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Overlooking the rear courtyard, this extra-spacious suite has antique wooden flooring and high all-wood ceiling.","link":"/rooms/premium_deluxe/neelathamara"},
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/Premium Deluxe 4/Premium Deluxe Suite 3- Main.jpeg","title":"Neelakurinji","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"With views of the frangipani and tamarind trees, this large suite next to the rear courtyard, opens to a veranda facing the central courtyard.","link":"/rooms/premium_deluxe/neelakurinji"},
 

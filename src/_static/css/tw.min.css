@@ -830,8 +830,8 @@ a.text-decoration-none:hover {
   bottom: 0px;
 }
 
-.bottom-10 {
-  bottom: 2.5rem;
+.bottom-4 {
+  bottom: 1rem;
 }
 
 .left-0 {
@@ -991,14 +991,6 @@ a.text-decoration-none:hover {
   margin-bottom: 1.5rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .ml-auto {
   margin-left: auto;
 }
@@ -1103,6 +1095,10 @@ a.text-decoration-none:hover {
   height: 350px;
 }
 
+.h-\[40vh\] {
+  height: 40vh;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -1157,6 +1153,10 @@ a.text-decoration-none:hover {
 
 .w-\[404px\] {
   width: 404px;
+}
+
+.w-\[70\%\] {
+  width: 70%;
 }
 
 .w-\[80px\] {
@@ -1243,10 +1243,6 @@ a.text-decoration-none:hover {
 
 .resize-none {
   resize: none;
-}
-
-.list-disc {
-  list-style-type: disc;
 }
 
 .grid-cols-1 {
@@ -2179,6 +2175,10 @@ a.text-decoration-none:hover {
     height: 500px;
   }
 
+  .md\:h-\[50vh\] {
+    height: 50vh;
+  }
+
   .md\:h-\[571px\] {
     height: 571px;
   }
@@ -2231,6 +2231,10 @@ a.text-decoration-none:hover {
     width: 500px;
   }
 
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .md\:w-\[800px\] {
     width: 800px;
   }
@@ -2281,10 +2285,6 @@ a.text-decoration-none:hover {
 
   .md\:max-w-\[950px\] {
     max-width: 950px;
-  }
-
-  .md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2 {
@@ -2532,10 +2532,6 @@ a.text-decoration-none:hover {
 
   .md\:pt-8 {
     padding-top: 2rem;
-  }
-
-  .md\:pt-1 {
-    padding-top: 0.25rem;
   }
 
   .md\:text-left {
@@ -3012,6 +3008,11 @@ a.text-decoration-none:hover {
     padding-bottom: 6rem;
   }
 
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .lg\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -3025,11 +3026,6 @@ a.text-decoration-none:hover {
   .lg\:py-\[16vh\] {
     padding-top: 16vh;
     padding-bottom: 16vh;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .lg\:pb-10 {

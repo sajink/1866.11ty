@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="container mx-auto flex justify-center items-center text-center">
-            <ul class="transform md:flex md:items-center md:w-auto md:space-x-7 space-y-2 md:space-y-0" id="menu">
+            <ul class="md:flex md:items-center md:w-auto md:space-x-7 space-y-2 md:space-y-0" id="menu">
                 {% for link in page.topmenu.links %}
                 {% if (link.href | replace('/', '')) == (page.url | replace('/', '')) %}
                 <li class="text-black hover:primary-clr text-sm md:text-base"><a href="{{ link.href }}"
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="container mx-auto max-w-[1000px] lg:max-w-[1200px] text-black">
-        <div class="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center text-sm md:mx-0  space-y-2">
+        <div class="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center text-sm md:mx-0 space-y-2">
             <div>Managed by Plain Canvas LLP</div>
             <a class="py-2 md:pl-10 lg:pl-16 inline-flex space-x-5 md:mb-0">
                 {% for sm in site.social %}
