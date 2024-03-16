@@ -1095,10 +1095,6 @@ a.text-decoration-none:hover {
   height: 350px;
 }
 
-.h-\[40vh\] {
-  height: 40vh;
-}
-
 .h-\[500px\] {
   height: 500px;
 }
@@ -1125,10 +1121,6 @@ a.text-decoration-none:hover {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[0vh\] {
-  height: 0vh;
 }
 
 .w-1\/2 {
@@ -2179,10 +2171,6 @@ a.text-decoration-none:hover {
     height: 500px;
   }
 
-  .md\:h-\[50vh\] {
-    height: 50vh;
-  }
-
   .md\:h-\[571px\] {
     height: 571px;
   }
@@ -2191,20 +2179,16 @@ a.text-decoration-none:hover {
     height: 58vh;
   }
 
+  .md\:h-\[60vh\] {
+    height: 60vh;
+  }
+
   .md\:h-\[800px\] {
     height: 800px;
   }
 
   .md\:h-\[90vh\] {
     height: 90vh;
-  }
-
-  .md\:h-\[0vh\] {
-    height: 0vh;
-  }
-
-  .md\:h-\[60vh\] {
-    height: 60vh;
   }
 
   .md\:w-1\/2 {
