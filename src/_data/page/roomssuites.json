@@ -13,7 +13,7 @@
 
     "room_detail": [
         {"image":"/images/roomdp/wifi.png","title":"Wifi & Internet"},
-        {"image":"/images/roomdp/ac.png","title":"Air conditioner"},
+        {"image":"/images/roomdp/ac.png","title":"Air Conditioner"},
         {"image":"/images/roomdp/towel.png","title":"Towels"},
         {"image":"/images/roomdp/shampoo.png","title":"Soap"},
         {"image":"/images/roomdp/dental.png","title":"Dental kit"}
@@ -21,9 +21,9 @@
 
     "room_essentials": [
         {"image":"/images/rooms/essentials/bedroom.png","title":"12 Spacious Bedrooms","desc":"12 spacious bedrooms, each with attached baths and standard amenities."},
-        {"image":"/images/rooms/essentials/pets.png","title":"Pets Stay Free","desc":"Ours is a Pet-Friendly accommodation. Because every family member deserves a getaway!"},
-        {"image":"/images/roomdp/wifi.png","title":"Wifi & Internet","desc":"Surf, stream, and stay connected with our complimentary WiFi and internet access."},
-        {"image":"/images/roomdp/ac.png","title":"Air Conditioned","desc":"All the bedrooms are air-conditioned, ensuring a cool and comfortable stay."},
+        {"image":"/images/rooms/essentials/pets.png","title":"Pets Stay Free!","desc":"Ours is a Pet-Friendly accommodation. Because every family member deserves a getaway!"},
+        {"image":"/images/rooms/essentials/wifi.png","title":"Wifi & Internet","desc":"Surf, stream, and stay connected with our complimentary WiFi and internet access."},
+        {"image":"/images/rooms/essentials/ac.png","title":"Air Conditioned","desc":"All the bedrooms are air-conditioned, ensuring a cool and comfortable stay."},
         {"image":"/images/rooms/car.png","title":"Airport Pickup","desc":"Airport and Railway Station pickup service available."},
         {"image":"/images/rooms/essentials/transportation.png","title":"Local Transportation","desc":"Explore with ease with our local transportation options."},
         {"image":"/images/rooms/essentials/fam.png","title":"Families, Friends & Couples","desc":"Ideal for families, friends, couples, small groups, and Remote Work."},

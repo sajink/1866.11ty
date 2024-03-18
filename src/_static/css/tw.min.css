@@ -1019,6 +1019,14 @@ a.text-decoration-none:hover {
   margin-top: 2rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1205,6 +1213,10 @@ a.text-decoration-none:hover {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-\[00px\] {
+  max-width: 00px;
 }
 
 .flex-1 {
@@ -2103,8 +2115,8 @@ a.text-decoration-none:hover {
     margin-top: auto;
   }
 
-  .md\:mt-10 {
-    margin-top: 2.5rem;
+  .md\:mt-2 {
+    margin-top: 0.5rem;
   }
 
   .md\:block {
@@ -2281,6 +2293,10 @@ a.text-decoration-none:hover {
 
   .md\:max-w-\[950px\] {
     max-width: 950px;
+  }
+
+  .md\:max-w-\[1250px\] {
+    max-width: 1250px;
   }
 
   .md\:grid-cols-2 {
@@ -2659,11 +2675,6 @@ a.text-decoration-none:hover {
     margin-right: auto;
   }
 
-  .lg\:mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
   .lg\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -2896,6 +2907,10 @@ a.text-decoration-none:hover {
     max-width: 1350px;
   }
 
+  .lg\:max-w-\[1500px\] {
+    max-width: 1500px;
+  }
+
   .lg\:max-w-\[404px\] {
     max-width: 404px;
   }
@@ -2928,16 +2943,8 @@ a.text-decoration-none:hover {
     max-width: 950px;
   }
 
-  .lg\:max-w-\[100px\] {
-    max-width: 100px;
-  }
-
-  .lg\:max-w-\[1800px\] {
-    max-width: 1800px;
-  }
-
-  .lg\:max-w-\[1500px\] {
-    max-width: 1500px;
+  .lg\:max-w-\[800px\] {
+    max-width: 800px;
   }
 
   .lg\:flex-none {
@@ -3000,10 +3007,6 @@ a.text-decoration-none:hover {
     --tw-space-y-reverse: 0;
     margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:p-8 {
-    padding: 2rem;
   }
 
   .lg\:px-20 {
