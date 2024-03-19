@@ -995,6 +995,10 @@ a.text-decoration-none:hover {
   margin-left: auto;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1017,14 +1021,6 @@ a.text-decoration-none:hover {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .block {
@@ -1213,10 +1209,6 @@ a.text-decoration-none:hover {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[00px\] {
-  max-width: 00px;
 }
 
 .flex-1 {
@@ -2115,10 +2107,6 @@ a.text-decoration-none:hover {
     margin-top: auto;
   }
 
-  .md\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -2293,10 +2281,6 @@ a.text-decoration-none:hover {
 
   .md\:max-w-\[950px\] {
     max-width: 950px;
-  }
-
-  .md\:max-w-\[1250px\] {
-    max-width: 1250px;
   }
 
   .md\:grid-cols-2 {
@@ -2939,12 +2923,12 @@ a.text-decoration-none:hover {
     max-width: 780px;
   }
 
-  .lg\:max-w-\[950px\] {
-    max-width: 950px;
-  }
-
   .lg\:max-w-\[800px\] {
     max-width: 800px;
+  }
+
+  .lg\:max-w-\[950px\] {
+    max-width: 950px;
   }
 
   .lg\:flex-none {
