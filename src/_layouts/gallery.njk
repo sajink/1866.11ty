@@ -7,7 +7,8 @@ layout: base.njk
 <div class="lg:top-[425px] px-6 md:px-10 pb-16 md:pb-28">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
         {% for img in page.gallery.photos %}
-        <img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer" onclick="showModal('{{img.image}}')"/>
+        {% gallery img.image, img.alt %}
+        <!-- img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer" onclick="showModal('{{img.image}}')"/ -->
         {% endfor %}
     </div>
 </div>
