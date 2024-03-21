@@ -1395,6 +1395,10 @@ a.text-decoration-none:hover {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-r {
   border-right-width: 1px;
 }
@@ -1402,6 +1406,11 @@ a.text-decoration-none:hover {
 .border-\[\#C29A5C\] {
   --tw-border-opacity: 1;
   border-color: rgb(194 154 92 / var(--tw-border-opacity));
+}
+
+.border-\[\#F3EEE8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 238 232 / var(--tw-border-opacity));
 }
 
 .border-\[\#e0e0e0\] {

@@ -10,12 +10,14 @@
                 Feel the warmth of home within the grandeur of The Heritage 1866. Step into a century-old haven,
                 experience unparalleled hospitality, and discover the captivating essence of Thalassery.
             </div>
+            <a class="hover:no-underline" href="/contact">
             <div class="flex items-center justify-center pt-6 md:pt-0 md:pl-[8%] lg:pl-[4%]">
                 <button
                     class="ftrtext font-baskervville lg:inline-block py-2 px-6 w-full md:max-w-[213px] primary-clr border text-xs flex items-center justify-center hover:bg-yellow-600 hover:text-white border-yellow-600 transition duration-200 tracking-widest semibold">
-                    <a class="hover:no-underline" href="/contact">BOOKING</a>
+                 BOOKING
                 </button>
             </div>
+        </a>
         </div>
     </div>
 </div>
@@ -28,9 +30,9 @@
     <div class="flex items-center justify-center md:pt-2 md:pb-10">
         <img src="/images/about-us/divider.svg" alt="divider">
     </div>
-    <p class="abt-text mt-5">
+    <p id="year" class="abt-text mt-5">
         Welcome to Heritage 1866. Nestled in the picturesque Melur village near Dharmadam in Thalassery, this
-        158-year-old heritage home, once the proud residence of an Indian freedom fighter, stands as a testament to
+        <span id="heritageAge"></span>-year-old heritage home, once the proud residence of an Indian freedom fighter, stands as a testament to
         unwavering spirit and cultural richness. Immerse yourself in the vintage opulence of traditional Kerala
         architecture, elegant antiques, and cherished artefacts which whisper stories of a bygone era.
     </p>
@@ -56,3 +58,9 @@
         </button>
     </div>
 </div>
+<script>
+    const currentYear = new Date().getFullYear();
+    const establishmentYear = 1866;
+    const heritageAge = currentYear - establishmentYear;
+    document.getElementById('heritageAge').textContent = heritageAge;
+</script>
