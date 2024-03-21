@@ -1055,10 +1055,6 @@ a.text-decoration-none:hover {
   height: 2rem;
 }
 
-.h-\[135px\] {
-  height: 135px;
-}
-
 .h-\[179px\] {
   height: 179px;
 }
@@ -2139,10 +2135,6 @@ a.text-decoration-none:hover {
     height: 170px;
   }
 
-  .md\:h-\[180px\] {
-    height: 180px;
-  }
-
   .md\:h-\[240px\] {
     height: 240px;
   }
@@ -2753,10 +2745,6 @@ a.text-decoration-none:hover {
 
   .lg\:h-\[316px\] {
     height: 316px;
-  }
-
-  .lg\:h-\[393px\] {
-    height: 393px;
   }
 
   .lg\:h-\[400px\] {

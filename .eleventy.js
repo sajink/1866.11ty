@@ -90,9 +90,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPairedShortcode("box", function(content, classes) {return '<div class="'+(classes??'h-32')+' flex">'+content+'</div>';});
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addAsyncShortcode("gallery", galleryShortcode);
-  
-  // Minify HTML
-  if(isProd) { eleventyConfig.addTransform("htmlmin", htmlMinify); }
+
+  // Prod Only Shortcodes and Transforms
+  if(isProd) { 
+    eleventyConfig.addTransform("htmlmin", htmlMinify); 
+  }
 
   return {
     dir: {
