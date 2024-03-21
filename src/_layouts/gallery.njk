@@ -30,7 +30,7 @@ layout: base.njk
 </div>   
 <script>
     var currentImageIndex = 0;
-    var images = [{% for img in page.gallery.photos %} '{{img.image}}', {% endfor %}];
+    var images = [{% for img in page.gallery.photos %} '{{img.image.replace('/images/','img/')}}', {% endfor %}];
     var modalImg = document.getElementById('modal-img');
     var modal = document.getElementById('modal');
 

@@ -16,7 +16,7 @@ async function galleryShortcode(src, alt, sizes = "100vw") {
       filenameFormat: function (id, src, width, format, options) {
         const extension = path.extname(src);
         const name = path.basename(src, extension);
-        return `${name}-${width}.${format}`;
+        return width<901 ? `${name}-${width}.${format}` : `${name}.${format}`;
       }
     });
   } catch (e) {
@@ -29,7 +29,7 @@ async function galleryShortcode(src, alt, sizes = "100vw") {
     loading: "lazy",
     decoding: "async",
     class: "w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer",
-    onclick: "showModal('img/"+src+"')"
+    onclick: "showModal('"+src.replace('/images/','img/')+"')"
   };
 
   return Image.generateHTML(metadata, imageAttributes);  

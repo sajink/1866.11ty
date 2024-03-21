@@ -1,6 +1,6 @@
 {
     "photos":[
-        {"image":"images/1Gallery.jpeg","alt":"Image 1"},
+        {"image":"/images/1Gallery.jpeg","alt":"Image 1"},
         {"image":"/images/2Gallery.jpeg","alt":"Image 2"},
         {"image":"/images/3Gallery.jpeg","alt":"Image 3"},
         {"image":"/images/4Gallery.jpeg","alt":"Image 4"},
