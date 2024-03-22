@@ -5,12 +5,6 @@
         {"image":"/images/places/Sea Kayak.jpeg","name":"Kayak In The Arabian Sea"},
         {"image":"/images/places/Village Walk.jpeg","name":"Wander Through Villages"}
     ],
-    "slide":[
-        {"image":"/images/slide/img1.jpg","alt":"Image 1"},
-        {"image":"/images/slide/img2.jpg","alt":"Image 2"},
-        {"image":"/images/slide/img3.jpg","alt":"Image 3"},
-        {"image":"/images/slide/img4.jpg","alt":"Image 4"}
-    ],
     "spec":[
         {"image":"images/exp/Historical Town-New.jpeg","num":"01","title":"Historical Town","desc":"Thalassery, nestled in Kerala's northern coast, is a treasure trove of history, culture, and scenic beauty. It's an offbeat destination in 'God’s Own Country', famed for its old-world charm, diverse cuisine, and cultural heritage. Renowned for biryani, spices, and Theyyam, it promises travellers an unforgettable journey of exploration and hospitality."},
         {"image":"images/exp/Vibrant Culture.jpeg","num":"02","title":"Vibrant Culture","desc":"Never one to shy away from embrace, Thalassery saw its population swell with diverse communities. European architects left their mark in elegant colonial buildings, while the Moplah community, descendants of Arab traders, added their distinct flavour to cuisine and culture. This confluence continues to enrich the place, evident in its warm hospitality and vibrant culture."},

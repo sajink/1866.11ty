@@ -17,7 +17,7 @@ layout: default.njk
 <div class="flex flex-col items-center pb-20">
     {% for e in page.exp.experience %}
     <div class="mx-[5%] md:mx-[4%] pt-12 pb-2">
-        <img src="{{e.image}}" alt="{{e.title}}" class="mb-4 w-full h-[256px] md:w-[857px] md:h-[571px] lg:w-[960px] lg:h-[640px]">
+        {% experience e.image, e.title %}
     </div>
     <div class="container w-full lg:w-[960px] ">
         <div class="mx-6 lg:mx-10 flex-row md:inline-flex gap-4 lg:gap-10">

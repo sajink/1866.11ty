@@ -28,12 +28,42 @@ async function galleryShortcode(src, alt, sizes = "100vw") {
     sizes,
     loading: "lazy",
     decoding: "async",
-    class: "w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer",
+    class: "w-full h-[135px] md:h-[180px] lg:h-[393px] cursor-pointer",
     onclick: "showModal('"+src.replace('/images/','img/')+"')"
   };
 
   return Image.generateHTML(metadata, imageAttributes);  
 }
+
+async function bannerShortcode(src, alt, sizes = "100vw") {
+  let imageSrc = `${path.dirname(this.page.inputPath)}/${src}`;
+  let metadata;
+  try {
+    metadata = await Image(imageSrc, {
+      widths: [300, 600],
+      outputDir: path.dirname(this.page.outputPath) + "/img",
+      urlPath: this.page.url + "/img",
+      filenameFormat: function (id, src, width, format, options) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}.${format}`;
+      }
+    });
+  } catch (e) {
+    // Handle error
+    console.error("Error processing image:", e);
+    return ""; // Return empty string in case of error
+  }
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+} 
 
 async function imageShortcode(src, alt, classes="", sizes = "100vw") {
   let imageSrc = `${path.dirname(this.page.inputPath)}/${src}`;
@@ -59,6 +89,35 @@ async function imageShortcode(src, alt, classes="", sizes = "100vw") {
     loading: "lazy",
     decoding: "async",
     class: classes
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);  
+}
+
+async function expShortcode(src, alt, sizes = "100vw") {
+  let imageSrc = `${path.dirname(this.page.inputPath)}/${src}`;
+  let metadata;
+  try{
+    metadata = await Image(imageSrc, {
+      widths: [900,"auto"],
+      outputDir: path.dirname(this.page.outputPath)+"/img",
+      urlPath: this.page.url+"/img",
+      filenameFormat: function (id, src, width, format, options) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return width<901 ? `${name}-${width}.${format}` : `${name}.${format}`;
+      }
+    });
+  } catch (e) {
+    //console.warn(e);
+    return e;//'';
+  }
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+    class: "mb-4 w-full h-[256px] md:w-[857px] md:h-[571px] lg:w-[960px] lg:h-[640px]"
   };
 
   return Image.generateHTML(metadata, imageAttributes);  
@@ -90,6 +149,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPairedShortcode("box", function(content, classes) {return '<div class="'+(classes??'h-32')+' flex">'+content+'</div>';});
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addAsyncShortcode("gallery", galleryShortcode);
+  eleventyConfig.addAsyncShortcode("banner", bannerShortcode);
+  eleventyConfig.addAsyncShortcode("experience", expShortcode);
 
   // Prod Only Shortcodes and Transforms
   if(isProd) { 

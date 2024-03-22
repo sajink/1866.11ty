@@ -8,13 +8,14 @@ layout: base.njk
     <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
         {% for img in page.gallery.photos %}
         {% gallery img.image, img.alt %}
+        <!-- img src="{{img.image}}" alt="{{img.alt}}" class="w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer" onclick="showModal('{{img.image}}')"/ -->
         {% endfor %}
     </div>
 </div>
 <div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
-    <a class="fixed z-90 left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="previousImage()"><img src="/images/gallery/left-arrow.png"></a>
-    <a class="fixed z-90 right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="nextImage()"><img src="/images/gallery/right-arrow.png"></a>
-    <a class="fixed z-90 top-2 right-2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()"><img src="/images/gallery/close.png"></a>
+    <a class="fixed z-90 left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="previousImage()"><img src="/images/gleft-arrow.png" alt="left arrow"></a>
+    <a class="fixed z-90 right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="nextImage()"><img src="/images/gright-arrow.png" alt="right arrow"></a>
+    <a class="fixed z-90 top-2 right-2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()"><img src="/images/gclose.png" alt="close button"></a>
     <img id="modal-img" class="w-[400px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1430px] lg:h-[90vh] object-cover" />
 </div>
 <div  class="mx-auto text-center lg:max-w-[1100px] pt-4">

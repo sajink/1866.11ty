@@ -1055,6 +1055,10 @@ a.text-decoration-none:hover {
   height: 2rem;
 }
 
+.h-\[135px\] {
+  height: 135px;
+}
+
 .h-\[179px\] {
   height: 179px;
 }
@@ -1069,10 +1073,6 @@ a.text-decoration-none:hover {
 
 .h-\[250px\] {
   height: 250px;
-}
-
-.h-\[256px\] {
-  height: 256px;
 }
 
 .h-\[269px\] {
@@ -2144,6 +2144,10 @@ a.text-decoration-none:hover {
     height: 170px;
   }
 
+  .md\:h-\[180px\] {
+    height: 180px;
+  }
+
   .md\:h-\[240px\] {
     height: 240px;
   }
@@ -2170,10 +2174,6 @@ a.text-decoration-none:hover {
 
   .md\:h-\[500px\] {
     height: 500px;
-  }
-
-  .md\:h-\[571px\] {
-    height: 571px;
   }
 
   .md\:h-\[58vh\] {
@@ -2234,10 +2234,6 @@ a.text-decoration-none:hover {
 
   .md\:w-\[800px\] {
     width: 800px;
-  }
-
-  .md\:w-\[857px\] {
-    width: 857px;
   }
 
   .md\:w-auto {
@@ -2756,6 +2752,10 @@ a.text-decoration-none:hover {
     height: 316px;
   }
 
+  .lg\:h-\[393px\] {
+    height: 393px;
+  }
+
   .lg\:h-\[400px\] {
     height: 400px;
   }
@@ -2778,10 +2778,6 @@ a.text-decoration-none:hover {
 
   .lg\:h-\[620px\] {
     height: 620px;
-  }
-
-  .lg\:h-\[640px\] {
-    height: 640px;
   }
 
   .lg\:h-\[711px\] {
