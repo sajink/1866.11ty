@@ -10,13 +10,13 @@ spec:
 - 1 Bathroom
 para1: Very spacious room adjacent to a “Nadumuttam” (small traditional inner courtyard), where one can watch the rain in all its fury during the monsoon season.
 images: 
-  - src: "/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe Suite 4- Main.jpeg"
+  - src: "/images/roomdp/premium_deluxe2_parijatham/premium_deluxe4_main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe Suite 2- B.jpeg"
+  - src: "/images/roomdp/premium_deluxe2_parijatham/premium_deluxe2_1.jpeg"
     alt: "image 2"
-  - src: "/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe 2- C.jpeg"
+  - src: "/images/roomdp/premium_deluxe2_parijatham/premium_deluxe2_2.jpeg"
     alt: "image 3"
-  - src: "/images/roomdp/Premium Deluxe 2- Parijatham/Premium Deluxe 2- D.jpeg"
+  - src: "/images/roomdp/premium_deluxe2_parijatham/premium_deluxe2_3.jpeg"
     alt: "image 4"
 otherrooms:
 - Nishagandhi

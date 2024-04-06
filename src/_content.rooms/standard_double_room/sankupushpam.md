@@ -11,9 +11,9 @@ spec:
 - 1 Bathroom
 para1: This stand-alone double room with windows on three sides,opens to the rear courtyard, and has its own veranda.
 images: 
-  - src: "/images/roomdp/Standard Double- Sankupushpam/Standard Double Room- Main.jpeg"
+  - src: "/images/roomdp/Std_double_sankupushpam/main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Standard Double- Sankupushpam/Standard Double Room- Bathroom.jpeg"
+  - src: "/images/roomdp/Std_double_sankupushpam/bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Suryakanthi

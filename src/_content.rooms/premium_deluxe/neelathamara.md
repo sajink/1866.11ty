@@ -20,9 +20,9 @@ included:
 - Bathroom with rain shower
 - Comfortable terry towels and bathrobes
 images: 
-  - src: "/images/roomdp/Premium Deluxe 3- Neelathamara/Premium Deluxe Suite 1- Main.jpeg"
+  - src: "/images/roomdp/premium_deluxe3_neelathamara/main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Premium Deluxe 3- Neelathamara/Premium Deluxe 3- Bathroom.jpeg"
+  - src: "/images/roomdp/premium_deluxe3_neelathamara/bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Suryakanthi

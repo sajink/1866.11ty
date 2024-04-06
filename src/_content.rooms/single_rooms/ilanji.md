@@ -10,9 +10,9 @@ spec:
 - 1 Bathroom
 para1: With its own private enclosed veranda, this single room opens to the central courtyard.
 images: 
-  - src: "/images/roomdp/Single 4- Ilanji/Single Room 4- Main.jpeg"
+  - src: "/images/roomdp/single4_ilanji/main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Single 4- Ilanji/Single Room 4- Bathroom.jpeg"
+  - src: "/images/roomdp/single4_ilanji/bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Suryakanthi

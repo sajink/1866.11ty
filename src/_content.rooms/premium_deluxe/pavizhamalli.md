@@ -10,13 +10,13 @@ spec:
 - 1 Bathroom
 para1: On one side,this suite has views of the river and, on the other, it faces the central courtyard, overlooking a fragrant night- blooming Pavizhamalli tree.
 images: 
-  - src: "/images/roomdp/Premium Deluxe 1- Pavizhamalli/Premium Deluxe Suite 2- Main.jpeg"
+  - src: "/images/roomdp/premium_deluxe1_pavizhamalli/premium_deluxesuite2_main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Premium Deluxe 1- Pavizhamalli/Premium Deluxe 2- B.jpeg"
+  - src: "/images/roomdp/premium_deluxe1_pavizhamalli/premium_deluxe2_1.jpeg"
     alt: "image 2"
-  - src: "/images/roomdp/Premium Deluxe 1- Pavizhamalli/Premium Deluxe 2- C.jpeg"
+  - src: "/images/roomdp/premium_deluxe1_pavizhamalli/premium_deluxe2_2.jpeg"
     alt: "image 3"
-  - src: "/images/roomdp/Premium Deluxe 1- Pavizhamalli/Premium Deluxe 2-D.jpeg"
+  - src: "/images/roomdp/premium_deluxe1_pavizhamalli/premium_deluxe2_3.jpeg"
     alt: "image 4"
 otherrooms:
 - Ponchempakam

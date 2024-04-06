@@ -10,9 +10,9 @@ spec:
 - 1 Bathroom
 para1: Exquisite east-facing suite with traditional wooden flooring and high ceiling, its bedroom has Belgian -glass windows from a bygone era. 
 images: 
-  - src: "/images/roomdp/Deluxe 2- Nishagandhi/Deluxe Suite 2- Main.jpeg"
+  - src: "/images/roomdp/deluxe2_nishagandhi/deluxe2_main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Deluxe 2- Nishagandhi/Deluxe 2 Bathroom.jpeg"
+  - src: "/images/roomdp/deluxe2_nishagandhi/deluxe2_ bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Nishagandhi

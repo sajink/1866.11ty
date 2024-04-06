@@ -10,9 +10,9 @@ spec:
 - 1 Bathroom
 para1: With antique wooden flooring and high all-wood ceiling, this suite opens to a veranda facing the central courtyard, and is adjacent to a traditional wooden swing. 
 images: 
-  - src: "/images/roomdp/Deluxe 1- Ponchempakam/Deluxe Suite 1- Main.jpeg"
+  - src: "/images/roomdp/deluxe1_ponchempakam/deluxe1_main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Deluxe 1- Ponchempakam/Deluxe Suite 1- Bathroom.jpeg"
+  - src: "/images/roomdp/deluxe1_ponchempakam/deluxe1_ bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Ponchempakam

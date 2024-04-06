@@ -10,9 +10,9 @@ spec:
 - 1 Bathroom
 para1: With a unique decor and ambience, this east-facing room opens to the rear courtyard.
 images: 
-  - src: "/images/roomdp/Single 1- Canberra/Single Room 1- Main.jpeg"
+  - src: "/images/roomdp/single1_canberra/main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Single 1- Canberra/Single Room 1- Bathroom.jpeg"
+  - src: "/images/roomdp/single1_canberra/bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Suryakanthi

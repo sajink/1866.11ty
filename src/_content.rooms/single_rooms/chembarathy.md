@@ -10,9 +10,9 @@ spec:
 - 1 Bathroom
 para1: With a 180° view of the rear courtyard and pathway, this bright and airy room remains cool even in summer.
 images: 
-  - src: "/images/roomdp/Single 2- Chembarathi/Single Room 2- Main.jpeg"
+  - src: "/images/roomdp/single2_chembarathi/main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Single 2- Chembarathi/Single Room 2- Bathroom.jpeg"
+  - src: "/images/roomdp/single2_chembarathi/bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Pichakam

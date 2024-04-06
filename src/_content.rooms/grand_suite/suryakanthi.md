@@ -10,13 +10,13 @@ spec:
 - 1 Bathroom
 para1: Exquisite river-facing suite, with its own private staircase and huge open veranda, the king size bedroom has a magnificent panoramic view of the lush mangroves and the pristine Anjarakandy river.
 images: 
-  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite - A.jpeg"
+  - src: "/images/roomdp/heritage_grandsuite_suryakanthi/grandsuite1.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite-D.jpeg"
+  - src: "/images/roomdp/heritage_grandsuite_suryakanthi/grandsuite2.jpeg"
     alt: "image 2"
-  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite- E.jpeg"
+  - src: "/images/roomdp/heritage_grandsuite_suryakanthi/grandsuite3.jpeg"
     alt: "image 3"
-  - src: "/images/roomdp/Heritage Grand Suite- Suryakanthi/Grand Suite -F.jpeg"
+  - src: "/images/roomdp/heritage_grandsuite_suryakanthi/grandsuite4.jpeg"
     alt: "image 4"
 otherrooms:
 - Pavizhamalli

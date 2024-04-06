@@ -10,9 +10,9 @@ spec:
 - 1 Bathroom
 para1: With views of the frangipani and tamarind trees, this large suite next to the rear courtyard, opens to a veranda facing the central courtyard.
 images: 
-  - src: "/images/roomdp/Premium Deluxe 4/Premium Deluxe Suite 3- Main.jpeg"
+  - src: "/images/roomdp/premium_deluxe4/main.jpeg"
     alt: "image 1"
-  - src: "/images/roomdp/Premium Deluxe 4/Premium Deluxe Suite 3- Bathroom.jpeg"
+  - src: "/images/roomdp/premium_deluxe4/bathroom.jpeg"
     alt: "image 2"
 otherrooms:
 - Parijatham
