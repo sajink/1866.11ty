@@ -13,9 +13,9 @@ layout: base.njk
     </div>
 </div>
 <div id="modal" class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
-    <a class="fixed z-90 left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="previousImage()"><img src="/images/gleft-arrow.png" alt="left arrow"></a>
-    <a class="fixed z-90 right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="nextImage()"><img src="/images/gright-arrow.png" alt="right arrow"></a>
-    <a class="fixed z-90 top-2 right-2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()"><img src="/images/gclose.png" alt="close button"></a>
+    <a class="fixed z-90 left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="previousImage()"><img src="/images/left-arrow.png" alt="left arrow" class="w-[30px] h-[30px] md:w-full md:h-full"></a>
+    <a class="fixed z-90 right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="nextImage()"><img src="/images/right-arrow.png" alt="right arrow" class="w-[30px] h-[30px] md:w-full md:h-full"></a>
+    <a class="fixed z-90 top-11 md:top-6 right-6 md:right-6 text-white text-5xl font-bold text-decoration-none" href="javascript:void(0)" onclick="closeModal()"><img src="/images/gclose.png" alt="close button"></a>
     <img id="modal-img" class="w-[400px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1430px] lg:h-[90vh] object-cover" />
 </div>
 <div  class="mx-auto text-center lg:max-w-[1100px] pt-4">

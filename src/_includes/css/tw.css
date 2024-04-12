@@ -120,4 +120,15 @@
     text-decoration: none;
   }
 
+.swiper-pagination-bullet {
+  background-color: black;  
+  width: 10px;
+  height: 10px;
+}
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: white;   
+    width: 10px;
+    height: 10px;
+}
 }

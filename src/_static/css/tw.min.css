@@ -754,15 +754,6 @@ label {
   font-weight: 600;
 }
 
-.overlay-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -810,6 +801,12 @@ a.text-decoration-none:hover {
   text-decoration: none;
 }
 
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+}
+
 .fixed {
   position: fixed;
 }
@@ -846,12 +843,12 @@ a.text-decoration-none:hover {
   right: 0px;
 }
 
-.right-2 {
-  right: 0.5rem;
-}
-
 .right-4 {
   right: 1rem;
+}
+
+.right-6 {
+  right: 1.5rem;
 }
 
 .right-8 {
@@ -866,8 +863,12 @@ a.text-decoration-none:hover {
   top: 50%;
 }
 
-.top-2 {
-  top: 0.5rem;
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-11 {
+  top: 2.75rem;
 }
 
 .top-6 {
@@ -1047,10 +1048,6 @@ a.text-decoration-none:hover {
   aspect-ratio: 1 / 1;
 }
 
-.h-3 {
-  height: 0.75rem;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -1081,6 +1078,10 @@ a.text-decoration-none:hover {
 
 .h-\[300px\] {
   height: 300px;
+}
+
+.h-\[30px\] {
+  height: 30px;
 }
 
 .h-\[318px\] {
@@ -1127,16 +1128,16 @@ a.text-decoration-none:hover {
   width: 50%;
 }
 
-.w-3 {
-  width: 0.75rem;
-}
-
 .w-\[120px\] {
   width: 120px;
 }
 
 .w-\[210px\] {
   width: 210px;
+}
+
+.w-\[30px\] {
+  width: 30px;
 }
 
 .w-\[35px\] {
@@ -1317,12 +1318,6 @@ a.text-decoration-none:hover {
   gap: 2rem;
 }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
@@ -1377,10 +1372,6 @@ a.text-decoration-none:hover {
 
 .rounded {
   border-radius: 0.25rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .rounded-md {
@@ -1452,11 +1443,6 @@ a.text-decoration-none:hover {
   background-color: rgb(0 0 0 / 0.7);
 }
 
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1484,10 +1470,6 @@ a.text-decoration-none:hover {
 
 .bg-cover {
   background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .bg-no-repeat {
@@ -1564,11 +1546,6 @@ a.text-decoration-none:hover {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-\[6vh\] {
-  padding-top: 6vh;
-  padding-bottom: 6vh;
 }
 
 .pb-1 {
@@ -1999,6 +1976,18 @@ a.text-decoration-none:hover {
 }
 
 @media (min-width: 768px) {
+  .md\:right-6 {
+    right: 1.5rem;
+  }
+
+  .md\:top-20 {
+    top: 5rem;
+  }
+
+  .md\:top-6 {
+    top: 1.5rem;
+  }
+
   .md\:order-2 {
     order: 2;
   }
@@ -2190,6 +2179,10 @@ a.text-decoration-none:hover {
 
   .md\:h-\[90vh\] {
     height: 90vh;
+  }
+
+  .md\:h-full {
+    height: 100%;
   }
 
   .md\:w-1\/2 {
@@ -2426,11 +2419,6 @@ a.text-decoration-none:hover {
     padding-bottom: 2rem;
   }
 
-  .md\:py-\[5vh\] {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-  }
-
   .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -2599,8 +2587,8 @@ a.text-decoration-none:hover {
     position: relative;
   }
 
-  .lg\:bottom-\[8\%\] {
-    bottom: 8%;
+  .lg\:top-0 {
+    top: 0px;
   }
 
   .lg\:top-\[-65px\] {
@@ -3016,11 +3004,6 @@ a.text-decoration-none:hover {
     padding-bottom: 2rem;
   }
 
-  .lg\:py-\[16vh\] {
-    padding-top: 16vh;
-    padding-bottom: 16vh;
-  }
-
   .lg\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -3031,6 +3014,10 @@ a.text-decoration-none:hover {
 
   .lg\:pb-16 {
     padding-bottom: 4rem;
+  }
+
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
   }
 
   .lg\:pb-24 {
