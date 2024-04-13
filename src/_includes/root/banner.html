@@ -1,22 +1,20 @@
-<div id="sSwiper" class="swiper h-[50vh] md:h-[58vh] lg:h-[90vh]"> 
+<div id="sSwiper" class="swiper h-[50vh] md:h-[58vh] lg:h-[90vh] relative overflow-hidden">
     <div class="absolute z-50 w-full">
         {% include "header.html" %}
     </div>
-    <div class="absolute top-10 md:top-20 lg:top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center font-fraunces overflow-hidden">    
+    <div class="absolute top-10 md:top-20 lg:top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center font-fraunces overflow-hidden">
         <h3 class="text-white text-lg md:text-2xl tracking-widest m-0 p-0 uppercase font-fraunces z-50">Step Back in Time at</h3>
-        <h1 class="text-white text-4xl medium md:text-7xl lg:text-8xl pt-2 md:pt-2 pb-5 m-0 p-0 font-fraunces z-50">The Heritage 1866</h1>
+        <h1 class="text-white text-4xl medium md:text-7xl lg:text-8xl pt-2 md:pt-2 pb-5 m-0 p-0 font-fraunces z-50">
+            The Heritage 1866
+        </h1>
     </div>
     <div class="swiper-wrapper z-50">
-        <div class="swiper-slide"><img src="/images/home-slide/h1.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h21.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h3.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h4.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h5.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h6.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h7.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h8.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h9.jpeg" class="h-full w-full object-cover"></div>
-        <div class="swiper-slide"><img src="/images/home-slide/h10.jpeg" class="h-full w-full object-cover"></div>
+        {% for i in page.banner.photos %}
+        <div class="swiper-slide relative">
+            <img src="{{ i.image }}" alt="{{ i.alt }}" class="h-full w-full object-cover">
+            <div class="overlay absolute inset-0 bg-black opacity-30"></div>
+        </div>
+        {% endfor %}
     </div>
     <div class="hidden md:block">
     <div class="swiper-button-prev" style="color:white; width: 54px; height: 54px; border-radius: 100%; border: 2px dotted #fff; background-color: transparent; margin-left: 4px; margin-right: 4px; color: #fff; font-size: 20px; line-height: 40px; text-align: center;"></div>

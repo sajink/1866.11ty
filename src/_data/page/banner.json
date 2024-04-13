@@ -1,14 +1,14 @@
 {
     "photos":[
-        {"image":"/images/h1.jpeg","alt":"Image 1"},
-        {"image":"/images/h21.jpeg","alt":"Image 2"},
-        {"image":"/images/h3.jpeg","alt":"Image 3"},
-        {"image":"/images/h4.jpeg","alt":"Image 4"},
-        {"image":"/images/h5.jpeg","alt":"Image 5"},
-        {"image":"/images/h6.jpeg","alt":"Image 6"},
-        {"image":"/images/h7.jpeg","alt":"Image 7"},
-        {"image":"/images/h8.jpeg","alt":"Image 8"},
-        {"image":"/images/h9.jpeg","alt":"Image 9"},
-        {"image":"/images/h10.jpeg","alt":"Image 10"}
+        {"image":"/images/home-slide/h1.jpeg","alt":"Image 1"},
+        {"image":"/images/home-slide/h21.jpeg","alt":"Image 2"},
+        {"image":"/images/home-slide/h3.jpeg","alt":"Image 3"},
+        {"image":"/images/home-slide/h4.jpeg","alt":"Image 4"},
+        {"image":"/images/home-slide/h5.jpeg","alt":"Image 5"},
+        {"image":"/images/home-slide/h6.jpeg","alt":"Image 6"},
+        {"image":"/images/home-slide/h7.jpeg","alt":"Image 7"},
+        {"image":"/images/home-slide/h8.jpeg","alt":"Image 8"},
+        {"image":"/images/home-slide/h9.jpeg","alt":"Image 9"},
+        {"image":"/images/home-slide/h10.jpeg","alt":"Image 10"}
     ]
 }
