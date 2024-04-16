@@ -758,10 +758,6 @@ label {
   overflow: hidden;
 }
 
-.text-shadow {
-  text-shadow: 6px 6px 10px rgba(0,0,0,0.5);
-}
-
 .social-icon {
   filter: brightness(0) invert(1);
 }
@@ -1727,6 +1723,10 @@ a.text-decoration-none:hover {
   font-weight: 600;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1765,6 +1765,10 @@ a.text-decoration-none:hover {
 
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-\[\#1A1A1A\] {
@@ -1834,10 +1838,6 @@ a.text-decoration-none:hover {
 
 .opacity-50 {
   opacity: 0.5;
-}
-
-.opacity-40 {
-  opacity: 0.4;
 }
 
 .shadow {
