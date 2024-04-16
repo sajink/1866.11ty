@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
 
     function closeMenu() {
         menu.forEach(function(menuElement) {
@@ -29,12 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (close.length) {
         close.forEach(function(element) {
-            element.addEventListener('click', closeMenu);
-        });
-    }
-
-    if (backdrop.length) {
-        backdrop.forEach(function(element) {
             element.addEventListener('click', closeMenu);
         });
     }
