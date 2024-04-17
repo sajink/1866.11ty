@@ -1,8 +1,8 @@
 {
     "photos":[
-        {"image":"/images/g1.jpeg","alt":"Image 1"},
+        {"image":"/images/g3.jpeg","alt":"Image 1"},     
         {"image":"/images/g2.jpeg","alt":"Image 2"},
-        {"image":"/images/g3.jpeg","alt":"Image 3"},
+        {"image":"/images/g1.jpeg","alt":"Image 3"},
         {"image":"/images/g4.jpeg","alt":"Image 4"},
         {"image":"/images/g5.jpeg","alt":"Image 5"},
         {"image":"/images/g6.jpeg","alt":"Image 6"},
