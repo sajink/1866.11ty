@@ -28,7 +28,7 @@ async function galleryShortcode(src, alt, sizes = "100vw") {
     sizes,
     loading: "lazy",
     decoding: "async",
-    class: "w-full h-[135px] md:h-[180px] lg:h-[393px] cursor-pointer",
+    class: "w-full h-[135px] md:h-[180px] lg:h-[393px] object-cover cursor-pointer",
     onclick: "showModal('"+src.replace('/images/','img/')+"')"
   };
 
