@@ -1,6 +1,7 @@
 {
     "room_detail": [
         {"image":"/images/roomdp/wifi.png","title":"Wifi & Internet"},
+        {"image":"/images/roomdp/ac.png","title":"Air Conditioner"},
         {"image":"/images/roomdp/towel.png","title":"Towels"},
         {"image":"/images/roomdp/shampoo.png","title":"Soap"},
         {"image":"/images/roomdp/dental.png","title":"Dental kit"}
