@@ -12,23 +12,18 @@
     "social": [
         {
             "name": "instagram",
-            "href": "/",
+            "href": "https://www.instagram.com/theheritage1866",
             "image": "/images/footer/insta-black.png"
         },
         {
             "name": "facebook",
-            "href": "/",
+            "href": "https://www.facebook.com/share/UaY5JMk4kcaGRQLk/?mibextid=LQQJ4d",
             "image": "/images/footer/fb-black.png"
         },
         {
             "name": "youtube",
             "href": "/",
             "image": "/images/footer/utube-black.png"
-        },
-        {
-            "name": "twitter",
-            "href": "/",
-            "image": "/images/footer/twitter-black.png"
         }
       ]
 }

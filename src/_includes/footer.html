@@ -24,11 +24,13 @@
             <a href="https://polika.net/" class="hover:no-underline">
             <div class="hover:primary-clr">Managed by Polika</div>
             </a>
-            <a class="py-2 md:pl-10 lg:pl-16 inline-flex space-x-5 md:mb-0">
+            <div class="py-2 md:pl-10 lg:pl-16 inline-flex space-x-5 md:mb-0">
                 {% for sm in site.social %}
+                <a href="{{ sm.href }}">
                 <img src="{{sm.image}}" alt={{sm.name}} />
-                {% endfor %}
             </a>
+                {% endfor %}
+        </div>
             <div>Website developed by LaLaLand</div>
         </div>
     </div>
