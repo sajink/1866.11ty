@@ -19,11 +19,6 @@
             "name": "facebook",
             "href": "https://www.facebook.com/share/UaY5JMk4kcaGRQLk/?mibextid=LQQJ4d",
             "image": "/images/footer/fb-black.png"
-        },
-        {
-            "name": "youtube",
-            "href": "/",
-            "image": "/images/footer/utube-black.png"
         }
       ]
 }
