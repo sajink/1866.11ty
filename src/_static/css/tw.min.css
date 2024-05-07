@@ -707,6 +707,11 @@ label {
   }
 }
 
+.text-thin {
+  font-weight: 50;
+  /* Adjust the value as needed */
+}
+
 .hline {
   margin-top: 2rem;
   margin-bottom: 2rem;

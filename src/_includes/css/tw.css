@@ -47,6 +47,10 @@
 }
 
 @layer components {
+  .text-thin {
+    font-weight: 50; /* Adjust the value as needed */
+  }
+
   .hline {
     @apply border-gray-900 border-t my-8 h-px w-full;
   }
