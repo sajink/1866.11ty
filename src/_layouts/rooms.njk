@@ -6,15 +6,11 @@ layout: default.njk
     {% include "header.html" %}
     <p class="font-fraunces text-white text-center text-4xl md:text-7xl lg:text-9xl pb-12 md:py-12 lg:py-24 mx-10">Suites & Rooms</p>
 </div>
-
-
-
 <div class="flex justify-center">
 <div class="max-w-[420px] md:max-w-[750px] lg:max-w-[780px]">
     <p class="font-fraunces primary-clr text-sm md:text-base text-center lg:py-4 pt-10 md:pt-16 lg:pt-20 medium tracking-widest" style="line-height: 1.25;">STAYING AT THE HERITAGE 1866</p>
     <p class="text-sm md:text-base text-center pb-8 md:pb-14">The heritage home offers 12 spacious vintage bedrooms, each with attached bathrooms.
 Each room is meticulously attended to, ensuring a delightful stay for our esteemed guests.
-
 The rooms are named after native flowers of our region.</p>
 </div>
 </div>
@@ -26,7 +22,6 @@ The rooms are named after native flowers of our region.</p>
         <button class="option hover:primary-clr uppercase" @click="selectOption(2)" :class="{ 'yellow-underline': selectedOption === 2 }">Standard Double Room</button>
         <button class="option hover:primary-clr uppercase" @click="selectOption(3)" :class="{ 'yellow-underline': selectedOption === 3 }">Single Rooms</button>
     </div> 
-
     <div id="content">
         {% set i=0 %}
         <div v-show="selectedOption === -1">
@@ -91,10 +86,7 @@ The rooms are named after native flowers of our region.</p>
             {% set i = i + 1 %}
         {% endfor %}
     </div>
-
 </div>
-
-
 <div class="bg-[#EAE3DC]">
     <div class="justify-center max-w-[600px] md:max-w-[850px] lg:max-w-[1500px] mx-8 lg:mx-auto mt-20 md:mt-24 py-10">
         <div class="flex-row md:flex md:gap-20 lg:gap-40 md:mx-4">
@@ -102,8 +94,7 @@ The rooms are named after native flowers of our region.</p>
                  <div class="mt-4 md:mt-4">Heritage 1866 offers all the essentials you need for a comfortable stay.</div>
             </div>
         </div>
-
-        <div class="flex flex-wrap justify-left md:justify-center mt-8 md:mt-12 lg:mt-16">
+        <div class="flex flex-wrap justify-left mt-8 md:mt-12 lg:mt-16">
             {% for rm in page.roomssuites.room_essentials %}
             <div class="w-full md:w-1/2 lg:w-1/4 pt-4 md:p-4">
                 <div>
@@ -118,8 +109,6 @@ The rooms are named after native flowers of our region.</p>
         </div>
     </div>
 </div>
-
-
 <div  class="mx-auto text-center lg:max-w-[1100px] pt-10 md:pt-14 lg:pt-16">
   <div class="flex items-center justify-center">
     <img src="/images/about-us/divider.svg" alt="divider">
@@ -130,20 +119,12 @@ The rooms are named after native flowers of our region.</p>
     <img src="/images/about-us/divider.svg" alt="divider">
   </div>
 </div>
-
-
-
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: {
-            selectedOption: -1 // Default to show all rooms
+            selectedOption: -1
         },
         methods: {
             selectOption(option) {
@@ -151,21 +132,16 @@ The rooms are named after native flowers of our region.</p>
             }
         },
         mounted() {
-            // Show the content for the default option (All Rooms)
             showContent(-1);
         }
     });
 </script>
-
 <script>
     function showContent(index) {
-        // Hide all content divs
         var contentDivs = document.querySelectorAll('.content');
         contentDivs.forEach(function (div) {
             div.style.display = 'none';
         });
-
-        // Show the selected content div
         var selectedContentDiv = document.getElementById('content-' + index);
         if (selectedContentDiv) {
             selectedContentDiv.style.display = 'block';
@@ -176,7 +152,7 @@ The rooms are named after native flowers of our region.</p>
     .yellow-underline {
         text-decoration: underline;
         text-decoration-color: #C29A5C;
-        text-underline-offset: 8px; /* Distance of 2px from the text */
-        text-decoration-thickness: 3px; /* Underline thickness of 2px */
+        text-underline-offset: 8px;
+        text-decoration-thickness: 3px;
     }
 </style>

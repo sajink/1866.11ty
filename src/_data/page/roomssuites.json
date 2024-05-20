@@ -9,7 +9,6 @@
 
     "room_essentials": [
         {"image":"/images/rooms/essentials/bedroom.png","title":"12 Spacious Bedrooms","desc":"12 spacious bedrooms, each with attached baths and standard amenities."},
-        {"image":"/images/rooms/essentials/pets.png","title":"Pets Stay Free!","desc":"Ours is a Pet-Friendly accommodation. Because every family member deserves a getaway!"},
         {"image":"/images/rooms/essentials/wifi.png","title":"Wifi & Internet","desc":"Surf, stream, and stay connected with our complimentary WiFi and internet access."},
         {"image":"/images/rooms/essentials/ac.png","title":"Air Conditioned","desc":"All the bedrooms are air-conditioned, ensuring a cool and comfortable stay."},
         {"image":"/images/rooms/essentials/car.png","title":"Airport Pickup","desc":"Airport and Railway Station pickup service available."},
