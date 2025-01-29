@@ -53,3 +53,33 @@ const enableSwiper = function (){
 document.addEventListener("DOMContentLoaded", function () {
     enableSwiper();
 });
+
+// rooms display
+function showContent(selectedType) {
+    document.querySelectorAll('.option').forEach(button => {
+        button.classList.remove('yellow-underline');
+    });
+
+    const selectedButton = document.querySelector(`button[data-type="${selectedType}"]`);
+    if (selectedButton) {
+        selectedButton.classList.add('yellow-underline');
+    }
+
+    document.querySelectorAll('.room-section').forEach(section => {
+        section.classList.add('hidden');
+    });
+
+    if (selectedType === -1) {
+        document.querySelectorAll('.room-section').forEach(section => {
+            section.classList.remove('hidden');
+        });
+    } else {
+        const selectedSection = document.querySelector(`[data-room="${selectedType}"]`);
+        if (selectedSection) {
+            selectedSection.classList.remove('hidden');
+        }
+    }
+}
+document.addEventListener("DOMContentLoaded", function() {
+    showContent(-1); // Show all rooms by default
+});

@@ -799,6 +799,13 @@ a.text-decoration-none:hover {
   text-decoration: none;
 }
 
+.yellow-underline {
+  text-decoration: underline;
+  text-decoration-color: #C29A5C;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+}
+
 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: white;
   width: 10px;
@@ -1814,10 +1821,6 @@ a.text-decoration-none:hover {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .opacity-0 {

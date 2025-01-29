@@ -25,6 +25,7 @@
     ],
 
     "rooms_list":[
+        {"type":"The Heritage Grand Suite","image":"/images/roomdp/heritage_grandsuite_suryakanthi/grandsuite1.jpeg","title":"Suryakanthi","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Exquisite river-facing suite, with its own private staircase and huge open  veranda, the king size bedroom has a magnificent panoramic view of the lush mangroves and the pristine Anjarakandy river.","link":"/rooms/grand_suite/suryakanthi"},
 
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/premium_deluxe1_pavizhamalli/premium_deluxesuite2_main.jpeg","title":"Pavizhamalli","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"On one side,this suite has views of the river and, on the other, it faces the central courtyard, overlooking a fragrant night- blooming Pavizhamalli tree.","link":"/rooms/premium_deluxe/pavizhamalli"},
         {"type":"Premium Deluxe Suites","image":"/images/roomdp/premium_deluxe2_parijatham/premium_deluxe4_main.jpeg","title":"Parijatham","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Very spacious room adjacent to a “Nadumuttam” (small traditional inner courtyard), where one can watch the rain in all its fury during the monsoon season.","link":"/rooms/premium_deluxe/parijatham"},
@@ -39,10 +40,7 @@
         {"type":"Single Rooms","image":"/images/roomdp/single1_canberra/main.jpeg","title":"Canberra","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"With a unique decor and ambience, this east-facing room opens to the rear courtyard.","link":"/rooms/single_rooms/canberra"},
         {"type":"Single Rooms","image":"/images/roomdp/single2_chembarathi/main.jpeg","title":"Chembarathy","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"With a 180° view of the rear courtyard and pathway, this bright and airy room  remains cool even in summer.","link":"/rooms/single_rooms/chembarathy"},
         {"type":"Single Rooms","image":"/images/roomdp/single3_pichakam/main.jpeg","title":"Pichakam","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"With a 180° view of the landscape, overlooking the central courtyard, this single room is very airy and bright.","link":"/rooms/single_rooms/pichakam"},
-        {"type":"Single Rooms","image":"/images/roomdp/single4_ilanji/main.jpeg","title":"Ilanji","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":" With its own private enclosed veranda, this single  room opens to the central courtyard.","link":"/rooms/single_rooms/ilanji"},
-
-        {"type":"The Heritage Grand Suite","image":"/images/roomdp/heritage_grandsuite_suryakanthi/grandsuite1.jpeg","title":"Suryakanthi","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":"Exquisite river-facing suite, with its own private staircase and huge open  veranda, the king size bedroom has a magnificent panoramic view of the lush mangroves and the pristine Anjarakandy river.","link":"/rooms/grand_suite/suryakanthi"}
-    
+        {"type":"Single Rooms","image":"/images/roomdp/single4_ilanji/main.jpeg","title":"Ilanji","spec":"1162 ft² / 108 m² / Avenue View / 4 Guests","desc":" With its own private enclosed veranda, this single  room opens to the central courtyard.","link":"/rooms/single_rooms/ilanji"}
     ]
 
 }
