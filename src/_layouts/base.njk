@@ -18,17 +18,8 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
   </head>
   <body class="text-base md:text-lg text-gray-800 font-baskervville">
-    {% if site.isParked %}
-    <div class="flex flex-col text-center bg-white h-screen text-black p-10">
-      <p class="text-2xl font-bold">Site is Parked</p>
-      <p>For more information, please contact Polika</p> 
-      <a class="text-[#00F] hover:underline" href="tel:+918050640555">+91 8050 640 555</a>
-      <a class="text-[#00F] hover:underline" href="mailto:hello@polika.net">hello@polika.net</a>
-    </div>
-    {% else %}
       {{ content | safe }}
       {% include "footer.html" %}
-    {% endif %}
     <script src="/main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   </body>

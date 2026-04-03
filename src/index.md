@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: root.njk
+layout: parked.njk
 description: 
 keywords: 
 ---
